@@ -8,7 +8,6 @@
 <meta name="apple-mobile-web-app-title" content="Orlando Trip">
 <title>Orlando Trip HQ</title>
 <style>
-/* No external fonts - system stack only */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 html, body { height: 100%; overflow: hidden; }
 body {
@@ -22,12 +21,11 @@ body {
   --red: #C0392B; --redl: rgba(192,57,43,0.1);
   --purple: #5B3FA0; --purplel: rgba(91,63,160,0.1);
   --grey: #6B6B70; --border: #E2DDD5; --bg: #F5F4F0;
+  --teal: #0891B2; --teall: rgba(8,145,178,0.1);
 }
 
-/* LAYOUT */
 #app { height: 100dvh; height: 100vh; display: flex; flex-direction: column; }
 
-/* HEADER */
 .hdr {
   background: var(--blue); color: #fff; height: 56px;
   display: flex; align-items: center; padding: 0 16px;
@@ -43,7 +41,6 @@ body {
 #hdrSub { font-size: 11px; opacity: 0.6; margin-top: 1px; }
 #hdrEmoji { font-size: 22px; margin-left: 8px; }
 
-/* SCREEN STACK */
 .sw { flex: 1; overflow: hidden; position: relative; }
 .scr {
   position: absolute; inset: 0; overflow-y: auto; -webkit-overflow-scrolling: touch;
@@ -54,7 +51,6 @@ body {
 .scr.active { visibility: visible; transform: translateX(0); transition: transform 0.28s ease, visibility 0s 0s; }
 .scr.behind { visibility: visible; transform: translateX(-25%); transition: transform 0.28s ease, visibility 0s 0s; }
 
-/* TAB BAR */
 .tbar {
   height: 64px; background: #fff; border-top: 1px solid var(--border);
   display: flex; flex-shrink: 0;
@@ -70,12 +66,10 @@ body {
 .tb-ic { font-size: 22px; }
 .tb.on { color: var(--blue2); }
 
-/* CARDS */
 .card { background: #fff; border-radius: 14px; border: 1px solid var(--border); overflow: hidden; margin-bottom: 10px; box-shadow: 0 1px 8px rgba(0,0,0,0.07); }
 .sec { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); margin: 16px 0 8px; }
 .sec:first-child { margin-top: 0; }
 
-/* HERO */
 .hero {
   background: linear-gradient(140deg, var(--blue) 0%, #0A1F3D 100%);
   border-radius: 18px; padding: 20px; margin-bottom: 12px; color: #fff;
@@ -89,7 +83,6 @@ body {
 #cdLabel strong { display: block; font-size: 15px; font-weight: 700; margin-bottom: 2px; }
 #cdLabel span { font-size: 12px; opacity: 0.75; }
 
-/* QUICK INFO */
 .qig { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
 .qi { background: #fff; border-radius: 12px; padding: 12px; border: 1px solid var(--border); }
 .qi-ic { font-size: 20px; margin-bottom: 3px; }
@@ -97,7 +90,6 @@ body {
 .qi-val { font-size: 13px; font-weight: 700; color: var(--blue); margin-top: 1px; }
 .qi-sub { font-size: 11px; color: var(--grey); }
 
-/* DAY ROWS */
 .drow {
   display: flex; align-items: center; gap: 10px; padding: 12px 14px;
   background: #fff; border-radius: 14px; border: 1px solid var(--border);
@@ -118,7 +110,6 @@ body {
 .dsu { font-size: 11px; color: var(--grey); }
 .dar { font-size: 20px; color: #ccc; flex-shrink: 0; }
 
-/* CHIPS */
 .chips { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
 .chip { display: inline-block; padding: 4px 11px; border-radius: 100px; font-size: 11px; font-weight: 600; }
 .cb { background: var(--bluel); color: var(--blue2); }
@@ -126,8 +117,8 @@ body {
 .cr { background: var(--redl); color: var(--red); }
 .cn { background: var(--greenl); color: var(--green); }
 .cp { background: var(--purplel); color: var(--purple); }
+.ct { background: var(--teall); color: var(--teal); }
 
-/* DAY DETAIL HEADER */
 .ddh { border-radius: 14px; padding: 18px; margin-bottom: 12px; color: #fff; }
 .ddh.ak { background: linear-gradient(135deg, #1B6B3A, #0D4022); }
 .ddh.mk { background: linear-gradient(135deg, var(--blue), #0A1F3D); }
@@ -139,7 +130,6 @@ body {
 .ddh-ti { font-size: 24px; font-weight: 900; line-height: 1.1; margin-bottom: 4px; }
 .ddh-su { font-size: 13px; opacity: 0.75; }
 
-/* TIMELINE */
 .tl { display: flex; flex-direction: column; }
 .tli { display: grid; grid-template-columns: 52px 14px 1fr; gap: 0 8px; margin-bottom: 5px; }
 .tlt { font-size: 10px; font-weight: 700; color: var(--grey); padding-top: 11px; text-align: right; line-height: 1.3; }
@@ -151,7 +141,6 @@ body {
 .tlb p { font-size: 12px; color: var(--grey); line-height: 1.4; margin-top: 2px; }
 .badge { display: inline-block; margin-top: 5px; background: var(--goldl); border: 1px solid rgba(201,151,26,0.3); color: #7A5800; border-radius: 100px; padding: 2px 10px; font-size: 11px; font-weight: 700; }
 
-/* Block colors */
 .bl { background: var(--bluel); } .bl h4 { color: var(--blue); }
 .gg { background: var(--goldl); } .gg h4 { color: #7A5800; }
 .gn { background: var(--greenl); } .gn h4 { color: var(--green); }
@@ -159,8 +148,8 @@ body {
 .pp { background: var(--purplel); } .pp h4 { color: var(--purple); }
 .gr { background: rgba(107,107,112,0.08); } .gr h4 { color: var(--grey); }
 .wh { background: #fff; border: 1px solid var(--border); } .wh h4 { color: var(--blue); }
+.tl2 { background: var(--teall); } .tl2 h4 { color: var(--teal); }
 
-/* Dot colors */
 .db { background: var(--blue2); }
 .dg { background: var(--gold); }
 .dn { background: var(--green); }
@@ -168,22 +157,31 @@ body {
 .dp { background: var(--purple); }
 .dgr { background: var(--grey); }
 .dw { background: var(--border); }
+.dt { background: var(--teal); }
 
 .tipbox { background: var(--goldl); border: 1px solid rgba(201,151,26,0.25); border-radius: 12px; padding: 12px; margin-top: 12px; display: flex; gap: 9px; }
 .tipbox h5 { font-size: 10px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3px; }
 .tipbox p { font-size: 12px; color: var(--grey); line-height: 1.4; }
+
+/* Insider tip box - teal */
+.insiderbox { background: var(--teall); border: 1px solid rgba(8,145,178,0.25); border-radius: 12px; padding: 12px; margin-top: 8px; display: flex; gap: 9px; }
+.insiderbox h5 { font-size: 10px; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3px; }
+.insiderbox p { font-size: 12px; color: var(--grey); line-height: 1.4; }
+
 .infobox { border-radius: 10px; padding: 11px; margin-bottom: 12px; }
 .infobox h4 { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
 .infobox p { font-size: 12px; color: var(--grey); line-height: 1.4; }
 .infobox.b { background: var(--bluel); } .infobox.b h4 { color: var(--blue); }
 .infobox.g { background: var(--goldl); } .infobox.g h4 { color: #7A5800; }
 .infobox.p { background: var(--purplel); } .infobox.p h4 { color: var(--purple); }
+.infobox.t { background: var(--teall); } .infobox.t h4 { color: var(--teal); }
+.infobox.r { background: var(--redl); } .infobox.r h4 { color: var(--red); }
 
-/* RIDES */
 .park-tabs { display: flex; gap: 7px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 12px; scrollbar-width: none; }
 .park-tabs::-webkit-scrollbar { display: none; }
 .ptab { flex-shrink: 0; padding: 6px 14px; border-radius: 100px; border: 1.5px solid var(--border); background: #fff; color: var(--grey); font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.15s; }
 .ptab.on { background: var(--blue); color: #fff; border-color: var(--blue); }
+
 .rcard { background: #fff; border-radius: 12px; border: 1px solid var(--border); padding: 12px 13px; margin-bottom: 7px; display: flex; gap: 10px; }
 .rnum { font-size: 18px; font-weight: 900; color: #ddd; width: 20px; flex-shrink: 0; line-height: 1; margin-top: 3px; }
 .rname { font-size: 14px; font-weight: 700; color: var(--blue); margin-bottom: 2px; }
@@ -196,7 +194,6 @@ body {
 .rb-st { background: var(--bluel); color: var(--blue2); }
 .rb-ht { background: var(--redl); color: var(--red); }
 
-/* PACKING */
 .prog-wrap { background: #fff; border-radius: 12px; padding: 12px; margin-bottom: 12px; border: 1px solid var(--border); }
 .prog-top { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: var(--blue); margin-bottom: 7px; }
 .prog-track { height: 7px; background: var(--border); border-radius: 100px; overflow: hidden; }
@@ -213,11 +210,10 @@ body {
 .pitem.done .pname { text-decoration: line-through; color: var(--grey); }
 .ploc { font-size: 11px; color: var(--grey); margin-top: 1px; }
 
-/* DOCS */
 .dcard { background: #fff; border-radius: 14px; border: 1px solid var(--border); padding: 14px; margin-bottom: 10px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
 .dhdr { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .dic { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
-.dic.b { background: var(--bluel); } .dic.n { background: var(--greenl); } .dic.g { background: var(--goldl); }
+.dic.b { background: var(--bluel); } .dic.n { background: var(--greenl); } .dic.g { background: var(--goldl); } .dic.t { background: var(--teall); }
 .dtitle { font-size: 15px; font-weight: 700; color: var(--blue); }
 .dsub { font-size: 11px; color: var(--grey); }
 .drow2 { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); }
@@ -234,6 +230,23 @@ body {
 .llstep:last-child { border-bottom: none; }
 .sn { background: var(--gold); color: #fff; border-radius: 50%; width: 19px; height: 19px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
+/* INSIDER TIPS TAB STYLES */
+.itip-cat { font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin: 16px 0 8px; padding-left: 2px; }
+.itip-cat:first-child { margin-top: 0; }
+.itip-item { background: #fff; border-radius: 11px; border: 1px solid var(--border); padding: 11px 13px; margin-bottom: 6px; display: flex; gap: 10px; align-items: flex-start; }
+.itip-num { font-size: 11px; font-weight: 800; color: var(--teal); flex-shrink: 0; min-width: 20px; margin-top: 1px; }
+.itip-body { flex: 1; }
+.itip-title { font-size: 13px; font-weight: 700; color: var(--blue); margin-bottom: 2px; }
+.itip-desc { font-size: 12px; color: var(--grey); line-height: 1.4; }
+
+.alert-card { border-radius: 14px; padding: 13px 14px; margin-bottom: 10px; border: 1.5px solid; display: flex; gap: 10px; align-items: flex-start; }
+.alert-card.teal { background: var(--teall); border-color: rgba(8,145,178,0.3); }
+.alert-card.gold { background: var(--goldl); border-color: rgba(201,151,26,0.3); }
+.alert-card h4 { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
+.alert-card.teal h4 { color: var(--teal); }
+.alert-card.gold h4 { color: #7A5800; }
+.alert-card p { font-size: 12px; color: var(--grey); line-height: 1.4; }
+
 .iph-card { background: linear-gradient(140deg, var(--blue), #0A1F3D); border-radius: 14px; padding: 14px; margin-bottom: 10px; color: #fff; }
 .iph-card h3 { font-size: 14px; font-weight: 700; color: #F5D97A; margin-bottom: 10px; }
 .iph-step { display: flex; gap: 9px; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: rgba(255,255,255,0.85); align-items: flex-start; }
@@ -244,17 +257,15 @@ body {
 <body>
 <div id="app">
 
-<!-- HEADER -->
 <div class="hdr">
   <button id="backBtn">&#8249;</button>
   <div class="hdr-text">
     <div id="hdrTitle">Orlando Trip HQ</div>
-    <div id="hdrSub">Feb 28 – Mar 7, 2026 &middot; Family of 4</div>
+    <div id="hdrSub">Feb 28 &ndash; Mar 7, 2026 &middot; Family of 4</div>
   </div>
   <div id="hdrEmoji">&#127984;</div>
 </div>
 
-<!-- SCREENS -->
 <div class="sw">
 
   <!-- OVERVIEW -->
@@ -325,35 +336,38 @@ body {
 
   <!-- DOCS -->
   <div class="scr" id="scr-docs">
+
     <div class="iph-card">
       <h3>&#128241; Add to iPhone Home Screen</h3>
       <div class="iph-step"><div class="in">1</div><div><strong>Email this file</strong> to yourself as an attachment</div></div>
-      <div class="iph-step"><div class="in">2</div><div>Open on your iPhone &rarr; tap and <strong>hold</strong> the .html attachment</div></div>
-      <div class="iph-step"><div class="in">3</div><div>Tap <strong>"Open in Safari"</strong> from the menu that pops up</div></div>
-      <div class="iph-step"><div class="in">4</div><div>In Safari, tap the <strong>Share icon</strong> (box with arrow at bottom) &rarr; <strong>"Add to Home Screen"</strong></div></div>
-      <div class="iph-step"><div class="in">5</div><div>Name it <strong>"Orlando Trip"</strong> &rarr; tap <strong>Add</strong></div></div>
-      <div class="iph-step"><div class="in">6</div><div>&#10003; App icon on your home screen. <strong>Works offline at the parks!</strong></div></div>
+      <div class="iph-step"><div class="in">2</div><div>Open on iPhone &rarr; tap and <strong>hold</strong> the .html attachment &rarr; <strong>"Open in Safari"</strong></div></div>
+      <div class="iph-step"><div class="in">3</div><div>Or: Save to Files app &rarr; open Files &rarr; tap file &rarr; share icon &rarr; <strong>"Add to Home Screen"</strong></div></div>
+      <div class="iph-step"><div class="in">4</div><div>Name it <strong>"Orlando Trip"</strong> &rarr; tap <strong>Add</strong> &rarr; &#10003; Works offline!</div></div>
     </div>
+
     <div class="ll-card">
-      <h3>&#9889; What is Genie+? Plain English.</h3>
-      <p>Disney paid skip-the-line (~$20&ndash;35/person/day). Buy at 7 AM in Disney app, book a Lightning Lane window, show up and skip the 60&ndash;90 min queue. <strong>Only buy it on Magic Kingdom days.</strong></p>
-      <div class="llstep"><div class="sn">1</div><div>One adult wakes at 7 AM (kids still sleeping)</div></div>
-      <div class="llstep"><div class="sn">2</div><div>Open Disney app &rarr; buy Genie+ &rarr; book Peter Pan immediately</div></div>
-      <div class="llstep"><div class="sn">3</div><div>Go back to breakfast. Done in 2 minutes.</div></div>
-      <div class="llstep"><div class="sn">4</div><div>After you USE the first Lightning Lane, book the next one</div></div>
+      <h3>&#9889; Genie+ Plain English</h3>
+      <p>Paid skip-the-line (~$20&ndash;35/person/day). Buy at 7 AM in Disney app, book a Lightning Lane window, skip the 60&ndash;90 min queue. <strong>Only buy on Magic Kingdom days.</strong></p>
+      <div class="llstep"><div class="sn">1</div><div>One adult wakes at 7 AM (kids still sleeping) &rarr; buy Genie+ &rarr; book Peter Pan immediately</div></div>
+      <div class="llstep"><div class="sn">2</div><div>After you USE the first LL, book the next one in the app</div></div>
+      <div class="llstep"><div class="sn">3</div><div><strong>Grace period:</strong> LL pass valid 5 min BEFORE your window opens and up to 1h 59m AFTER it closes. Use it if you're in line for something.</div></div>
+      <div class="llstep"><div class="sn">4</div><div>If a LL shows "sold out" keep refreshing &mdash; Disney adds popup availability throughout the day. Never give up.</div></div>
       <div class="llstep"><div class="sn">5</div><div>Seven Dwarfs Mine Train = separate purchase ($15&ndash;25 extra)</div></div>
-      <div class="llstep"><div class="sn">6</div><div>Skip Genie+ at Animal Kingdom and Hollywood Studios</div></div>
+      <div class="llstep"><div class="sn">6</div><div>Skip Genie+ entirely at Animal Kingdom and Hollywood Studios</div></div>
+      <div class="llstep"><div class="sn">7</div><div>Genie+ purchase = <strong>free ride photo downloads</strong> that day. Grab them within 45 days in the MDE app.</div></div>
     </div>
+
     <div class="dcard">
       <div class="dhdr"><div class="dic b">&#9992;&#65039;</div><div><div class="dtitle">United Airlines</div><div class="dsub">Confirmation: NZ4HTS</div></div></div>
       <div class="drow2"><div class="dlabel">Confirmation</div><div class="cval"><div class="dval">NZ4HTS</div><button class="cbtn" data-copy="NZ4HTS">Copy</button></div></div>
-      <div class="drow2"><div class="dlabel">Outbound flight</div><div class="dval">UA2215</div></div>
+      <div class="drow2"><div class="dlabel">Outbound</div><div class="dval">UA2215</div></div>
       <div class="drow2"><div class="dlabel">Departs</div><div class="dval">EWR &middot; Feb 28 &middot; 2:00 PM</div></div>
       <div class="drow2"><div class="dlabel">Arrives</div><div class="dval">MCO &middot; Feb 28 &middot; 4:59 PM</div></div>
-      <div class="drow2"><div class="dlabel">Return flight</div><div class="dval">UA1866</div></div>
+      <div class="drow2"><div class="dlabel">Return</div><div class="dval">UA1866</div></div>
       <div class="drow2"><div class="dlabel">Departs</div><div class="dval">MCO &middot; Mar 7 &middot; 12:11 PM</div></div>
       <div class="drow2"><div class="dlabel">Arrives</div><div class="dval">EWR &middot; Mar 7 &middot; 2:59 PM</div></div>
     </div>
+
     <div class="dcard">
       <div class="dhdr"><div class="dic n">&#127968;</div><div><div class="dtitle">Airbnb &mdash; Kissimmee</div><div class="dsub">Host: Diogo &middot; ~20 min to parks</div></div></div>
       <div class="drow2"><div class="dlabel">Address</div><div class="cval"><div class="dval" style="font-size:11px">4806 Romeo Cir, Kissimmee FL</div><button class="cbtn" data-copy="4806 Romeo Cir, Kissimmee FL 34746">Copy</button></div></div>
@@ -362,6 +376,7 @@ body {
       <div class="drow2"><div class="dlabel">Check-out</div><div class="dval">Mar 7 &middot; By 10:00 AM</div></div>
       <div class="drow2"><div class="dlabel">Total paid</div><div class="dval">$1,575.67</div></div>
     </div>
+
     <div class="dcard">
       <div class="dhdr"><div class="dic g">&#128663;</div><div><div class="dtitle">Parking &amp; Leave Times</div><div class="dsub">~$30/day at all parks</div></div></div>
       <div class="drow2"><div class="dlabel">Animal Kingdom</div><div class="dval">Leave 8:15 AM &middot; Direct lot</div></div>
@@ -370,6 +385,452 @@ body {
       <div class="drow2"><div class="dlabel">Universal IOA</div><div class="dval">Leave 7:45 AM &middot; Garage</div></div>
       <div class="drow2"><div class="dlabel">MK note</div><div class="dval" style="font-size:11px">TTC &rarr; monorail adds 20&ndash;25 extra min</div></div>
     </div>
+
+  </div>
+
+  <!-- INSIDER TIPS TAB -->
+  <div class="scr" id="scr-tips">
+
+    <div class="itip-cat">&#127906; Line-Skipping Secrets</div>
+
+    <div class="itip-item">
+      <div class="itip-num">1</div>
+      <div class="itip-body">
+        <div class="itip-title">Main St opens 1 HOUR before the park</div>
+        <div class="itip-desc">The park-proper (rides etc) opens at rope drop, but Main Street USA opens a full hour early. Walk in, take uncrowded castle photos, grab a pastry at the Main St Bakery, then you're right there for rope drop.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">2</div>
+      <div class="itip-body">
+        <div class="itip-title">Vintage Main St Vehicles &mdash; free ride to castle</div>
+        <div class="itip-desc">Free old-timey cars and a double-decker bus run up Main St all morning. Wait inside the entrance at Town Hall area and ride right to the castle steps. No wait, totally free, kids love it.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">3</div>
+      <div class="itip-body">
+        <div class="itip-title">LL grace period: almost 2 hours after</div>
+        <div class="itip-desc">Lightning Lane passes are valid 5 minutes BEFORE your window opens, and up to 1 hour 59 minutes AFTER your window closes. So if you're stuck on another ride, don't panic &mdash; your LL is still good.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">4</div>
+      <div class="itip-body">
+        <div class="itip-title">"Sold out" Lightning Lane = keep refreshing</div>
+        <div class="itip-desc">Disney adds popup LL availability throughout the day. People also cancel and move passes around. If Peter Pan or anything else shows sold out, refresh repeatedly &mdash; it comes back.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">5</div>
+      <div class="itip-body">
+        <div class="itip-title">Cast members open the gates 30 min early</div>
+        <div class="itip-desc">Early Entry (or even regular rope drop) often starts 30 minutes before the official time. Head straight to the ride you want first &mdash; you'll often be let on before the official opening.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">6</div>
+      <div class="itip-body">
+        <div class="itip-title">Rider Switch for height-limit rides</div>
+        <div class="itip-body">If one toddler can't ride (38" height req on Mine Train / Slinky), one adult waits in line while the other stays with the kids. Then the second adult uses Rider Switch to enter the Lightning Lane. Free, no app needed &mdash; just ask the cast member at the ride entrance.</div>
+      </div>
+    </div>
+
+    <div class="itip-cat">&#128247; Photo Secrets</div>
+
+    <div class="itip-item">
+      <div class="itip-num">7</div>
+      <div class="itip-body">
+        <div class="itip-title">Castle photos with NO crowd in the background</div>
+        <div class="itip-desc">Go to the small projection buildings on either side at the front of the castle and shoot from right in front of the fence. The angle eliminates the crowd behind you. Perfect family shot.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">8</div>
+      <div class="itip-body">
+        <div class="itip-title">PhotoPass photographer will use your phone</div>
+        <div class="itip-desc">Any PhotoPass photographer stationed around the park will happily use your own phone or camera to take photos for free. Just ask. You don't have to buy Memory Maker for this.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">9</div>
+      <div class="itip-body">
+        <div class="itip-title">Genie+ purchase = free ride photo downloads</div>
+        <div class="itip-desc">When you buy Genie+ (Lightning Lane Multi Pass) you get complimentary ride photo downloads for that entire day at any park. Grab them in the MDE app within 45 days or they expire.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">10</div>
+      <div class="itip-body">
+        <div class="itip-title">Tree of Life photos at Animal Kingdom</div>
+        <div class="itip-desc">Best Tree of Life background photos are on the pathway between Africa and Asia sections &mdash; not right in front of it. Try both sides at golden hour.</div>
+      </div>
+    </div>
+
+    <div class="itip-cat">&#128083; Money Savers</div>
+
+    <div class="itip-item">
+      <div class="itip-num">11</div>
+      <div class="itip-body">
+        <div class="itip-title">Toll Pass vending machine at MCO &mdash; do this first!</div>
+        <div class="itip-desc">Before picking up your rental car, find the Visitor Toll Pass vending machines inside the terminal. Buy a hangtag for your rental car and save up to 80% on tolls vs. the rental car company rates. High priority on arrival.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">12</div>
+      <div class="itip-body">
+        <div class="itip-title">Popcorn bucket &mdash; $2.25 refills all trip</div>
+        <div class="itip-desc">Buy a souvenir popcorn bucket on your first park day. Refills are $2.25 at any popcorn stand in any park. Pays for itself in one day with toddlers who want popcorn everywhere.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">13</div>
+      <div class="itip-body">
+        <div class="itip-title">Disney Springs &mdash; same merch, fraction of the price</div>
+        <div class="itip-desc">World of Disney at Disney Springs has virtually the same merchandise as the park stores. No ticket needed, free parking. Shop on your rest day Wednesday before seeing the park prices.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">14</div>
+      <div class="itip-body">
+        <div class="itip-title">Mouse ear headbands &mdash; buy from Amazon before you go</div>
+        <div class="itip-desc">Park headbands are heavy and give headaches after a few hours. Etsy and Amazon have lighter, cheaper, often cuter options. Kids won't know the difference and you'll thank yourself.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">15</div>
+      <div class="itip-body">
+        <div class="itip-title">Walk-up dining in MDE app</div>
+        <div class="itip-desc">No restaurant reservation? Open MDE app &rarr; Check Dining Availability &rarr; scroll to bottom for "Join Walk-Up List." Surprisingly often available, even at busy restaurants.</div>
+      </div>
+    </div>
+
+    <div class="itip-cat">&#127785; Parade &amp; Fireworks Tips</div>
+
+    <div class="itip-item">
+      <div class="itip-num">16</div>
+      <div class="itip-body">
+        <div class="itip-title">Best parade spot = Frontierland, not Main St</div>
+        <div class="itip-desc">Afternoon parade starts in Frontierland and ends on Main St. Nighttime parade runs in reverse. Watch from Frontierland/Liberty Square area for significantly lower crowds &mdash; same great view.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">17</div>
+      <div class="itip-body">
+        <div class="itip-title">Fireworks from Polynesian beach (alternative)</div>
+        <div class="itip-desc">If you want to skip the MK park exit chaos, drive/take Disney transport to the Polynesian resort beach and watch fireworks from there. Bring food and sit on the sand. Way more relaxed with toddlers. Electric Water Pageant passes by at 8:45 PM too.</div>
+      </div>
+    </div>
+
+    <div class="itip-cat">&#127800; Family &amp; Toddler Tips</div>
+
+    <div class="itip-item">
+      <div class="itip-num">18</div>
+      <div class="itip-body">
+        <div class="itip-title">Baby Care Centers in every Disney park</div>
+        <div class="itip-desc">Every park has a Baby Care Center &mdash; air-conditioned, private nursing rooms, changing tables away from crowds, basic supplies for purchase. Lifesaver on hot days when you just need 15 quiet minutes.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">19</div>
+      <div class="itip-body">
+        <div class="itip-title">Afternoon rain showers = lower wait times</div>
+        <div class="itip-desc">Florida gets quick 20-minute afternoon showers almost daily in late Feb/March. Most people run for cover or leave. Stay, use your ponchos, and enjoy drastically shorter lines the moment rain stops.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">20</div>
+      <div class="itip-body">
+        <div class="itip-title">Install MyRadar app before the trip</div>
+        <div class="itip-desc">Florida weather changes fast. MyRadar gives hyper-local storm tracking so you can see exactly when a shower will pass. Plan your indoor ride queue timing around it.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">21</div>
+      <div class="itip-body">
+        <div class="itip-title">Mobile Order food &mdash; skip the queue entirely</div>
+        <div class="itip-desc">For any counter service restaurant, use the MDE app to place a Mobile Order and choose your pickup window. Tap the + symbol at the bottom of MDE. Works for snacks too &mdash; you don't have to wait in line for a Dole Whip. Just show up when ready.</div>
+      </div>
+    </div>
+
+    <div class="itip-cat">&#127919; Strategy &amp; Timing</div>
+
+    <div class="itip-item">
+      <div class="itip-num">22</div>
+      <div class="itip-body">
+        <div class="itip-title">Burner Ride = unlock Tier 1 LLs faster</div>
+        <div class="itip-desc">Book a "burner ride" as your first LL advance selection &mdash; something low-stakes like Dumbo or Tea Cups, as early in the morning as possible. The moment you tap into it, you can immediately book another Tier 1 LL (like Peter Pan or Tiana's) before anyone else can. Power move.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">23</div>
+      <div class="itip-body">
+        <div class="itip-title">Park close = shortest waits of the day</div>
+        <div class="itip-desc">Disney posts inflated wait times in the last hour before close (posted 40 min often means 5&ndash;10 min). Get in line for Seven Dwarfs Mine Train or Peter Pan right at the posted closing time &mdash; you'll still ride. This is how Disney veterans skip paying for Single Pass.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">24</div>
+      <div class="itip-body">
+        <div class="itip-title">Stack your LLs for the evening return</div>
+        <div class="itip-desc">In the MDE app, you can modify your LL times to later in the evening. Before your midday break, stack 2&ndash;3 LLs for your 5&ndash;7 PM return window. You come back and chain through them immediately &mdash; this is what Disney insiders do and most people never figure it out.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">25</div>
+      <div class="itip-body">
+        <div class="itip-title">Standby Skipper &mdash; the app that books LLs for you</div>
+        <div class="itip-desc">Standby Skipper is a third-party app that automatically makes Lightning Lane reservations for you while you enjoy the parks. After you tap into your first LL of the day, it chains the rest. ~$25/day for up to 12 people. Worth considering for your two MK days when LLs matter most.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">26</div>
+      <div class="itip-body">
+        <div class="itip-title">Crowds peak noon&ndash;4 PM every day</div>
+        <div class="itip-desc">Wait times build from opening and peak between noon and 4 PM at every Disney park, every day. This is the scientific reason your midday reset is not a luxury &mdash; it's a strategic move. Return after 5 PM when waits start dropping again.</div>
+      </div>
+    </div>
+
+    <div class="itip-cat">&#127869; Food &amp; Dining Picks</div>
+
+    <div class="itip-item">
+      <div class="itip-num">27</div>
+      <div class="itip-body">
+        <div class="itip-title">Magic Kingdom best quick service: Columbia Harbor House</div>
+        <div class="itip-desc">Located near Haunted Mansion &amp; Peter Pan. Seafood, chicken, salads. Upper level seating with great views of Liberty Square. Consistent, affordable, accepts Mobile Order. Better than 90% of MK food options. Your go-to lunch spot both MK days.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">28</div>
+      <div class="itip-body">
+        <div class="itip-title">Magic Kingdom best snacks you can't miss</div>
+        <div class="itip-desc">Dole Whip (pineapple-vanilla swirl) at Aloha Isle in Adventureland. Creme Brulee Croissant at Gaston's Tavern in Fantasyland. Cold Brew Float at Auntie Gravity's in Tomorrowland. Order all via Mobile Order to skip the lines.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">29</div>
+      <div class="itip-body">
+        <div class="itip-title">Hollywood Studios: Woody's Lunchbox + Docking Bay 7</div>
+        <div class="itip-desc">HS has the worst food of any park overall. Stick to these two: Woody's Lunchbox in Toy Story Land (Lunchbox Tarts are a must), and Docking Bay 7 in Galaxy's Edge (pricey but creative and highly themed). Use Mobile Order &mdash; both get very long lines.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">30</div>
+      <div class="itip-body">
+        <div class="itip-title">Animal Kingdom best food: Flame Tree BBQ + Satuli Canteen</div>
+        <div class="itip-desc">Flame Tree Barbecue (Africa): best ribs at Disney World. Satuli Canteen (Pandora): beautiful themed setting, creative bowls with lots of variety. Both are excellent. Harambe Market is a solid backup for a rice bowl. Get coffee at Creature Comforts (Starbucks) on the way to Africa.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">31</div>
+      <div class="itip-body">
+        <div class="itip-title">Walk-up dining in MDE app works more than you think</div>
+        <div class="itip-desc">No restaurant reservation? MDE app &rarr; Check Dining Availability &rarr; scroll to "Join Walk-Up List." Frequently available even at popular spots, especially right when the park opens or after the main rush. Check MDE while you're in line for a ride &mdash; spots open constantly.</div>
+      </div>
+    </div>
+
+    <div class="itip-cat">&#128197; Best Days Per Park</div>
+
+    <div class="itip-item">
+      <div class="itip-num">32</div>
+      <div class="itip-body">
+        <div class="itip-title">Magic Kingdom is most crowded Mondays &amp; Saturdays</div>
+        <div class="itip-desc">This has been true for years: families fly in Friday/Sunday and head to MK on their first full day. Your schedule (Mon 3/2, Tue 3/3) is one of the better combos &mdash; Monday is higher crowd but Tuesday is much lighter. If wait times feel brutal on Monday, just remind yourself Tuesday will be noticeably calmer.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">33</div>
+      <div class="itip-body">
+        <div class="itip-title">Best days to visit each park (ranked lowest crowds)</div>
+        <div class="itip-desc">Magic Kingdom: Sunday, Thursday, Friday. Hollywood Studios: Wednesday, Thursday. Animal Kingdom: Wednesday, Thursday, Tuesday. EPCOT: Wednesday, Friday, Thursday. Your Animal Kingdom on Sunday and Hollywood Studios on Thursday both land within the ideal windows. These aren't random &mdash; they're backed by years of crowd data.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">34</div>
+      <div class="itip-body">
+        <div class="itip-title">Animal Kingdom: you may not need Lightning Lane Multi Pass</div>
+        <div class="itip-desc">AK is the one park where Multi Pass is optional on non-peak days. Most rides have under 30-minute waits in the first hour, and the afternoon crowds are lower too since people wrongly treat it as a half-day park and leave by 2 PM. Your Sunday visit is non-peak. Buy Single Pass for Flight of Passage (it runs 80-min waits all day) &mdash; skip Multi Pass and save the $30+ per person.</div>
+      </div>
+    </div>
+
+    <div class="itip-cat">&#128260; Virtual Queue (7 AM Rule)</div>
+
+    <div class="itip-item">
+      <div class="itip-num">35</div>
+      <div class="itip-body">
+        <div class="itip-title">Virtual Queue opens at exactly 7 AM &mdash; spots go in seconds</div>
+        <div class="itip-desc">For any ride offering a free Virtual Queue (check MDE app before your visit day), the queue opens at 7:00 AM sharp &mdash; sometimes spots vanish in under 30 seconds. Be in the MDE app before 7, find the Virtual Queue button on the home screen, confirm your party, and tap Refresh repeatedly until the clock hits 7:00, then tap Join Queue immediately. There's a second chance at 1:00 PM but don't count on it. If you get in, you'll get a Boarding Group number and a notification when it's your turn (you have 1 hour to arrive).</div>
+      </div>
+    </div>
+
+    <div class="itip-cat">&#128118; Kids &amp; Character Tips</div>
+
+    <div class="itip-item">
+      <div class="itip-num">36</div>
+      <div class="itip-body">
+        <div class="itip-title">PhotoPass photographers use your phone &mdash; no Memory Maker needed</div>
+        <div class="itip-desc">Any PhotoPass photographer will shoot with your own phone or camera for free. Just politely ask. You don't need to buy Memory Maker ($200+) for great photos. They're stationed near the castle hub, character meets, and key spots throughout the parks.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">37</div>
+      <div class="itip-body">
+        <div class="itip-title">Character meets: pick 2 max per day</div>
+        <div class="itip-desc">Character meets no longer have Lightning Lane. They take 20&ndash;40 min each. If you want more than 2 meets in a day, plan to miss some rides. Best strategy: meet characters in the first hour before long queues form, or right after noon when waits dip. Let the kids decide who matters most.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">38</div>
+      <div class="itip-body">
+        <div class="itip-title">Enchanted Tales with Belle &mdash; arrive 10 min before showtime</div>
+        <div class="itip-desc">This is more of a show than a standard meet. Kids get chosen to play roles in the story. Usually opens around 10:30 AM &mdash; check MDE for times. Arrive 10 minutes before your entry time. One of the most magical toddler experiences in all of Disney; do not skip it.</div>
+      </div>
+    </div>
+
+    <div class="itip-item">
+      <div class="itip-num">39</div>
+      <div class="itip-body">
+        <div class="itip-title">Rider Switch &mdash; free, no app needed, both parents ride</div>
+        <div class="itip-desc">At any height-restricted ride (Mine Train, Slinky Dog, TRON): walk up as a group, tell the cast member you want Rider Switch. One adult waits with the child while the others ride standby. Then the second adult + one more person enters the Lightning Lane for free. Both adults ride, one gets a bonus partner. Just ask at the entrance gate.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MAP TAB -->
+  <div class="scr" id="scr-map">
+
+    <div style="background:var(--blue);border-radius:14px;padding:14px;color:#fff;margin-bottom:14px;">
+      <div style="font-size:11px;opacity:0.6;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:4px;">&#128205; Trip Map</div>
+      <div style="font-size:18px;font-weight:900;margin-bottom:4px;">Orlando Area</div>
+      <div style="font-size:12px;opacity:0.8;line-height:1.5;">Tap any link below to open in Google Maps. Share your custom My Maps link with Claude to embed it here.</div>
+    </div>
+
+    <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue2);margin-bottom:8px;">&#127984; Disney Parks</div>
+
+    <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:16px;">
+      <a href="https://maps.google.com/?q=Magic+Kingdom+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+        <span style="font-size:20px;">&#127984;</span>
+        <div style="flex:1;">
+          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Magic Kingdom</div>
+          <div style="font-size:11px;color:var(--grey);">Mon 3/2 &amp; Tue 3/3 &mdash; 3 World Dr</div>
+        </div>
+        <span style="color:var(--blue2);font-size:16px;">&#8599;</span>
+      </a>
+      <a href="https://maps.google.com/?q=Animal+Kingdom+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+        <span style="font-size:20px;">&#129446;</span>
+        <div style="flex:1;">
+          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Animal Kingdom</div>
+          <div style="font-size:11px;color:var(--grey);">Sun 3/1 &mdash; 2901 Osceola Pkwy</div>
+        </div>
+        <span style="color:var(--blue2);font-size:16px;">&#8599;</span>
+      </a>
+      <a href="https://maps.google.com/?q=Hollywood+Studios+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+        <span style="font-size:20px;">&#127916;</span>
+        <div style="flex:1;">
+          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Hollywood Studios</div>
+          <div style="font-size:11px;color:var(--grey);">Thu 3/5 &mdash; 351 S Studio Dr</div>
+        </div>
+        <span style="color:var(--blue2);font-size:16px;">&#8599;</span>
+      </a>
+    </div>
+
+    <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--purple);margin-bottom:8px;">&#129497; Universal</div>
+
+    <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:16px;">
+      <a href="https://maps.google.com/?q=Universal+Islands+of+Adventure+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+        <span style="font-size:20px;">&#129497;</span>
+        <div style="flex:1;">
+          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Islands of Adventure</div>
+          <div style="font-size:11px;color:var(--grey);">Fri 3/6 &mdash; 6000 Universal Blvd</div>
+        </div>
+        <span style="color:var(--purple);font-size:16px;">&#8599;</span>
+      </a>
+    </div>
+
+    <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:8px;">&#127968; Your Base</div>
+
+    <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:16px;">
+      <a href="https://maps.google.com/?q=Kissimmee+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+        <span style="font-size:20px;">&#127968;</span>
+        <div style="flex:1;">
+          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Airbnb &mdash; Kissimmee</div>
+          <div style="font-size:11px;color:var(--grey);">Code HMNR52HJYB &mdash; Home base</div>
+        </div>
+        <span style="color:var(--green);font-size:16px;">&#8599;</span>
+      </a>
+      <a href="https://maps.google.com/?q=Orlando+International+Airport" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+        <span style="font-size:20px;">&#9992;&#65039;</span>
+        <div style="flex:1;">
+          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Orlando International Airport (MCO)</div>
+          <div style="font-size:11px;color:var(--grey);">Arrive Sat 2/28 &middot; Depart Sat 3/7</div>
+        </div>
+        <span style="color:var(--green);font-size:16px;">&#8599;</span>
+      </a>
+    </div>
+
+    <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#7A5800;margin-bottom:8px;">&#128717; Shopping &amp; Food</div>
+
+    <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:16px;">
+      <a href="https://maps.google.com/?q=Disney+Springs+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+        <span style="font-size:20px;">&#127970;</span>
+        <div style="flex:1;">
+          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Disney Springs</div>
+          <div style="font-size:11px;color:var(--grey);">Wed 3/4 Rest Day &mdash; free parking, cheaper merch</div>
+        </div>
+        <span style="color:#7A5800;font-size:16px;">&#8599;</span>
+      </a>
+      <a href="https://maps.google.com/?q=Orlando+Vineland+Premium+Outlets+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+        <span style="font-size:20px;">&#128717;</span>
+        <div style="flex:1;">
+          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Vineland Premium Outlets</div>
+          <div style="font-size:11px;color:var(--grey);">Character Warehouse inside &mdash; discounted Disney merch</div>
+        </div>
+        <span style="color:#7A5800;font-size:16px;">&#8599;</span>
+      </a>
+      <a href="https://maps.google.com/?q=Publix+Kissimmee+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+        <span style="font-size:20px;">&#127839;</span>
+        <div style="flex:1;">
+          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Publix Nearest to Airbnb</div>
+          <div style="font-size:11px;color:var(--grey);">Groceries &amp; snacks for the week</div>
+        </div>
+        <span style="color:#7A5800;font-size:16px;">&#8599;</span>
+      </a>
+    </div>
+
+    <div style="background:var(--teall);border-radius:12px;padding:12px 14px;border:1.5px solid rgba(8,145,178,0.25);margin-bottom:6px;">
+      <div style="font-size:11px;font-weight:800;text-transform:uppercase;color:var(--teal);margin-bottom:4px;">&#128279; Embed Your Custom Map</div>
+      <div style="font-size:12px;color:var(--grey);line-height:1.5;">Have a Google My Maps link? Share it with Claude and the map can be embedded directly here as a live interactive view.</div>
+    </div>
+
   </div>
 
   <!-- DAY DETAIL -->
@@ -377,25 +838,22 @@ body {
     <div id="dayContent"></div>
   </div>
 
-</div><!-- /sw -->
+</div>
 
-<!-- TAB BAR -->
 <div class="tbar">
   <button class="tb on" data-tab="overview"><span class="tb-ic">&#127968;</span><span>Trip</span></button>
   <button class="tb" data-tab="rides"><span class="tb-ic">&#127906;</span><span>Rides</span></button>
-  <button class="tb" data-tab="packing"><span class="tb-ic">&#127890;</span><span>Packing</span></button>
+  <button class="tb" data-tab="packing"><span class="tb-ic">&#127890;</span><span>Pack</span></button>
+  <button class="tb" data-tab="tips"><span class="tb-ic">&#128161;</span><span>Tips</span></button>
+  <button class="tb" data-tab="map"><span class="tb-ic">&#128205;</span><span>Map</span></button>
   <button class="tb" data-tab="docs"><span class="tb-ic">&#128203;</span><span>Docs</span></button>
 </div>
 
-</div><!-- /app -->
+</div>
 
 <script>
-// ============================================================
 // COUNTDOWN
-// Feb 28 2026 14:00 ET = 19:00 UTC
-// ============================================================
 var FLIGHT_UTC = Date.UTC(2026, 1, 28, 19, 0, 0);
-
 function updateCountdown() {
   var diff = FLIGHT_UTC - Date.now();
   var numEl = document.getElementById('cdNum');
@@ -418,16 +876,12 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 30000);
 
-// ============================================================
 // APP STATE
-// ============================================================
 var curTab = 'overview';
 var inDay = false;
 
-// ============================================================
 // TAB BAR
-// ============================================================
-document.querySelector('.tbar').addEventListener('click', function (e) {
+document.querySelector('.tbar').addEventListener('click', function(e) {
   var btn = e.target.closest('[data-tab]');
   if (!btn) return;
   var tab = btn.dataset.tab;
@@ -437,8 +891,8 @@ document.querySelector('.tbar').addEventListener('click', function (e) {
 
 function switchTab(tab) {
   curTab = tab;
-  document.querySelectorAll('.scr').forEach(function (s) { s.classList.remove('active', 'behind'); });
-  document.querySelectorAll('.tb').forEach(function (t) { t.classList.remove('on'); });
+  document.querySelectorAll('.scr').forEach(function(s) { s.classList.remove('active', 'behind'); });
+  document.querySelectorAll('.tb').forEach(function(t) { t.classList.remove('on'); });
   document.getElementById('scr-' + tab).classList.add('active');
   document.querySelector('[data-tab="' + tab + '"]').classList.add('on');
   setHeader('Orlando Trip HQ', 'Feb 28 \u2013 Mar 7, 2026 \u00B7 Family of 4', '\uD83C\uDFF0', false);
@@ -446,11 +900,8 @@ function switchTab(tab) {
   if (tab === 'packing') renderPacking();
 }
 
-// ============================================================
-// BACK + DAY VIEW
-// ============================================================
+// BACK
 document.getElementById('backBtn').addEventListener('click', closeDay);
-
 function closeDay() {
   inDay = false;
   document.getElementById('scr-day').classList.remove('active');
@@ -459,7 +910,6 @@ function closeDay() {
   cur.classList.add('active');
   setHeader('Orlando Trip HQ', 'Feb 28 \u2013 Mar 7, 2026 \u00B7 Family of 4', '\uD83C\uDFF0', false);
 }
-
 function openDay(dayKey) {
   inDay = true;
   document.getElementById('dayContent').innerHTML = buildDay(dayKey);
@@ -470,38 +920,31 @@ function openDay(dayKey) {
   var m = DAY_META[dayKey] || {};
   setHeader(m.title || 'Day Plan', m.date || '', m.emoji || '', true);
 }
-
-document.getElementById('scr-overview').addEventListener('click', function (e) {
+document.getElementById('scr-overview').addEventListener('click', function(e) {
   var row = e.target.closest('[data-day]');
   if (row) openDay(row.dataset.day);
 });
-
 function setHeader(title, sub, emoji, showBack) {
   document.getElementById('hdrTitle').textContent = title;
   document.getElementById('hdrSub').textContent = sub;
   document.getElementById('hdrEmoji').textContent = emoji;
   var b = document.getElementById('backBtn');
-  if (showBack) b.classList.add('show');
-  else b.classList.remove('show');
+  if (showBack) b.classList.add('show'); else b.classList.remove('show');
 }
 
-// ============================================================
-// DAY METADATA
-// ============================================================
+// DAY META
 var DAY_META = {
-  trvout:  { title: 'Travel Day',            date: 'Saturday \u00B7 Feb 28',  emoji: '\u2708\uFE0F' },
-  ak:      { title: 'Animal Kingdom',        date: 'Sunday \u00B7 Mar 1',     emoji: '\uD83E\uDD81' },
-  mk1:     { title: 'Magic Kingdom \u00B7 Day 1', date: 'Monday \u00B7 Mar 2', emoji: '\uD83C\uDFF0' },
-  mk2:     { title: 'Magic Kingdom \u00B7 Day 2', date: 'Tuesday \u00B7 Mar 3', emoji: '\uD83D\uDC51' },
-  rest:    { title: 'Rest Day',              date: 'Wednesday \u00B7 Mar 4',  emoji: '\uD83C\uDF3F' },
-  hs:      { title: 'Hollywood Studios',     date: 'Thursday \u00B7 Mar 5',   emoji: '\uD83C\uDFAC' },
-  univ:    { title: 'Universal IOA',         date: 'Friday \u00B7 Mar 6',     emoji: '\uD83E\uDDD9' },
-  trvhome: { title: 'Travel Home',           date: 'Saturday \u00B7 Mar 7',   emoji: '\uD83C\uDFE1' }
+  trvout:  { title: 'Travel Day',                 date: 'Saturday \u00B7 Feb 28',   emoji: '\u2708\uFE0F' },
+  ak:      { title: 'Animal Kingdom',             date: 'Sunday \u00B7 Mar 1',      emoji: '\uD83E\uDD81' },
+  mk1:     { title: 'Magic Kingdom \u00B7 Day 1', date: 'Monday \u00B7 Mar 2',      emoji: '\uD83C\uDFF0' },
+  mk2:     { title: 'Magic Kingdom \u00B7 Day 2', date: 'Tuesday \u00B7 Mar 3',     emoji: '\uD83D\uDC51' },
+  rest:    { title: 'Rest Day',                   date: 'Wednesday \u00B7 Mar 4',   emoji: '\uD83C\uDF3F' },
+  hs:      { title: 'Hollywood Studios',          date: 'Thursday \u00B7 Mar 5',    emoji: '\uD83C\uDFAC' },
+  univ:    { title: 'Universal IOA',              date: 'Friday \u00B7 Mar 6',      emoji: '\uD83E\uDDD9' },
+  trvhome: { title: 'Travel Home',                date: 'Saturday \u00B7 Mar 7',    emoji: '\uD83C\uDFE1' }
 };
 
-// ============================================================
-// DAY BUILDER HELPERS
-// ============================================================
+// HELPERS
 function tli(time, dotClass, blockClass, title, body, badge) {
   var b = badge ? '<div class="badge">' + badge + '</div>' : '';
   var p = body ? '<p>' + body + '</p>' : '';
@@ -511,26 +954,23 @@ function tli(time, dotClass, blockClass, title, body, badge) {
     + '<div class="tlb ' + blockClass + '"><h4>' + title + '</h4>' + p + b + '</div>'
     + '</div>';
 }
-
 function dayHero(cls, date, title, sub) {
   return '<div class="ddh ' + cls + '"><div class="ddh-dt">' + date + '</div><div class="ddh-ti">' + title + '</div><div class="ddh-su">' + sub + '</div></div>';
 }
-
 function chips(arr) {
   return '<div class="chips">' + arr.map(function(c) { return '<span class="chip ' + c[1] + '">' + c[0] + '</span>'; }).join('') + '</div>';
 }
-
 function infoBox(cls, h, p) {
   return '<div class="infobox ' + cls + '"><h4>' + h + '</h4><p>' + p + '</p></div>';
 }
-
 function tip(h, p) {
   return '<div class="tipbox"><div style="font-size:16px;flex-shrink:0">&#128161;</div><div><h5>' + h + '</h5><p>' + p + '</p></div></div>';
 }
+function insider(h, p) {
+  return '<div class="insiderbox"><div style="font-size:16px;flex-shrink:0">&#127381;</div><div><h5>' + h + '</h5><p>' + p + '</p></div></div>';
+}
 
-// ============================================================
 // DAY CONTENT
-// ============================================================
 function buildDay(key) {
   var fn = DAYS[key];
   return fn ? fn() : '<p style="padding:20px;color:var(--grey)">Day not found.</p>';
@@ -540,140 +980,149 @@ var DAYS = {
   trvout: function() {
     return dayHero('tv', 'Saturday &middot; February 28', '&#9992;&#65039; Travel Day', 'EWR &rarr; MCO &middot; Check in &middot; Settle')
       + chips([['UA2215 departs 2:00 PM','cb'],['Lands 4:59 PM MCO','cn'],['Check-in after 4 PM','cg']])
+      + infoBox('t', '&#128683; Do first at MCO: Toll Pass Vending Machine', 'Before picking up your rental car, find the Visitor Toll Pass vending machines inside the MCO terminal. Buy a hangtag and save up to 80% on Florida toll costs vs. the rental car company rates. Look for them near the rental car center.')
       + '<div class="sec">Timetable</div><div class="tl">'
       + tli('Morning','dn','gn','Pack up + head to EWR','Arrive 2&ndash;2.5 hrs early. Pack kids snacks and tablets. Stroller gate-checks.','')
-      + tli('2:00 PM','dn','gn','&#9992;&#65039; UA2215 Departs EWR','~3 hr flight. Snacks, tablets, headphones. Let the magic begin.','')
-      + tli('~5:00 PM','db','bl','Land MCO + Rental Car','Pick up rental, install car seats. ~25 min drive to Kissimmee.','')
+      + tli('2:00 PM','dn','gn','&#9992;&#65039; UA2215 Departs EWR','~3 hr flight. Snacks, tablets, headphones.','')
+      + tli('At MCO','dt','tl2','&#128683; Toll Pass vending machine FIRST','Find the machine before the rental car pickup. Buy the hangtag. Do not skip this &mdash; tolls on FL roads add up fast.','Save up to 80% on tolls')
+      + tli('~5:30 PM','db','bl','Pick up rental + install car seats','Install car seats in parking garage. ~25 min drive to Kissimmee.','')
       + tli('6:00 PM','dn','gn','&#127968; Check in to Airbnb','4806 Romeo Cir, Kissimmee FL. Code: HMNR52HJYB. Host: Diogo.','&#128273; After 4:00 PM')
       + tli('6:30 PM','dg','gg','&#128722; Grocery Run &mdash; Do Tonight!','Breakfast items, deli meat, cheese, fruit cups, granola bars, juice boxes, sunscreen, wipes.','')
-      + tli('8:30 PM','dgr','gr','&#128564; Early bedtime','Animal Kingdom tomorrow. Charge all devices. On MK mornings, one adult books Genie+ at 7 AM from bed.','')
-      + '</div>';
+      + tli('8:30 PM','dgr','gr','&#128564; Early bedtime','Animal Kingdom tomorrow. Charge all devices. Download MyRadar app for Florida weather.','')
+      + '</div>'
+      + insider('MyRadar App', 'Download MyRadar on your phone now. Florida afternoon storms move fast &mdash; this app shows exactly when a shower will pass so you can plan your ride queue timing around it.');
   },
 
   ak: function() {
     return dayHero('ak', 'Sunday &middot; March 1', '&#129409; Animal Kingdom', 'Safari &middot; Lion King &middot; Na\'vi &middot; Easy first day')
       + chips([['&#128663; Leave 8:15 AM','cb'],['In park ~9:15 AM','cn'],['No Genie+ needed','cr'],['Midday reset: YES','cg']])
       + '<div class="sec">Timetable</div><div class="tl">'
-      + tli('7:15 AM','dw','wh','&#9728;&#65039; Wake + breakfast at Airbnb','Eat before you go. Pack bag. Sunscreen on at home saves time at security.','')
+      + tli('7:15 AM','dw','wh','&#9728;&#65039; Wake + breakfast at Airbnb','Eat before you go. Sunscreen on at home saves 10 min at security.','')
       + tli('8:15 AM','dn','gn','&#128663; Leave for Animal Kingdom','~20 min drive. Direct parking &mdash; no monorail. Allow 30 min for parking + security + walk.','')
-      + tli('9:15 AM','db','bl','&#127919; Rope drop &mdash; straight to Safari','Animals most active in the morning. Walk-on at opening. Do NOT stop for photos yet.','&#128694; Walk-on at opening')
-      + tli('10:00 AM','db','bl','&#127754; Na\'vi River Journey','Glowing Pandora boat ride. No height req. Both kids can do it. Head here right after Safari.','&#9889; Optional LL if wait exceeds 40 min')
-      + tli('10:45 AM','dg','gg','&#129426; Gorilla Falls Trail','Walking trail: gorillas, hippos, birds. No wait. Stroller-friendly. Kids love spotting animals up close.','')
-      + tli('11:15 AM','dg','gg','&#129429; TriceraTop Spin','Gentle dino spinning ride. Both kids control up/down. Short wait.','')
-      + tli('11:45 AM','dn','gn','&#127917; Festival of the Lion King','30-min live show. Singing, acrobatics, fire. Air-conditioned. Arrive 15 min early.','&#11088; Check show times in Disney app')
-      + tli('12:30 PM','dw','wh','&#127869; Snack break + shade','Pull out packed food under Tree of Life canopy. Hydrate. Non-negotiable.','')
-      + tli('1:30 PM','dr','rd','&#127968; Midday Reset &mdash; Head home','Do not push it on Day 1. Pool + nap. Optional return 5:30 PM for light show.','')
+      + tli('9:15 AM','db','bl','&#127919; Rope drop &mdash; straight to Safari','Animals most active in morning. Walk-on at opening. Do NOT stop for photos yet.','&#128694; Walk-on at opening')
+      + tli('10:00 AM','db','bl','Na\'vi River Journey','Glowing Pandora boat ride. No height req. Both kids ride. Head here right after Safari.','&#9889; Skip LL if wait under 40 min')
+      + tli('10:45 AM','dg','gg','&#129426; Gorilla Falls Trail','Walking trail: gorillas, hippos, birds. No wait. Stroller-friendly.','')
+      + tli('11:15 AM','dg','gg','&#129429; TriceraTop Spin','Gentle dino ride. Both toddlers ride and control up/down.','')
+      + tli('11:45 AM','dn','gn','&#127917; Festival of the Lion King','30-min live show. Air-conditioned. Arrive 15 min early for good seats.','&#11088; Check show times in MDE app')
+      + tli('12:30 PM','dw','wh','&#127869; Snack break + shade','Pull out packed food under Tree of Life canopy. Hydrate.','')
+      + tli('1:30 PM','dr','rd','&#127968; Midday Reset &mdash; Head home','Do not push it on Day 1. Pool + nap. Optional return 5:30 PM.','')
       + '</div>'
-      + tip('Animal Kingdom Tips', 'Most outdoor park &mdash; bring cooling towels and bug spray. The Safari alone makes this day worth it. AK has fewer toddler rides by design, so do not stress doing everything.');
+      + tip('Animal Kingdom Tips', 'Most outdoor park &mdash; bring cooling towels and bug spray. AK has fewer toddler rides by design. The Safari alone makes this day worth it.')
+      + insider('Tree of Life Photo Spot', 'Best Tree of Life background photos are on the pathway between Africa and Asia sections &mdash; not right in front of it. Way less crowded and a better angle. Baby Care Center is near the park entrance on Discovery Island.')
+      + insider('Afternoon Rain Strategy', 'If a Florida shower hits, use your ponchos and queue for an indoor ride (Lion King show, Na\'vi). The moment rain stops, outdoor wait times drop dramatically &mdash; best time to do the Safari if you missed rope drop.');
   },
 
   mk1: function() {
     return dayHero('mk', 'Monday &middot; March 2', '&#127984; Magic Kingdom &mdash; Day 1', 'Fantasyland &middot; Parade &middot; Fireworks Night')
-      + chips([['&#128663; Leave 8:15 AM','cb'],['In park 9:15&ndash;9:30 AM','cn'],['TTC + Monorail: 45 min buffer','cb'],['&#9889; Buy Genie+','cg'],['&#128241; Book LL at 7 AM from bed','cr']])
-      + infoBox('g', '&#9889; Genie+ &mdash; One adult, 7 AM, still in bed', 'Open Disney app &rarr; buy Genie+ &rarr; book Peter Pan\'s Flight immediately. Takes 2 minutes. Kids still asleep. Then go back to breakfast mode.')
+      + chips([['&#128663; Leave 8:15 AM','cb'],['TTC + Monorail: 45 min buffer','cb'],['&#9889; Buy Genie+ at 7 AM','cg'],['Fireworks tonight','cp']])
+      + infoBox('g', '&#9889; Genie+ &mdash; One adult, 7 AM, still in bed', 'Open Disney app &rarr; buy Genie+ &rarr; book Peter Pan\'s Flight immediately. Takes 2 min. Then breakfast as normal. Grace period: LL valid 5 min before + 1h 59m after your window. Genie+ also = free ride photo downloads today.')
+      + '<div class="sec">Insider Bonus: Arrive Early for Castle Photos</div>'
+      + infoBox('t', '&#127984; Main St opens 1 HOUR before the park', 'You can enter Main St USA a full hour before rope drop. Walk to the castle for an uncrowded family photo, grab a pastry at the Main St Bakery, then be RIGHT at rope drop position. This is how Disney veterans do it.')
       + '<div class="sec">Timetable</div><div class="tl">'
-      + tli('7:00 AM','dg','gg','&#128241; Book Genie+ from phone &mdash; in bed','Buy Genie+ in Disney app. Book Peter Pan first. Done in 2 min.','&#9889; Peter Pan LL booked &rarr; back to breakfast')
-      + tli('7:30 AM','dw','wh','&#9728;&#65039; Wake kids + breakfast at Airbnb','Eat before leaving. Sunscreen at home. Lay out outfits the night before.','')
-      + tli('8:15 AM','dn','gn','&#128663; Leave for Magic Kingdom','~20 min to TTC, then monorail/ferry + security. Budget 45 min total. In park 9:15&ndash;9:30 AM.','')
-      + tli('9:20 AM','db','bl','&#129668; Dumbo the Flying Elephant','Kids control up/down. Both toddlers can ride. Classic must-do. Lines stay moderate all day.','')
-      + tli('9:45 AM','dg','gg','&#9973; Peter Pan\'s Flight &mdash; USE LL','Flying over London at night. Both kids wide-eyed. Hits 80&ndash;90 min waits by 10 AM without LL.','&#9889; Lightning Lane &mdash; booked at 7 AM from bed')
-      + tli('10:15 AM','dg','gg','&#128120; Enchanted Tales with Belle','Kids become PART of the story &mdash; one gets chosen to play a role. Most magical toddler moment at any Disney park.','&#11088; Arrive 10 min early')
-      + tli('11:00 AM','db','bl','&#127758; It\'s a Small World','Gentle singing boat ride. Toddler absolute favorite. Ride it twice if they beg.','')
-      + tli('11:30 AM','dw','wh','&#127869; Snack break near Gaston\'s Tavern','Pull out food. Hydrate. Sit down for at least 20 minutes.','')
-      + tli('12:00 PM','db','bl','&#128026; Under the Sea &mdash; Little Mermaid','Gentle dark ride. No height req. Short wait. Ariel scenes throughout.','')
-      + tli('12:30 PM','dn','gn','&#127917; Festival of Fantasy Parade','Find a Main Street spot 20 min early. Floats, princesses, Mickey. Core toddler Disney memory.','&#11088; Check parade time in Disney app')
-      + tli('1:30 PM','dr','rd','&#127968; Midday Reset &mdash; Go Home','Leave right after parade. Pool + nap. Come back for fireworks tonight!','')
-      + tli('6:30 PM','dg','gg','&#127769; Evening Return &mdash; Fireworks!','Find a hub spot 30 min before show. Pull out your glow sticks &mdash; not the $30 park ones.','&#10024; Fireworks typically 9 PM &mdash; check Disney app')
+      + tli('7:00 AM','dg','gg','&#128241; Book Genie+ from phone &mdash; in bed','Buy Genie+ in Disney app. Book Peter Pan first. Done in 2 min.','&#9889; Peter Pan LL booked')
+      + tli('7:30 AM','dw','wh','&#9728;&#65039; Wake kids + breakfast at Airbnb','Eat before leaving. Lay out outfits night before.','')
+      + tli('8:15 AM','dn','gn','&#128663; Leave for Magic Kingdom','TTC + monorail/ferry + security = 45 min total. Main St opens early &mdash; get castle photos before rope drop.','')
+      + tli('~8:45 AM','dt','tl2','&#128247; Castle photos on empty Main St','This window before rope drop is the least crowded Main St gets all day. Find a PhotoPass photographer or use your own camera. They will use your phone too &mdash; just ask.','&#128247; Best castle photo of the trip')
+      + tli('9:20 AM','db','bl','&#129668; Dumbo the Flying Elephant','Kids control up/down. Both toddlers ride. Classic must-do first.','')
+      + tli('9:45 AM','dg','gg','&#9973; Peter Pan\'s Flight &mdash; USE LL','Flying over London at night. 80&ndash;90 min waits by 10 AM without LL.','&#9889; Lightning Lane &mdash; booked at 7 AM')
+      + tli('10:15 AM','dg','gg','&#128120; Enchanted Tales with Belle','Kids become PART of the story. Most magical toddler moment at Disney. Arrive 10 min early.','&#11088; Do not miss')
+      + tli('11:00 AM','db','bl','It\'s a Small World','Gentle singing boat ride. Toddler absolute favorite.','')
+      + tli('11:30 AM','dw','wh','&#127869; Snack break near Gaston\'s Tavern','Sit down. Hydrate. Mobile Order from MDE app to skip the food line.','')
+      + tli('12:00 PM','db','bl','Under the Sea &mdash; Little Mermaid','Gentle dark ride. No height req. Short wait.','')
+      + tli('12:30 PM','dn','gn','&#127917; Festival of Fantasy Parade','Watch from Frontierland/Liberty Square for lower crowds &mdash; same great view, way less packed.','&#11088; Better spot than Main St')
+      + tli('1:30 PM','dr','rd','&#127968; Midday Reset &mdash; Go Home','Leave right after parade. Pool + nap. Come back for fireworks!','')
+      + tli('6:30 PM','dg','gg','&#127769; Evening Return &mdash; Fireworks!','Find hub spot 30 min before show. Pull out your glow sticks.','&#10024; Check fireworks time in MDE app')
       + '</div>'
-      + tip('MK Day 1 Tips', 'The monorail from TTC adds 20+ extra minutes &mdash; never underestimate it. PhotoPass photographers stand at the castle hub: stop for a family photo. Glow sticks from your bag at fireworks = instant hero moment. Leave immediately after the finale &mdash; exits are chaotic.');
+      + tip('MK Day 1 Tips', 'The monorail from TTC adds 20+ min &mdash; never underestimate it. Use Mobile Order in MDE app for food to skip every queue. Leave immediately after the fireworks finale &mdash; exits are chaotic with strollers.');
   },
 
   mk2: function() {
-    return dayHero('mk', 'Tuesday &middot; March 3', '&#128081; Magic Kingdom &mdash; Day 2', 'Slower Pace &middot; Characters &middot; Castle Photos &middot; No Pressure')
-      + chips([['&#128663; Leave 8:30 AM','cb'],['In park 9:30 AM','cn'],['Relaxed today','cg'],['Follow kids\' lead','cb']])
-      + infoBox('b', 'Day 2 Philosophy', 'You\'ve hit the big ones. Today is slow magic &mdash; castle photos, characters, rides they loved on Day 1. If they want to ride Small World four times, let them. No hustle. No agenda.')
+    return dayHero('mk', 'Tuesday &middot; March 3', '&#128081; Magic Kingdom &mdash; Day 2', 'Slower Pace &middot; Characters &middot; Main St Vehicles')
+      + chips([['&#128663; Leave 8:30 AM','cb'],['Relaxed today','cg'],['Follow kids\' lead','cb'],['Main St opens early','ct']])
+      + infoBox('b', 'Day 2 Philosophy', 'You\'ve hit the big ones. Today is slow magic &mdash; castle photos, characters, rides they loved Day 1. If they want Small World four times, let them. No hustle.')
       + '<div class="sec">Timetable</div><div class="tl">'
-      + tli('7:00 AM<br>(optional)','dg','gg','&#128241; Optional Genie+ from bed','Only if you want Peter Pan again or Mine Train (38&Prime; req). Otherwise skip &mdash; less crowded on Tuesdays.','')
+      + tli('7:00 AM<br>(optional)','dg','gg','&#128241; Optional Genie+ from bed','Only if you want Peter Pan again or Mine Train (38&Prime; req). Tuesday is less crowded than Monday &mdash; may not need it.','')
       + tli('7:45 AM','dw','wh','&#128564; Slow morning + breakfast','No scramble. You have earned it.','')
-      + tli('8:30 AM','dn','gn','&#128663; Leave for Magic Kingdom','Same TTC routine. You know the drill now.','')
-      + tli('9:30 AM','db','bl','&#128247; Castle photos on Main Street','Find a PhotoPass photographer near the hub. THE iconic family Disney photo.','&#128247; Memory Maker PhotoPass worth it here')
-      + tli('10:00 AM','db','bl','&#127904; Prince Charming Regal Carrousel','Classic carousel in Fantasyland. Both kids. Short wait all day.','')
-      + tli('10:30 AM','dg','gg','&#9973; Peter Pan\'s Flight (again)','Second time kids notice new things &mdash; Captain Hook, the croc, the pirate ship.','')
-      + tli('11:00 AM','db','bl','&#128640; Buzz Lightyear Space Ranger Spin','Interactive laser blaster ride. Both ages love competing for the high score.','')
+      + tli('8:30 AM','dn','gn','&#128663; Leave for Magic Kingdom','Same TTC routine. Consider parking at Contemporary and walking for variety.','')
+      + tli('~9:00 AM','dt','tl2','&#128652; Ride the Main St Vehicles','Free old-timey cars and double-decker bus run up Main St all morning. Wait inside entrance at Town Hall. You\'ll be dropped right at the castle. Toddlers love it, zero wait.','&#128652; Free &mdash; no ticket needed')
+      + tli('9:30 AM','db','bl','&#128247; Castle photos with no crowd behind you','Stand at the small projection buildings on either side in front of the castle and shoot from the fence &mdash; crowd disappears from background.','&#128247; THE clean castle shot')
+      + tli('10:00 AM','db','bl','&#127904; Prince Charming Regal Carrousel','Classic. Both kids. Short wait all day.','')
+      + tli('10:30 AM','dg','gg','&#9973; Peter Pan\'s Flight (again)','Second time kids notice new things &mdash; Captain Hook, the croc.','')
+      + tli('11:00 AM','db','bl','&#128640; Buzz Lightyear Space Ranger Spin','Interactive laser blaster. Both ages love competing for high score.','')
       + tli('11:30 AM','db','bl','&#128642; Walt Disney World Railroad','Steam train around the whole park. No wait. Rest your feet.','')
-      + tli('12:00 PM','dg','gg','&#128400; Character Meets &mdash; Check App','Mickey, Minnie, Cinderella, Ariel. Let kids choose who they want to meet.','&#11088; Check Disney app for meet locations')
-      + tli('12:45 PM','dw','wh','&#127869; Snack break','Same routine. Find shade. Hydrate.','')
-      + tli('1:15 PM','db','bl','&#128662; PeopleMover','Elevated tram through Tomorrowland. No wait. Air-conditioned.','')
+      + tli('12:00 PM','dg','gg','&#128400; Character Meets','Mickey, Minnie, Cinderella, Ariel. Let kids pick. Check MDE app for locations.','&#128241; PhotoPass photographer will use your phone &mdash; just ask')
+      + tli('12:45 PM','dw','wh','&#127869; Snack + Mobile Order lunch','Use MDE app Mobile Order to avoid food line.','')
+      + tli('1:15 PM','db','bl','PeopleMover','Elevated tram through Tomorrowland. No wait. Air-conditioned.','')
       + tli('2:00 PM','dr','rd','&#127968; Leave &mdash; Two MK days done!','Pool + nap. Tomorrow is a genuine rest day.','')
       + '</div>'
-      + tip('Day 2 Tips', 'If they want to ride Small World three times in a row &mdash; let them. Do not introduce a new agenda. Day 2 is about saying yes to whatever made them happiest on Day 1.');
+      + tip('Day 2 Tips', 'If they want Small World three times in a row &mdash; let them. Day 2 is about saying yes to whatever made them happiest yesterday.');
   },
 
   rest: function() {
-    return dayHero('rs', 'Wednesday &middot; March 4', '&#127807; Rest Day', 'You earned this. Pool &middot; Outlets &middot; Zero pressure.')
+    return dayHero('rs', 'Wednesday &middot; March 4', '&#127807; Rest Day', 'Pool &middot; Outlets &middot; Disney Springs &middot; Zero Pressure')
       + '<div class="sec">The Day</div><div class="tl">'
-      + tli('Morning','dgr','gr','&#128564; Sleep in &mdash; genuinely','No alarm. Kids wake when they wake. Big breakfast at Airbnb. 3 straight park days = the body needs this.','')
-      + tli('10:00 AM','dg','gg','&#127946; Pool time','Kids burn energy in a controlled, low-stakes environment. No stroller, no crowds, no sunscreen anxiety.','')
-      + tli('12:30 PM','dg','gg','&#128717; Orlando Vineland Premium Outlets','Closest outlet to Disney. Disney Character Warehouse = same merch at a fraction of park prices.','&#128161; Nike, Gap, Carter\'s for kids')
+      + tli('Morning','dgr','gr','&#128564; Sleep in &mdash; genuinely','No alarm. 3 straight park days = the body needs this.','')
+      + tli('10:00 AM','dg','gg','&#127946; Pool time','Kids burn energy in a controlled, low-stakes setting.','')
+      + tli('12:30 PM','dg','gg','&#128717; Orlando Vineland Premium Outlets','Disney Character Warehouse = same merch at fraction of park prices. Nike, Gap, Carter\'s.','')
       + tli('3:00 PM','db','bl','&#128717; Disney Springs (optional)','Free parking. World of Disney store, LEGO store, Rainforest Cafe. No park tickets needed.','')
-      + tli('Evening','dgr','gr','&#127769; Prep for Hollywood Studios','Pack snack bags tonight. No Genie+ needed tomorrow. Easiest park day of the trip.','')
-      + '</div>';
+      + tli('Evening','dgr','gr','&#127769; Prep for Hollywood Studios','Pack snack bags tonight. No Genie+ needed tomorrow.','')
+      + '</div>'
+      + insider('Disney Springs Shopping Tip', 'World of Disney at Disney Springs has virtually the same merchandise as the park stores &mdash; cheaper. If you need souvenirs, buy them here on your rest day rather than paying park prices. Also check the Character Warehouse outlet for discounted Disney merchandise.')
   },
 
   hs: function() {
     return dayHero('hs', 'Thursday &middot; March 5', '&#127915; Hollywood Studios', 'Runaway Railway &middot; Toy Story Land &middot; Shows &middot; Lighter Day')
       + chips([['&#128663; Leave 8:15 AM','cb'],['In park 9:15 AM','cn'],['No Genie+ needed','cr'],['Out by 2 PM','cg']])
       + '<div class="sec">Timetable</div><div class="tl">'
-      + tli('7:30 AM','dw','wh','&#9728;&#65039; Wake + breakfast at Airbnb','Lightest park day. No major rush. Still eat before you go.','')
+      + tli('7:30 AM','dw','wh','&#9728;&#65039; Wake + breakfast at Airbnb','Lightest park day. Still eat before you go.','')
       + tli('8:15 AM','dn','gn','&#128663; Leave for Hollywood Studios','Direct parking lot. Allow 30 min for parking + security + walk.','')
-      + tli('9:15 AM','db','bl','&#127919; Rope Drop &mdash; Runaway Railway FIRST','No height req. Cartoon world comes to life. Walk-on at opening &mdash; 60+ min waits by 10 AM.','&#128694; Walk-on at rope drop')
-      + tli('10:00 AM','dg','gg','&#128640; Alien Swirling Saucers','Toy Story Land. Spinning saucers. Fun for both kids. Check 3-yr-old is 32&Prime;+.','32&Prime; height requirement')
-      + tli('10:30 AM','dn','gn','&#127925; Disney Junior Dance Party','Interactive show: Mickey, Doc McStuffins. Kids dance along. Air-conditioned.','&#11088; Top toddler experience &mdash; check show times')
-      + tli('11:15 AM','dw','wh','&#127869; Snack in Toy Story Land','Colorful immersive area. Great themed photo while eating.','')
-      + tli('11:45 AM','dn','gn','&#10052;&#65039; Frozen Sing-Along Celebration','Live Let It Go. Both kids will sing along. Air-conditioned theatre.','Check show times in Disney app')
-      + tli('12:30 PM','db','bl','&#127919; Toy Story Mania (if short wait)','Interactive shooter ride. Skip if wait is over 30 min.','')
-      + tli('1:30 PM','dr','rd','&#127968; Leave &mdash; Lighter day done','Pool + nap. Universal tomorrow &mdash; you want everyone fresh.','')
+      + tli('9:15 AM','db','bl','&#127919; Rope Drop &mdash; Runaway Railway FIRST','No height req. Walk-on at opening &mdash; 60+ min waits by 10 AM.','&#128694; Walk-on at rope drop')
+      + tli('10:00 AM','dg','gg','&#128640; Alien Swirling Saucers','Toy Story Land. Spinning saucers. Check 3-yr-old is 32&Prime;+.','32&Prime; height req')
+      + tli('10:30 AM','dn','gn','&#127925; Disney Junior Dance Party','Mickey, Doc McStuffins. Kids dance along. Air-conditioned.','&#11088; Check show times')
+      + tli('11:15 AM','dw','wh','&#127869; Snack in Toy Story Land','Colorful immersive area. Use Mobile Order in MDE app &mdash; skip the food line entirely.','')
+      + tli('11:45 AM','dn','gn','&#10052;&#65039; Frozen Sing-Along Celebration','Live Let It Go. Both kids will sing. Air-conditioned.','')
+      + tli('12:30 PM','db','bl','Toy Story Mania (if short wait)','Skip if wait is over 30 min.','')
+      + tli('1:30 PM','dr','rd','&#127968; Leave &mdash; Lighter day done','Universal tomorrow &mdash; everyone needs to be fresh.','')
       + '</div>'
-      + tip('Hollywood Tips', 'Star Wars Galaxy\'s Edge is stunning to walk through but both rides have height limits for toddlers. Woody &amp; Buzz character meets in Toy Story Land if kids are still fresh. Do not turn this into a long day.');
+      + tip('Hollywood Tips', 'Star Wars Galaxy\'s Edge is stunning to walk through but both rides have height limits for toddlers. Woody and Buzz character meets in Toy Story Land if kids are still fresh. Do not turn this into a long day.')
+      + insider('Mobile Order = no food lines', 'Hollywood Studios has great quick service restaurants. Use MDE app Mobile Order to pre-order your Toy Story Land lunch &mdash; tap + at the bottom, select restaurant, pick your window. Walk up and collect. Never stand in a food line.');
   },
 
   univ: function() {
     return dayHero('uv', 'Friday &middot; March 6', '&#129497; Universal &mdash; Hogsmeade Day', 'Seuss Landing &middot; Butterbeer &middot; Hogwarts Express')
-      + chips([['&#128663; Leave 7:45 AM','cb'],['In park 8:30 AM','cn'],['Park-to-Park ticket','cp'],['Vibes day &mdash; not ride-max','cg']])
-      + infoBox('p', '&#9888;&#65039; Toddler Reality Check', 'Most HP rides need 48&Prime;+ (Forbidden Journey, Hagrid\'s) &mdash; your kids cannot ride them. That\'s fine. The magic IS the world itself: the castle, the shops, the Butterbeer, interactive wands. Seuss Landing has multiple perfect rides for this age.')
+      + chips([['&#128663; Leave 7:45 AM','cb'],['In park 8:30 AM','cn'],['Park-to-Park ticket','cp'],['Vibes day','cg']])
+      + infoBox('r', '&#9888;&#65039; Toddler Reality Check', 'Most HP rides need 48&Prime;+ (Forbidden Journey, Hagrid\'s) &mdash; your kids cannot ride them. That\'s fine. The magic IS the world: the castle, shops, Butterbeer, interactive wands. Seuss Landing has multiple perfect rides for this age.')
       + '<div class="sec">Timetable</div><div class="tl">'
-      + tli('7:45 AM','dn','gn','&#128663; Leave for Universal IOA','Parking garage. Short walk to entrance. Allow 30 min buffer.','')
-      + tli('8:30 AM','dp','pp','&#127919; Rope Drop &mdash; Seuss Landing FIRST','Shorter lines, toddler-perfect rides, incredible colors. Kids amazed immediately.','')
-      + tli('8:40 AM','dp','pp','&#128049; The Cat in the Hat','Spinning car through the book. No height req. Both toddlers ride. Walk-on at opening.','&#128694; Walk-on at rope drop')
-      + tli('9:00 AM','dp','pp','&#127904; Caro-Seuss-el','Seuss-themed carousel. No height req. Great photos.','')
-      + tli('9:20 AM','dp','pp','&#128644; High in the Sky Trolley Train','Bird\'s-eye view of Seuss Landing. Calm, scenic, beautiful.','')
-      + tli('9:45 AM','dg','gg','&#127963;&#65039; Walk to Hogsmeade &mdash; THE MOMENT','Round the corner and Hogwarts Castle appears. Walk slowly. Look up. Let the moment land.','&#10024; Breathe it in')
-      + tli('10:00 AM','dg','gg','&#127866; Butterbeer &mdash; Non-Negotiable','Frozen Butterbeer (non-alcoholic). Cream soda + butterscotch foam. Everyone gets one. Take the photo.','&#128247; Before the cart lines build')
-      + tli('10:30 AM','dg','gg','&#129668; Interactive Wand Experience','Buy a wand (~$65) from Ollivanders. Wave at medallion spots &mdash; water sprays, lights turn on. Kids obsessed.','&#11088; Kids will be completely obsessed')
-      + tli('11:15 AM','dp','pp','&#128650; Hogwarts Express &rarr; Diagon Alley','Full show inside the train compartment. Calm, toddler-perfect magic. Park-to-Park ticket required.','&#11088; Cannot miss &mdash; need Park-to-Park ticket')
-      + tli('12:00 PM','dp','pp','&#128009; Explore Diagon Alley (USF side)','Gringotts Bank, fire-breathing dragon, wand spots, shops. Pure exploration zone.','')
-      + tli('12:30 PM','dw','wh','&#127869; Lunch + rest break','Three Broomsticks or Leaky Cauldron. Or pull out packed food.','')
-      + tli('1:30 PM','dr','rd','&#127968; Leave when the magic wanes','When kids start fading, you have enough memories. Pool + nap. Trip is almost done.','')
+      + tli('7:45 AM','dn','gn','&#128663; Leave for Universal IOA','Parking garage. Allow 30 min buffer.','')
+      + tli('8:30 AM','dp','pp','&#127919; Rope Drop &mdash; Seuss Landing FIRST','Shorter lines, toddler-perfect rides. Kids amazed immediately.','')
+      + tli('8:40 AM','dp','pp','The Cat in the Hat','Spinning car through the book. No height req. Walk-on at opening.','&#128694; Walk-on at rope drop')
+      + tli('9:00 AM','dp','pp','Caro-Seuss-el','Seuss-themed carousel. No height req. Great photos.','')
+      + tli('9:20 AM','dp','pp','High in the Sky Trolley Train','Bird\'s-eye view of Seuss Landing. Calm and scenic.','')
+      + tli('9:45 AM','dg','gg','&#127963;&#65039; Walk to Hogsmeade &mdash; THE MOMENT','Round the corner and Hogwarts Castle appears. Walk slowly. Let the moment land.','&#10024; Stop and breathe it in')
+      + tli('10:00 AM','dg','gg','&#127866; Butterbeer &mdash; Non-Negotiable','Frozen Butterbeer. Cream soda + butterscotch foam. Everyone gets one.','&#128247; Take the photo')
+      + tli('10:30 AM','dg','gg','&#129668; Interactive Wand Experience','Buy a wand (~$65) from Ollivanders. Wave at medallion spots. Kids will be obsessed.','&#11088; Kids will be completely obsessed')
+      + tli('11:15 AM','dp','pp','&#128650; Hogwarts Express &rarr; Diagon Alley','Full show inside train compartment. Calm toddler-perfect magic. Park-to-Park ticket required.','&#11088; Cannot miss')
+      + tli('12:00 PM','dp','pp','&#128009; Explore Diagon Alley (USF side)','Gringotts Bank, fire-breathing dragon, wand spots, shops.','')
+      + tli('12:30 PM','dw','wh','&#127869; Lunch break','Three Broomsticks or pull out packed food.','')
+      + tli('1:30 PM','dr','rd','&#127968; Leave when the magic wanes','When kids start fading, you have enough memories.','')
       + '</div>'
-      + tip('Universal Tips', 'Hagrid\'s: 120+ min wait and toddlers cannot ride &mdash; skip it entirely. Friday is busier but you are in experience mode, not ride-count mode. Seuss Landing at rope drop is the smartest move with kids under 6.');
+      + tip('Universal Tips', 'Hagrid\'s: 120+ min wait AND toddlers cannot ride &mdash; skip it entirely. Friday is busier but you are in experience mode, not ride-count mode. Seuss Landing at rope drop is the smartest move with kids under 6.');
   },
 
   trvhome: function() {
     return dayHero('tv', 'Saturday &middot; March 7', '&#127968; Travel Home', 'MCO &rarr; EWR &middot; Checkout by 10 AM &middot; UA1866')
       + chips([['Checkout by 10:00 AM','cr'],['UA1866 departs 12:11 PM','cn'],['Arrives EWR 2:59 PM','cb']])
       + '<div class="sec">Timetable</div><div class="tl">'
-      + tli('7:00 AM','dw','wh','Pack up + final breakfast','Check all rooms, chargers, stroller. Leave space in bags for souvenirs.','')
+      + tli('7:00 AM','dw','wh','Pack up + final breakfast','Check all rooms, chargers, stroller. Leave space for souvenirs.','')
       + tli('9:30 AM','dr','rd','&#128273; Checkout &mdash; 4806 Romeo Cir','Must be out by 10:00 AM. Confirmation: HMNR52HJYB.','')
-      + tli('9:45 AM','dn','gn','&#128663; Drive to MCO + Return Rental','~25 min drive. Budget 90 min: rental drop + check-in + security + gate walk.','')
-      + tli('12:11 PM','dn','gn','&#9992;&#65039; UA1866 Departs MCO','MCO &rarr; EWR. Have entertainment ready. Let them nap on the plane.','')
+      + tli('9:45 AM','dn','gn','&#128663; Drive to MCO + Return Rental','~25 min drive. Budget 90 min: rental drop + check-in + security + gate.','')
+      + tli('12:11 PM','dn','gn','&#9992;&#65039; UA1866 Departs MCO','MCO &rarr; EWR. Have entertainment ready.','')
       + tli('2:59 PM','dg','gg','&#127968; Land EWR &mdash; Trip Complete!','Two toddlers. Four parks. Safari at dawn. Butterbeer. Fireworks over the castle.','&#127775; They\'ll talk about this for years')
       + '</div>';
   }
 };
 
-// ============================================================
 // RIDES
-// ============================================================
 var RIDES = {
   ak: [
     { n: 'Kilimanjaro Safari', d: 'Real animals: giraffes, elephants, lions, hippos. Most active in the morning. Number 1 toddler hit.', b: [['&#11088; Must-do first','rb-st'],['&#128694; Rope drop standby','rb-go']] },
@@ -683,27 +1132,28 @@ var RIDES = {
     { n: 'TriceraTop Spin', d: 'Gentle dino spinning ride. Both kids control up/down. Short wait.', b: [['No height req','rb-st']] }
   ],
   mk: [
-    { n: "Peter Pan's Flight", d: 'Flying over London at night. Hits 80\u201390 min waits by 10 AM without LL. Book at 7 AM from bed.', b: [['&#9889; Book LL at 7 AM from bed!','rb-ll'],['&#11088; #1 priority','rb-st']] },
-    { n: 'Enchanted Tales with Belle', d: 'Kids become PART of the story \u2014 one gets chosen to play a role. Most magical toddler moment at Disney.', b: [['&#11088; Do not skip \u2014 arrive early','rb-st']] },
+    { n: "Peter Pan's Flight", d: 'Flying over London at night. Hits 80\u201390 min waits by 10 AM. Book LL at 7 AM from bed. Grace period: valid 1h 59m after window closes.', b: [['&#9889; Book LL at 7 AM!','rb-ll'],['&#11088; #1 priority','rb-st']] },
+    { n: 'Enchanted Tales with Belle', d: 'Kids become PART of the story \u2014 one gets chosen to play a role. Most magical toddler moment at Disney. Arrive early.', b: [['&#11088; Do not skip','rb-st']] },
     { n: 'Dumbo the Flying Elephant', d: 'Classic. Both toddlers ride and control up/down. Do early before lines build.', b: [['No height req','rb-st'],['Do at opening','rb-go']] },
     { n: "It's a Small World", d: 'Gentle singing boat ride. Toddler absolute favorite. Ride as many times as they want.', b: [['Short wait all day','rb-go']] },
-    { n: 'Seven Dwarfs Mine Train', d: 'Mild coaster. 38\u2033 height req \u2014 5-yr-old likely qualifies. Fun if they want it.', b: [['38\u2033 height req','rb-ht'],['&#9889; Individual LL $15\u201325','rb-ll']] },
+    { n: 'Main St Vehicles', d: 'Free vintage cars + double-decker bus running up Main St all morning. Wait at Town Hall inside entrance. Dropped right at castle. Zero wait.', b: [['Totally free','rb-go'],['Kids love it','rb-st']] },
+    { n: 'Seven Dwarfs Mine Train', d: 'Mild coaster. 38\u2033 height req \u2014 5-yr-old likely qualifies. Use Rider Switch so both adults can ride.', b: [['38\u2033 height req','rb-ht'],['&#9889; Individual LL $15\u201325','rb-ll'],['Rider Switch available','rb-go']] },
     { n: 'Under the Sea \u2014 Mermaid', d: 'Gentle dark ride. No height req. Short wait. Ariel scenes.', b: [['No height req','rb-st']] },
     { n: 'Buzz Lightyear Spin', d: 'Interactive laser blaster ride. Both ages love competing for high score.', b: [['Short\u2013moderate wait','rb-go']] },
-    { n: 'Festival of Fantasy Parade', d: 'Best Disney parade. Find Main Street spot 20 min early. Core toddler memory.', b: [['&#11088; Do not miss','rb-st'],['Check app for time','rb-go']] },
-    { n: 'Happily Ever After Fireworks', d: 'Castle fireworks \u2014 your Day 1 evening. Pull out glow sticks from your bag, not the $30 park ones.', b: [['&#11088; Core Disney memory','rb-st'],['Typically 9:00 PM','rb-go']] }
+    { n: 'Festival of Fantasy Parade', d: 'Best Disney parade. Watch from Frontierland/Liberty Square for lower crowds \u2014 same great view, way less packed than Main St.', b: [['&#11088; Do not miss','rb-st'],['Frontierland spot = less crowd','rb-go']] },
+    { n: 'Happily Ever After Fireworks', d: 'Castle fireworks \u2014 your Day 1 evening. Pull out glow sticks from your bag, not the $30 park ones. Alternative: watch from Polynesian beach (way more relaxed with kids).', b: [['&#11088; Core Disney memory','rb-st'],['Typically 9:00 PM','rb-go']] }
   ],
   hs: [
     { n: "Mickey & Minnie's Runaway Railway", d: 'No height req. Cartoon world comes to life. Walk-on at rope drop \u2014 60+ min waits by 10 AM.', b: [['&#128694; Rope drop','rb-go'],['&#11088; Must-do','rb-st']] },
     { n: 'Alien Swirling Saucers', d: 'Toy Story Land. Spinning saucers. Fun for both kids.', b: [['32\u2033 height req','rb-ht'],['After rope drop','rb-go']] },
     { n: 'Disney Junior Dance Party', d: 'Interactive show: Mickey, Doc McStuffins. Kids dance along. Air-conditioned.', b: [['&#11088; Top toddler experience','rb-st'],['Check show times','rb-go']] },
     { n: 'Frozen Sing-Along Celebration', d: 'Live Let It Go. Both kids will sing along. Air-conditioned theatre.', b: [['Great midday break','rb-go']] },
-    { n: 'Slinky Dog Dash', d: 'Mild coaster. 38\u2033 req \u2014 5-yr-old likely qualifies. Skip if it splits the family.', b: [['38\u2033 height req','rb-ht'],['&#9889; LL if you want it','rb-ll']] },
+    { n: 'Slinky Dog Dash', d: 'Mild coaster. 38\u2033 req \u2014 5-yr-old likely qualifies. Rider Switch available if one parent stays with toddlers.', b: [['38\u2033 height req','rb-ht'],['Rider Switch','rb-go']] },
     { n: 'Toy Story Mania', d: 'Interactive shooter ride. Skip if wait is over 30 min.', b: [['Skip if 30+ min wait','rb-sk']] }
   ],
   univ: [
     { n: 'The Cat in the Hat', d: 'Spinning car through the book. No height req. Both toddlers ride. Walk-on at rope drop.', b: [['No height req','rb-st'],['&#128694; Rope drop','rb-go']] },
-    { n: 'Caro-Seuss-el', d: 'Seuss-themed carousel. No height req. Great photos.', b: [['No height req','rb-st']] },
+    { n: 'Caro-Seuss-el', d: "Seuss-themed carousel. No height req. Great photos.", b: [['No height req','rb-st']] },
     { n: 'High in the Sky Trolley Train', d: "Bird's-eye view of Seuss Landing. Calm, scenic, beautiful.", b: [['Great views','rb-st']] },
     { n: 'Hogwarts Express', d: 'Full show inside the train compartment. Calm, toddler-perfect magic. Park-to-Park ticket required.', b: [['&#11088; Cannot miss','rb-st'],['Park-to-Park ticket needed','rb-ht']] },
     { n: 'Interactive Wand Experience', d: 'Buy wand (~$65) from Ollivanders. Wave at medallion spots \u2014 water sprays, lights turn on. Kids obsessed.', b: [['&#11088; Kids will be obsessed','rb-st']] },
@@ -714,7 +1164,6 @@ var RIDES = {
 };
 
 var curPark = 'ak';
-
 function renderRides() {
   document.querySelectorAll('#parkTabs .ptab').forEach(function(t) { t.classList.remove('on'); });
   var active = document.querySelector('#parkTabs [data-park="' + curPark + '"]');
@@ -725,7 +1174,6 @@ function renderRides() {
   }).join('');
   document.getElementById('rideList').innerHTML = html;
 }
-
 document.getElementById('parkTabs').addEventListener('click', function(e) {
   var btn = e.target.closest('[data-park]');
   if (!btn) return;
@@ -733,66 +1181,65 @@ document.getElementById('parkTabs').addEventListener('click', function(e) {
   renderRides();
 });
 
-// ============================================================
 // PACKING
-// ============================================================
 var ITEMS = [
   { id:'p01', n:'Passports (all 4)',              l:'Carry-on',             c:'docs' },
   { id:'p02', n:'Driver\'s License',               l:'Wallet',               c:'docs' },
   { id:'p03', n:'Health Insurance Cards',          l:'Wallet',               c:'docs' },
   { id:'p04', n:'Flight Confirmation NZ4HTS',      l:'Phone screenshot',     c:'docs' },
   { id:'p05', n:'Airbnb Code HMNR52HJYB',          l:'Phone screenshot',     c:'docs' },
-  { id:'p06', n:'Disney Tickets in app',           l:'Disney app',           c:'docs' },
+  { id:'p06', n:'Disney Tickets in MDE app',       l:'Disney app',           c:'docs' },
   { id:'p07', n:'Universal Park-to-Park Tickets',  l:'Universal app',        c:'docs' },
   { id:'p08', n:'Credit Cards + backup card',      l:'Wallet',               c:'docs' },
   { id:'p09', n:'Diapers (full pack)',              l:'Suitcase',             c:'kids' },
-  { id:'p10', n:'Pull-ups (if needed)',            l:'Suitcase',             c:'kids' },
-  { id:'p11', n:'Wipes (2 packs)',                 l:'Park bag',             c:'kids' },
-  { id:'p12', n:'Portable Potty Seat / Stand',     l:'Car',                  c:'kids' },
-  { id:'p13', n:'Disposable potty liners',         l:'Park bag',             c:'kids' },
-  { id:'p14', n:'Diaper cream',                    l:'Park bag',             c:'kids' },
-  { id:'p15', n:'Wet bag (for accidents)',          l:'Park bag',             c:'kids' },
-  { id:'p16', n:'Changing pad',                    l:'Park bag',             c:'kids' },
-  { id:'p17', n:'Kids extra change of clothes',    l:'Park bag',             c:'kids' },
-  { id:'p18', n:'Kids Tylenol / medications',      l:'Park bag',             c:'kids' },
-  { id:'p19', n:'Small comfort toy / lovey',       l:'Park bag',             c:'kids' },
-  { id:'p20', n:'Sticker book / entertainment',    l:'Park bag',             c:'kids' },
-  { id:'p21', n:'Lightweight Stroller',            l:'Car',                  c:'park' },
-  { id:'p22', n:'Stroller rain cover',             l:'Car',                  c:'park' },
-  { id:'p23', n:'Stroller clip-on fan',            l:'Park bag',             c:'park' },
-  { id:'p24', n:'Sunscreen (spray + face stick)',  l:'Park bag',             c:'park' },
-  { id:'p25', n:'Cooling towels x4',               l:'Park bag',             c:'park' },
-  { id:'p26', n:'Hats (adults + kids)',            l:'Park bag',             c:'park' },
-  { id:'p27', n:'Refillable water bottles x4',     l:'Park bag',             c:'park' },
-  { id:'p28', n:'Electrolyte packets',             l:'Park bag',             c:'park' },
-  { id:'p29', n:'Packed snacks + sandwiches',      l:'Park bag (daily)',     c:'park' },
-  { id:'p30', n:'Hand sanitizer',                  l:'Park bag',             c:'park' },
-  { id:'p31', n:'Ponchos x4',                      l:'Park bag',             c:'park' },
-  { id:'p32', n:'Small first aid kit',             l:'Park bag',             c:'park' },
-  { id:'p33', n:'Ziplock bags x10',                l:'Park bag',             c:'park' },
-  { id:'p34', n:'Glow sticks (pack of 50)',        l:'Suitcase',             c:'park' },
-  { id:'p35', n:'iPhones + chargers',              l:'Carry-on',             c:'tech' },
-  { id:'p36', n:'Portable power bank x2',          l:'Park bag',             c:'tech' },
-  { id:'p37', n:'Ray-Ban Meta glasses',            l:'Park bag',             c:'tech' },
-  { id:'p38', n:'Meta charging cable',             l:'Suitcase',             c:'tech' },
-  { id:'p39', n:'Apple Watch charger',             l:'Suitcase',             c:'tech' },
-  { id:'p40', n:'AirPods x2',                      l:'Carry-on',             c:'tech' },
-  { id:'p41', n:'Travel power strip',              l:'Suitcase',             c:'tech' },
-  { id:'p42', n:'Car phone charger / USB',         l:'Car',                  c:'tech' },
-  { id:'p43', n:'T-shirts adults (5-6 each)',      l:'Suitcase',             c:'clothes' },
-  { id:'p44', n:'Shorts adults (3-4)',             l:'Suitcase',             c:'clothes' },
-  { id:'p45', n:'Light hoodie / jacket',           l:'Suitcase',             c:'clothes' },
-  { id:'p46', n:'Swimsuits',                       l:'Suitcase',             c:'clothes' },
-  { id:'p47', n:'Comfortable sneakers (worn-in)',  l:'Wear',                 c:'clothes' },
-  { id:'p48', n:'Kids park outfits (5-6)',         l:'Suitcase',             c:'clothes' },
-  { id:'p49', n:'Kids swimsuits x2 each',          l:'Suitcase',             c:'clothes' },
-  { id:'p50', n:'Extra kids socks (6-7 pairs)',    l:'Suitcase',             c:'clothes' },
-  { id:'p51', n:'Small cooler bag',                l:'Car',                  c:'car' },
-  { id:'p52', n:'Ice packs x3',                    l:'Freezer until leaving',c:'car' },
-  { id:'p53', n:'Trash bags',                      l:'Car',                  c:'car' },
-  { id:'p54', n:'Paper towels',                    l:'Car',                  c:'car' },
-  { id:'p55', n:'Umbrella',                        l:'Car',                  c:'car' },
-  { id:'p56', n:'Laundry pods (small pack)',       l:'Suitcase',             c:'car' }
+  { id:'p10', n:'Pull-ups (if needed)',             l:'Suitcase',             c:'kids' },
+  { id:'p11', n:'Wipes (2 packs)',                  l:'Park bag',             c:'kids' },
+  { id:'p12', n:'Portable Potty Seat / Stand',      l:'Car',                  c:'kids' },
+  { id:'p13', n:'Disposable potty liners',          l:'Park bag',             c:'kids' },
+  { id:'p14', n:'Diaper cream',                     l:'Park bag',             c:'kids' },
+  { id:'p15', n:'Wet bag (for accidents)',           l:'Park bag',             c:'kids' },
+  { id:'p16', n:'Changing pad',                     l:'Park bag',             c:'kids' },
+  { id:'p17', n:'Kids extra change of clothes',     l:'Park bag',             c:'kids' },
+  { id:'p18', n:'Kids Tylenol / medications',       l:'Park bag',             c:'kids' },
+  { id:'p19', n:'Small comfort toy / lovey',        l:'Park bag',             c:'kids' },
+  { id:'p20', n:'Sticker book / entertainment',     l:'Park bag',             c:'kids' },
+  { id:'p21', n:'Lightweight Stroller',             l:'Car',                  c:'park' },
+  { id:'p22', n:'Stroller rain cover',              l:'Car',                  c:'park' },
+  { id:'p23', n:'Stroller clip-on fan',             l:'Park bag',             c:'park' },
+  { id:'p24', n:'Sunscreen (spray + face stick)',   l:'Park bag',             c:'park' },
+  { id:'p25', n:'Cooling towels x4',                l:'Park bag',             c:'park' },
+  { id:'p26', n:'Hats (adults + kids)',             l:'Park bag',             c:'park' },
+  { id:'p27', n:'Refillable water bottles x4',      l:'Park bag',             c:'park' },
+  { id:'p28', n:'Electrolyte packets',              l:'Park bag',             c:'park' },
+  { id:'p29', n:'Packed snacks + sandwiches',       l:'Park bag (daily)',     c:'park' },
+  { id:'p30', n:'Hand sanitizer',                   l:'Park bag',             c:'park' },
+  { id:'p31', n:'Ponchos x4',                       l:'Park bag',             c:'park' },
+  { id:'p32', n:'Small first aid kit',              l:'Park bag',             c:'park' },
+  { id:'p33', n:'Ziplock bags x10',                 l:'Park bag',             c:'park' },
+  { id:'p34', n:'Glow sticks (pack of 50)',         l:'Suitcase',             c:'park' },
+  { id:'p35', n:'Souvenir popcorn bucket',          l:'Buy at first park',    c:'park' },
+  { id:'p36', n:'iPhones + chargers',               l:'Carry-on',             c:'tech' },
+  { id:'p37', n:'Portable power bank x2',           l:'Park bag',             c:'tech' },
+  { id:'p38', n:'Ray-Ban Meta glasses',             l:'Park bag',             c:'tech' },
+  { id:'p39', n:'Meta charging cable',              l:'Suitcase',             c:'tech' },
+  { id:'p40', n:'Apple Watch charger',              l:'Suitcase',             c:'tech' },
+  { id:'p41', n:'AirPods x2',                       l:'Carry-on',             c:'tech' },
+  { id:'p42', n:'Travel power strip',               l:'Suitcase',             c:'tech' },
+  { id:'p43', n:'Car phone charger / USB',          l:'Car',                  c:'tech' },
+  { id:'p44', n:'T-shirts adults (5-6 each)',       l:'Suitcase',             c:'clothes' },
+  { id:'p45', n:'Shorts adults (3-4)',              l:'Suitcase',             c:'clothes' },
+  { id:'p46', n:'Light hoodie / jacket',            l:'Suitcase',             c:'clothes' },
+  { id:'p47', n:'Swimsuits',                        l:'Suitcase',             c:'clothes' },
+  { id:'p48', n:'Comfortable sneakers (worn-in)',   l:'Wear',                 c:'clothes' },
+  { id:'p49', n:'Kids park outfits (5-6)',          l:'Suitcase',             c:'clothes' },
+  { id:'p50', n:'Kids swimsuits x2 each',           l:'Suitcase',             c:'clothes' },
+  { id:'p51', n:'Extra kids socks (6-7 pairs)',     l:'Suitcase',             c:'clothes' },
+  { id:'p52', n:'Small cooler bag',                 l:'Car',                  c:'car' },
+  { id:'p53', n:'Ice packs x3',                     l:'Freezer until leaving',c:'car' },
+  { id:'p54', n:'Trash bags',                       l:'Car',                  c:'car' },
+  { id:'p55', n:'Paper towels',                     l:'Car',                  c:'car' },
+  { id:'p56', n:'Umbrella',                         l:'Car',                  c:'car' },
+  { id:'p57', n:'Laundry pods (small pack)',        l:'Suitcase',             c:'car' }
 ];
 
 var checked = {};
@@ -832,9 +1279,7 @@ document.getElementById('scr-packing').addEventListener('click', function(e) {
   renderPacking();
 });
 
-// ============================================================
 // COPY BUTTONS
-// ============================================================
 document.getElementById('scr-docs').addEventListener('click', function(e) {
   var btn = e.target.closest('[data-copy]');
   if (!btn) return;
@@ -856,9 +1301,7 @@ document.getElementById('scr-docs').addEventListener('click', function(e) {
   }
 });
 
-// ============================================================
 // INIT
-// ============================================================
 renderRides();
 renderPacking();
 </script>
