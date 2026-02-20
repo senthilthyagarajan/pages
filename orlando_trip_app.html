@@ -726,111 +726,73 @@ body {
   </div>
 
   <!-- MAP TAB -->
-  <div class="scr" id="scr-map">
+  <div class="scr" id="scr-map" style="padding:0;display:flex;flex-direction:column;">
 
-    <div style="background:var(--blue);border-radius:14px;padding:14px;color:#fff;margin-bottom:14px;">
-      <div style="font-size:11px;opacity:0.6;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:4px;">&#128205; Trip Map</div>
-      <div style="font-size:18px;font-weight:900;margin-bottom:4px;">Orlando Area</div>
-      <div style="font-size:12px;opacity:0.8;line-height:1.5;">Tap any link below to open in Google Maps. Share your custom My Maps link with Claude to embed it here.</div>
+    <!-- LIVE EMBEDDED MAP -->
+    <div style="flex-shrink:0;border-radius:0;overflow:hidden;border-bottom:2px solid var(--border);">
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1j4zztXc572SNLf_xaEHDEjhLEBkMok8&ehbc=2E312F"
+        style="width:100%;height:340px;border:none;display:block;"
+        allowfullscreen loading="lazy" title="Orlando Trip Custom Map">
+      </iframe>
     </div>
 
-    <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue2);margin-bottom:8px;">&#127984; Disney Parks</div>
-
-    <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:16px;">
-      <a href="https://maps.google.com/?q=Magic+Kingdom+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-        <span style="font-size:20px;">&#127984;</span>
-        <div style="flex:1;">
-          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Magic Kingdom</div>
-          <div style="font-size:11px;color:var(--grey);">Mon 3/2 &amp; Tue 3/3 &mdash; 3 World Dr</div>
-        </div>
-        <span style="color:var(--blue2);font-size:16px;">&#8599;</span>
-      </a>
-      <a href="https://maps.google.com/?q=Animal+Kingdom+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-        <span style="font-size:20px;">&#129446;</span>
-        <div style="flex:1;">
-          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Animal Kingdom</div>
-          <div style="font-size:11px;color:var(--grey);">Sun 3/1 &mdash; 2901 Osceola Pkwy</div>
-        </div>
-        <span style="color:var(--blue2);font-size:16px;">&#8599;</span>
-      </a>
-      <a href="https://maps.google.com/?q=Hollywood+Studios+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-        <span style="font-size:20px;">&#127916;</span>
-        <div style="flex:1;">
-          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Hollywood Studios</div>
-          <div style="font-size:11px;color:var(--grey);">Thu 3/5 &mdash; 351 S Studio Dr</div>
-        </div>
-        <span style="color:var(--blue2);font-size:16px;">&#8599;</span>
+    <!-- OPEN FULL MAP BUTTON -->
+    <div style="padding:10px 14px;background:#fff;border-bottom:1px solid var(--border);flex-shrink:0;">
+      <a href="https://www.google.com/maps/d/viewer?mid=1j4zztXc572SNLf_xaEHDEjhLEBkMok8"
+         target="_blank" rel="noopener"
+         style="display:flex;align-items:center;justify-content:center;gap:7px;background:var(--blue);color:#fff;border-radius:10px;padding:10px 14px;text-decoration:none;font-size:13px;font-weight:700;">
+        &#128279; Open Full Map in Google Maps
       </a>
     </div>
 
-    <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--purple);margin-bottom:8px;">&#129497; Universal</div>
+    <!-- SCROLLABLE QUICK LINKS -->
+    <div style="flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px;">
 
-    <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:16px;">
-      <a href="https://maps.google.com/?q=Universal+Islands+of+Adventure+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-        <span style="font-size:20px;">&#129497;</span>
-        <div style="flex:1;">
-          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Islands of Adventure</div>
-          <div style="font-size:11px;color:var(--grey);">Fri 3/6 &mdash; 6000 Universal Blvd</div>
-        </div>
-        <span style="color:var(--purple);font-size:16px;">&#8599;</span>
-      </a>
+      <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue2);margin-bottom:8px;">&#127984; Disney Parks</div>
+      <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px;">
+        <a href="https://maps.google.com/?q=Magic+Kingdom+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#127984;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Magic Kingdom</div><div style="font-size:11px;color:var(--grey);">Mon 3/2 &amp; Tue 3/3</div></div><span style="color:var(--blue2);">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Animal+Kingdom+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#129446;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Animal Kingdom</div><div style="font-size:11px;color:var(--grey);">Sun 3/1</div></div><span style="color:var(--blue2);">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Hollywood+Studios+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#127916;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Hollywood Studios</div><div style="font-size:11px;color:var(--grey);">Thu 3/5</div></div><span style="color:var(--blue2);">&#8599;</span>
+        </a>
+      </div>
+
+      <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--purple);margin-bottom:8px;">&#129497; Universal</div>
+      <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px;">
+        <a href="https://maps.google.com/?q=Universal+Islands+of+Adventure+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#129497;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Islands of Adventure</div><div style="font-size:11px;color:var(--grey);">Fri 3/6</div></div><span style="color:var(--purple);">&#8599;</span>
+        </a>
+      </div>
+
+      <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:8px;">&#127968; Your Base</div>
+      <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px;">
+        <a href="https://maps.google.com/?q=4806+Romeo+Cir+Kissimmee+FL+34746" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#127968;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Airbnb &mdash; Kissimmee</div><div style="font-size:11px;color:var(--grey);">4806 Romeo Cir &middot; HMNR52HJYB</div></div><span style="color:var(--green);">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Orlando+International+Airport" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#9992;&#65039;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">MCO Airport</div><div style="font-size:11px;color:var(--grey);">Arrive 2/28 &middot; Depart 3/7</div></div><span style="color:var(--green);">&#8599;</span>
+        </a>
+      </div>
+
+      <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#7A5800;margin-bottom:8px;">&#128717; Shopping &amp; Food</div>
+      <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:6px;">
+        <a href="https://maps.google.com/?q=Disney+Springs+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#127970;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Disney Springs</div><div style="font-size:11px;color:var(--grey);">Wed 3/4 &mdash; cheaper merch, free parking</div></div><span style="color:#7A5800;">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Orlando+Vineland+Premium+Outlets+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#128717;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Vineland Premium Outlets</div><div style="font-size:11px;color:var(--grey);">Character Warehouse &mdash; discounted Disney merch</div></div><span style="color:#7A5800;">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Publix+Kissimmee+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#127839;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Publix</div><div style="font-size:11px;color:var(--grey);">Groceries &amp; snacks for the week</div></div><span style="color:#7A5800;">&#8599;</span>
+        </a>
+      </div>
+
     </div>
-
-    <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:8px;">&#127968; Your Base</div>
-
-    <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:16px;">
-      <a href="https://maps.google.com/?q=Kissimmee+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-        <span style="font-size:20px;">&#127968;</span>
-        <div style="flex:1;">
-          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Airbnb &mdash; Kissimmee</div>
-          <div style="font-size:11px;color:var(--grey);">Code HMNR52HJYB &mdash; Home base</div>
-        </div>
-        <span style="color:var(--green);font-size:16px;">&#8599;</span>
-      </a>
-      <a href="https://maps.google.com/?q=Orlando+International+Airport" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-        <span style="font-size:20px;">&#9992;&#65039;</span>
-        <div style="flex:1;">
-          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Orlando International Airport (MCO)</div>
-          <div style="font-size:11px;color:var(--grey);">Arrive Sat 2/28 &middot; Depart Sat 3/7</div>
-        </div>
-        <span style="color:var(--green);font-size:16px;">&#8599;</span>
-      </a>
-    </div>
-
-    <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#7A5800;margin-bottom:8px;">&#128717; Shopping &amp; Food</div>
-
-    <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:16px;">
-      <a href="https://maps.google.com/?q=Disney+Springs+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-        <span style="font-size:20px;">&#127970;</span>
-        <div style="flex:1;">
-          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Disney Springs</div>
-          <div style="font-size:11px;color:var(--grey);">Wed 3/4 Rest Day &mdash; free parking, cheaper merch</div>
-        </div>
-        <span style="color:#7A5800;font-size:16px;">&#8599;</span>
-      </a>
-      <a href="https://maps.google.com/?q=Orlando+Vineland+Premium+Outlets+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-        <span style="font-size:20px;">&#128717;</span>
-        <div style="flex:1;">
-          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Vineland Premium Outlets</div>
-          <div style="font-size:11px;color:var(--grey);">Character Warehouse inside &mdash; discounted Disney merch</div>
-        </div>
-        <span style="color:#7A5800;font-size:16px;">&#8599;</span>
-      </a>
-      <a href="https://maps.google.com/?q=Publix+Kissimmee+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-        <span style="font-size:20px;">&#127839;</span>
-        <div style="flex:1;">
-          <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Publix Nearest to Airbnb</div>
-          <div style="font-size:11px;color:var(--grey);">Groceries &amp; snacks for the week</div>
-        </div>
-        <span style="color:#7A5800;font-size:16px;">&#8599;</span>
-      </a>
-    </div>
-
-    <div style="background:var(--teall);border-radius:12px;padding:12px 14px;border:1.5px solid rgba(8,145,178,0.25);margin-bottom:6px;">
-      <div style="font-size:11px;font-weight:800;text-transform:uppercase;color:var(--teal);margin-bottom:4px;">&#128279; Embed Your Custom Map</div>
-      <div style="font-size:12px;color:var(--grey);line-height:1.5;">Have a Google My Maps link? Share it with Claude and the map can be embedded directly here as a live interactive view.</div>
-    </div>
-
   </div>
 
   <!-- DAY DETAIL -->
