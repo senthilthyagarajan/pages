@@ -1,6 +1,4 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -29,13 +27,13 @@ body {
 #app { height: 100dvh; height: 100vh; display: flex; flex-direction: column; }
 
 .hdr {
-background: var(–blue); color: #fff; height: 56px;
-display: flex; align-items: center; padding: 0 16px;
-flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.3); z-index: 100;
+  background: var(--blue); color: #fff; height: 56px;
+  display: flex; align-items: center; padding: 0 16px;
+  flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.3); z-index: 100;
 }
 #backBtn {
-background: none; border: none; color: #fff; font-size: 30px; line-height: 1;
-cursor: pointer; padding: 0 14px 0 0; display: none; font-weight: 200;
+  background: none; border: none; color: #fff; font-size: 30px; line-height: 1;
+  cursor: pointer; padding: 0 14px 0 0; display: none; font-weight: 200;
 }
 #backBtn.show { display: block; }
 .hdr-text { flex: 1; overflow: hidden; }
@@ -45,36 +43,36 @@ cursor: pointer; padding: 0 14px 0 0; display: none; font-weight: 200;
 
 .sw { flex: 1; overflow: hidden; position: relative; }
 .scr {
-position: absolute; inset: 0; overflow-y: auto; -webkit-overflow-scrolling: touch;
-background: var(–bg); padding: 14px 14px 20px;
-visibility: hidden; transform: translateX(100%);
-transition: transform 0.28s ease, visibility 0s 0.28s;
+  position: absolute; inset: 0; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  background: var(--bg); padding: 14px 14px 20px;
+  visibility: hidden; transform: translateX(100%);
+  transition: transform 0.28s ease, visibility 0s 0.28s;
 }
 .scr.active { visibility: visible; transform: translateX(0); transition: transform 0.28s ease, visibility 0s 0s; }
 .scr.behind { visibility: visible; transform: translateX(-25%); transition: transform 0.28s ease, visibility 0s 0s; }
 
 .tbar {
-height: 64px; background: #fff; border-top: 1px solid var(–border);
-display: flex; flex-shrink: 0;
-padding-bottom: env(safe-area-inset-bottom, 0px);
+  height: 64px; background: #fff; border-top: 1px solid var(--border);
+  display: flex; flex-shrink: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 .tb {
-flex: 1; display: flex; flex-direction: column; align-items: center;
-justify-content: center; gap: 2px; border: none; background: none;
-color: var(–grey); font-size: 10px; font-weight: 500; cursor: pointer;
-font-family: inherit; letter-spacing: 0.02em; padding: 6px 2px;
-transition: color 0.15s;
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 2px; border: none; background: none;
+  color: var(--grey); font-size: 10px; font-weight: 500; cursor: pointer;
+  font-family: inherit; letter-spacing: 0.02em; padding: 6px 2px;
+  transition: color 0.15s;
 }
 .tb-ic { font-size: 22px; }
-.tb.on { color: var(–blue2); }
+.tb.on { color: var(--blue2); }
 
-.card { background: #fff; border-radius: 14px; border: 1px solid var(–border); overflow: hidden; margin-bottom: 10px; box-shadow: 0 1px 8px rgba(0,0,0,0.07); }
-.sec { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(–grey); margin: 16px 0 8px; }
+.card { background: #fff; border-radius: 14px; border: 1px solid var(--border); overflow: hidden; margin-bottom: 10px; box-shadow: 0 1px 8px rgba(0,0,0,0.07); }
+.sec { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); margin: 16px 0 8px; }
 .sec:first-child { margin-top: 0; }
 
 .hero {
-background: linear-gradient(140deg, var(–blue) 0%, #0A1F3D 100%);
-border-radius: 18px; padding: 20px; margin-bottom: 12px; color: #fff;
+  background: linear-gradient(140deg, var(--blue) 0%, #0A1F3D 100%);
+  border-radius: 18px; padding: 20px; margin-bottom: 12px; color: #fff;
 }
 .hero-eye { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,217,122,0.9); margin-bottom: 5px; }
 .hero-title { font-size: 28px; font-weight: 900; line-height: 1.1; margin-bottom: 3px; }
@@ -86,44 +84,44 @@ border-radius: 18px; padding: 20px; margin-bottom: 12px; color: #fff;
 #cdLabel span { font-size: 12px; opacity: 0.75; }
 
 .qig { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
-.qi { background: #fff; border-radius: 12px; padding: 12px; border: 1px solid var(–border); }
+.qi { background: #fff; border-radius: 12px; padding: 12px; border: 1px solid var(--border); }
 .qi-ic { font-size: 20px; margin-bottom: 3px; }
-.qi-lbl { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(–grey); }
-.qi-val { font-size: 13px; font-weight: 700; color: var(–blue); margin-top: 1px; }
-.qi-sub { font-size: 11px; color: var(–grey); }
+.qi-lbl { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--grey); }
+.qi-val { font-size: 13px; font-weight: 700; color: var(--blue); margin-top: 1px; }
+.qi-sub { font-size: 11px; color: var(--grey); }
 
 .drow {
-display: flex; align-items: center; gap: 10px; padding: 12px 14px;
-background: #fff; border-radius: 14px; border: 1px solid var(–border);
-margin-bottom: 8px; cursor: pointer;
-box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-transition: transform 0.1s;
--webkit-user-select: none; user-select: none;
+  display: flex; align-items: center; gap: 10px; padding: 12px 14px;
+  background: #fff; border-radius: 14px; border: 1px solid var(--border);
+  margin-bottom: 8px; cursor: pointer;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  transition: transform 0.1s;
+  -webkit-user-select: none; user-select: none;
 }
 .drow:active { transform: scale(0.98); }
-.drow.pk { border-left: 3px solid var(–blue2); }
-.drow.tv { border-left: 3px solid var(–green); }
-.drow.rs { border-left: 3px solid var(–border); }
-.drow.uv { border-left: 3px solid var(–purple); }
+.drow.pk { border-left: 3px solid var(--blue2); }
+.drow.tv { border-left: 3px solid var(--green); }
+.drow.rs { border-left: 3px solid var(--border); }
+.drow.uv { border-left: 3px solid var(--purple); }
 .dem { font-size: 26px; flex-shrink: 0; width: 36px; text-align: center; }
 .dbd { flex: 1; overflow: hidden; }
-.ddt { font-size: 10px; font-weight: 600; color: var(–grey); text-transform: uppercase; letter-spacing: 0.08em; }
-.dti { font-size: 14px; font-weight: 700; color: var(–blue); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.dsu { font-size: 11px; color: var(–grey); }
+.ddt { font-size: 10px; font-weight: 600; color: var(--grey); text-transform: uppercase; letter-spacing: 0.08em; }
+.dti { font-size: 14px; font-weight: 700; color: var(--blue); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dsu { font-size: 11px; color: var(--grey); }
 .dar { font-size: 20px; color: #ccc; flex-shrink: 0; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
 .chip { display: inline-block; padding: 4px 11px; border-radius: 100px; font-size: 11px; font-weight: 600; }
-.cb { background: var(–bluel); color: var(–blue2); }
-.cg { background: var(–goldl); color: #7A5800; }
-.cr { background: var(–redl); color: var(–red); }
-.cn { background: var(–greenl); color: var(–green); }
-.cp { background: var(–purplel); color: var(–purple); }
-.ct { background: var(–teall); color: var(–teal); }
+.cb { background: var(--bluel); color: var(--blue2); }
+.cg { background: var(--goldl); color: #7A5800; }
+.cr { background: var(--redl); color: var(--red); }
+.cn { background: var(--greenl); color: var(--green); }
+.cp { background: var(--purplel); color: var(--purple); }
+.ct { background: var(--teall); color: var(--teal); }
 
 .ddh { border-radius: 14px; padding: 18px; margin-bottom: 12px; color: #fff; }
 .ddh.ak { background: linear-gradient(135deg, #1B6B3A, #0D4022); }
-.ddh.mk { background: linear-gradient(135deg, var(–blue), #0A1F3D); }
+.ddh.mk { background: linear-gradient(135deg, var(--blue), #0A1F3D); }
 .ddh.hs { background: linear-gradient(135deg, #6B2A1A, #3A0E0E); }
 .ddh.uv { background: linear-gradient(135deg, #3F1A6B, #1D0A3D); }
 .ddh.tv { background: linear-gradient(135deg, #0E6B5E, #074039); }
@@ -134,163 +132,162 @@ transition: transform 0.1s;
 
 .tl { display: flex; flex-direction: column; }
 .tli { display: grid; grid-template-columns: 52px 14px 1fr; gap: 0 8px; margin-bottom: 5px; }
-.tlt { font-size: 10px; font-weight: 700; color: var(–grey); padding-top: 11px; text-align: right; line-height: 1.3; }
+.tlt { font-size: 10px; font-weight: 700; color: var(--grey); padding-top: 11px; text-align: right; line-height: 1.3; }
 .tll { display: flex; flex-direction: column; align-items: center; padding-top: 12px; }
 .dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
-.tli:not(:last-child) .tll::after { content: ‘’; width: 2px; flex: 1; background: var(–border); margin-top: 4px; min-height: 14px; }
+.tli:not(:last-child) .tll::after { content: ''; width: 2px; flex: 1; background: var(--border); margin-top: 4px; min-height: 14px; }
 .tlb { border-radius: 10px; padding: 10px 12px; }
 .tlb h4 { font-size: 13px; font-weight: 700; margin-bottom: 1px; }
-.tlb p { font-size: 12px; color: var(–grey); line-height: 1.4; margin-top: 2px; }
-.badge { display: inline-block; margin-top: 5px; background: var(–goldl); border: 1px solid rgba(201,151,26,0.3); color: #7A5800; border-radius: 100px; padding: 2px 10px; font-size: 11px; font-weight: 700; }
+.tlb p { font-size: 12px; color: var(--grey); line-height: 1.4; margin-top: 2px; }
+.badge { display: inline-block; margin-top: 5px; background: var(--goldl); border: 1px solid rgba(201,151,26,0.3); color: #7A5800; border-radius: 100px; padding: 2px 10px; font-size: 11px; font-weight: 700; }
 
-.bl { background: var(–bluel); } .bl h4 { color: var(–blue); }
-.gg { background: var(–goldl); } .gg h4 { color: #7A5800; }
-.gn { background: var(–greenl); } .gn h4 { color: var(–green); }
-.rd { background: var(–redl); } .rd h4 { color: var(–red); }
-.pp { background: var(–purplel); } .pp h4 { color: var(–purple); }
-.gr { background: rgba(107,107,112,0.08); } .gr h4 { color: var(–grey); }
-.wh { background: #fff; border: 1px solid var(–border); } .wh h4 { color: var(–blue); }
-.tl2 { background: var(–teall); } .tl2 h4 { color: var(–teal); }
+.bl { background: var(--bluel); } .bl h4 { color: var(--blue); }
+.gg { background: var(--goldl); } .gg h4 { color: #7A5800; }
+.gn { background: var(--greenl); } .gn h4 { color: var(--green); }
+.rd { background: var(--redl); } .rd h4 { color: var(--red); }
+.pp { background: var(--purplel); } .pp h4 { color: var(--purple); }
+.gr { background: rgba(107,107,112,0.08); } .gr h4 { color: var(--grey); }
+.wh { background: #fff; border: 1px solid var(--border); } .wh h4 { color: var(--blue); }
+.tl2 { background: var(--teall); } .tl2 h4 { color: var(--teal); }
 
-.db { background: var(–blue2); }
-.dg { background: var(–gold); }
-.dn { background: var(–green); }
-.dr { background: var(–red); }
-.dp { background: var(–purple); }
-.dgr { background: var(–grey); }
-.dw { background: var(–border); }
-.dt { background: var(–teal); }
+.db { background: var(--blue2); }
+.dg { background: var(--gold); }
+.dn { background: var(--green); }
+.dr { background: var(--red); }
+.dp { background: var(--purple); }
+.dgr { background: var(--grey); }
+.dw { background: var(--border); }
+.dt { background: var(--teal); }
 
-.tipbox { background: var(–goldl); border: 1px solid rgba(201,151,26,0.25); border-radius: 12px; padding: 12px; margin-top: 12px; display: flex; gap: 9px; }
-.tipbox h5 { font-size: 10px; font-weight: 700; color: var(–gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3px; }
-.tipbox p { font-size: 12px; color: var(–grey); line-height: 1.4; }
+.tipbox { background: var(--goldl); border: 1px solid rgba(201,151,26,0.25); border-radius: 12px; padding: 12px; margin-top: 12px; display: flex; gap: 9px; }
+.tipbox h5 { font-size: 10px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3px; }
+.tipbox p { font-size: 12px; color: var(--grey); line-height: 1.4; }
 
 /* Insider tip box - teal */
-.insiderbox { background: var(–teall); border: 1px solid rgba(8,145,178,0.25); border-radius: 12px; padding: 12px; margin-top: 8px; display: flex; gap: 9px; }
-.insiderbox h5 { font-size: 10px; font-weight: 700; color: var(–teal); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3px; }
-.insiderbox p { font-size: 12px; color: var(–grey); line-height: 1.4; }
+.insiderbox { background: var(--teall); border: 1px solid rgba(8,145,178,0.25); border-radius: 12px; padding: 12px; margin-top: 8px; display: flex; gap: 9px; }
+.insiderbox h5 { font-size: 10px; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3px; }
+.insiderbox p { font-size: 12px; color: var(--grey); line-height: 1.4; }
 
 .infobox { border-radius: 10px; padding: 11px; margin-bottom: 12px; }
 .infobox h4 { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
-.infobox p { font-size: 12px; color: var(–grey); line-height: 1.4; }
-.infobox.b { background: var(–bluel); } .infobox.b h4 { color: var(–blue); }
-.infobox.g { background: var(–goldl); } .infobox.g h4 { color: #7A5800; }
-.infobox.p { background: var(–purplel); } .infobox.p h4 { color: var(–purple); }
-.infobox.t { background: var(–teall); } .infobox.t h4 { color: var(–teal); }
-.infobox.r { background: var(–redl); } .infobox.r h4 { color: var(–red); }
+.infobox p { font-size: 12px; color: var(--grey); line-height: 1.4; }
+.infobox.b { background: var(--bluel); } .infobox.b h4 { color: var(--blue); }
+.infobox.g { background: var(--goldl); } .infobox.g h4 { color: #7A5800; }
+.infobox.p { background: var(--purplel); } .infobox.p h4 { color: var(--purple); }
+.infobox.t { background: var(--teall); } .infobox.t h4 { color: var(--teal); }
+.infobox.r { background: var(--redl); } .infobox.r h4 { color: var(--red); }
 
 .park-tabs { display: flex; gap: 7px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 12px; scrollbar-width: none; }
 .park-tabs::-webkit-scrollbar { display: none; }
-.ptab { flex-shrink: 0; padding: 6px 14px; border-radius: 100px; border: 1.5px solid var(–border); background: #fff; color: var(–grey); font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.15s; }
-.ptab.on { background: var(–blue); color: #fff; border-color: var(–blue); }
+.ptab { flex-shrink: 0; padding: 6px 14px; border-radius: 100px; border: 1.5px solid var(--border); background: #fff; color: var(--grey); font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+.ptab.on { background: var(--blue); color: #fff; border-color: var(--blue); }
 
-.rcard { background: #fff; border-radius: 12px; border: 1px solid var(–border); padding: 12px 13px; margin-bottom: 7px; display: flex; gap: 10px; }
+.rcard { background: #fff; border-radius: 12px; border: 1px solid var(--border); padding: 12px 13px; margin-bottom: 7px; display: flex; gap: 10px; }
 .rnum { font-size: 18px; font-weight: 900; color: #ddd; width: 20px; flex-shrink: 0; line-height: 1; margin-top: 3px; }
-.rname { font-size: 14px; font-weight: 700; color: var(–blue); margin-bottom: 2px; }
-.rdesc { font-size: 11px; color: var(–grey); line-height: 1.4; margin-bottom: 5px; }
+.rname { font-size: 14px; font-weight: 700; color: var(--blue); margin-bottom: 2px; }
+.rdesc { font-size: 11px; color: var(--grey); line-height: 1.4; margin-bottom: 5px; }
 .rbadges { display: flex; flex-wrap: wrap; gap: 4px; }
 .rbadge { font-size: 11px; font-weight: 600; padding: 2px 9px; border-radius: 100px; }
-.rb-ll { background: var(–goldl); color: #7A5800; }
-.rb-go { background: var(–greenl); color: var(–green); }
-.rb-sk { background: rgba(107,107,112,0.1); color: var(–grey); }
-.rb-st { background: var(–bluel); color: var(–blue2); }
-.rb-ht { background: var(–redl); color: var(–red); }
+.rb-ll { background: var(--goldl); color: #7A5800; }
+.rb-go { background: var(--greenl); color: var(--green); }
+.rb-sk { background: rgba(107,107,112,0.1); color: var(--grey); }
+.rb-st { background: var(--bluel); color: var(--blue2); }
+.rb-ht { background: var(--redl); color: var(--red); }
 
-.prog-wrap { background: #fff; border-radius: 12px; padding: 12px; margin-bottom: 12px; border: 1px solid var(–border); }
-.prog-top { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: var(–blue); margin-bottom: 7px; }
-.prog-track { height: 7px; background: var(–border); border-radius: 100px; overflow: hidden; }
-.prog-fill { height: 100%; background: linear-gradient(90deg, var(–blue2), var(–green)); border-radius: 100px; transition: width 0.4s; }
-.hrisk { background: var(–redl); border: 1.5px solid rgba(192,57,43,0.25); border-radius: 12px; padding: 12px; margin-bottom: 12px; display: flex; gap: 8px; }
-.hrisk h4 { font-size: 11px; font-weight: 700; color: var(–red); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 5px; }
+.prog-wrap { background: #fff; border-radius: 12px; padding: 12px; margin-bottom: 12px; border: 1px solid var(--border); }
+.prog-top { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: var(--blue); margin-bottom: 7px; }
+.prog-track { height: 7px; background: var(--border); border-radius: 100px; overflow: hidden; }
+.prog-fill { height: 100%; background: linear-gradient(90deg, var(--blue2), var(--green)); border-radius: 100px; transition: width 0.4s; }
+.hrisk { background: var(--redl); border: 1.5px solid rgba(192,57,43,0.25); border-radius: 12px; padding: 12px; margin-bottom: 12px; display: flex; gap: 8px; }
+.hrisk h4 { font-size: 11px; font-weight: 700; color: var(--red); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 5px; }
 .hr-items { display: flex; flex-wrap: wrap; gap: 4px; }
-.hri { background: #fff; border: 1px solid rgba(192,57,43,0.2); border-radius: 100px; padding: 3px 10px; font-size: 11px; font-weight: 600; color: var(–red); }
-.pitem { background: #fff; border-radius: 10px; border: 1px solid var(–border); padding: 10px 12px; margin-bottom: 5px; display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.hri { background: #fff; border: 1px solid rgba(192,57,43,0.2); border-radius: 100px; padding: 3px 10px; font-size: 11px; font-weight: 600; color: var(--red); }
+.pitem { background: #fff; border-radius: 10px; border: 1px solid var(--border); padding: 10px 12px; margin-bottom: 5px; display: flex; align-items: center; gap: 10px; cursor: pointer; }
 .pitem.done { opacity: 0.45; }
-.pck { width: 21px; height: 21px; border-radius: 6px; border: 2px solid var(–border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 12px; }
-.pitem.done .pck { background: var(–green); border-color: var(–green); color: #fff; }
-.pname { font-size: 13px; font-weight: 600; color: var(–blue); }
-.pitem.done .pname { text-decoration: line-through; color: var(–grey); }
-.ploc { font-size: 11px; color: var(–grey); margin-top: 1px; }
+.pck { width: 21px; height: 21px; border-radius: 6px; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 12px; }
+.pitem.done .pck { background: var(--green); border-color: var(--green); color: #fff; }
+.pname { font-size: 13px; font-weight: 600; color: var(--blue); }
+.pitem.done .pname { text-decoration: line-through; color: var(--grey); }
+.ploc { font-size: 11px; color: var(--grey); margin-top: 1px; }
 
-.dcard { background: #fff; border-radius: 14px; border: 1px solid var(–border); padding: 14px; margin-bottom: 10px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+.dcard { background: #fff; border-radius: 14px; border: 1px solid var(--border); padding: 14px; margin-bottom: 10px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
 .dhdr { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .dic { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
-.dic.b { background: var(–bluel); } .dic.n { background: var(–greenl); } .dic.g { background: var(–goldl); } .dic.t { background: var(–teall); }
-.dtitle { font-size: 15px; font-weight: 700; color: var(–blue); }
-.dsub { font-size: 11px; color: var(–grey); }
-.drow2 { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(–border); }
+.dic.b { background: var(--bluel); } .dic.n { background: var(--greenl); } .dic.g { background: var(--goldl); } .dic.t { background: var(--teall); }
+.dtitle { font-size: 15px; font-weight: 700; color: var(--blue); }
+.dsub { font-size: 11px; color: var(--grey); }
+.drow2 { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); }
 .drow2:last-child { border-bottom: none; padding-bottom: 0; }
-.dlabel { font-size: 11px; color: var(–grey); font-weight: 500; }
-.dval { font-size: 13px; font-weight: 700; color: var(–blue); text-align: right; flex-shrink: 0; }
-.cbtn { background: var(–bluel); border: none; color: var(–blue2); border-radius: 7px; padding: 4px 11px; font-size: 11px; font-weight: 600; cursor: pointer; font-family: inherit; margin-left: 8px; flex-shrink: 0; }
+.dlabel { font-size: 11px; color: var(--grey); font-weight: 500; }
+.dval { font-size: 13px; font-weight: 700; color: var(--blue); text-align: right; flex-shrink: 0; }
+.cbtn { background: var(--bluel); border: none; color: var(--blue2); border-radius: 7px; padding: 4px 11px; font-size: 11px; font-weight: 600; cursor: pointer; font-family: inherit; margin-left: 8px; flex-shrink: 0; }
 .cval { display: flex; align-items: center; justify-content: flex-end; }
 
-.ll-card { background: var(–goldl); border: 1.5px solid rgba(201,151,26,0.3); border-radius: 14px; padding: 14px; margin-bottom: 10px; }
+.ll-card { background: var(--goldl); border: 1.5px solid rgba(201,151,26,0.3); border-radius: 14px; padding: 14px; margin-bottom: 10px; }
 .ll-card h3 { font-size: 14px; font-weight: 700; color: #7A5800; margin-bottom: 6px; }
-.ll-card p { font-size: 12px; color: var(–grey); line-height: 1.5; margin-bottom: 8px; }
-.llstep { display: flex; gap: 9px; padding: 7px 0; border-bottom: 1px solid rgba(201,151,26,0.2); font-size: 12px; color: var(–grey); align-items: flex-start; }
+.ll-card p { font-size: 12px; color: var(--grey); line-height: 1.5; margin-bottom: 8px; }
+.llstep { display: flex; gap: 9px; padding: 7px 0; border-bottom: 1px solid rgba(201,151,26,0.2); font-size: 12px; color: var(--grey); align-items: flex-start; }
 .llstep:last-child { border-bottom: none; }
-.sn { background: var(–gold); color: #fff; border-radius: 50%; width: 19px; height: 19px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.sn { background: var(--gold); color: #fff; border-radius: 50%; width: 19px; height: 19px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
 /* INSIDER TIPS TAB STYLES */
-.itip-cat { font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(–teal); margin: 16px 0 8px; padding-left: 2px; }
+.itip-cat { font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin: 16px 0 8px; padding-left: 2px; }
 .itip-cat:first-child { margin-top: 0; }
-.itip-item { background: #fff; border-radius: 11px; border: 1px solid var(–border); padding: 11px 13px; margin-bottom: 6px; display: flex; gap: 10px; align-items: flex-start; }
-.itip-num { font-size: 11px; font-weight: 800; color: var(–teal); flex-shrink: 0; min-width: 20px; margin-top: 1px; }
+.itip-item { background: #fff; border-radius: 11px; border: 1px solid var(--border); padding: 11px 13px; margin-bottom: 6px; display: flex; gap: 10px; align-items: flex-start; }
+.itip-num { font-size: 11px; font-weight: 800; color: var(--teal); flex-shrink: 0; min-width: 20px; margin-top: 1px; }
 .itip-body { flex: 1; }
-.itip-title { font-size: 13px; font-weight: 700; color: var(–blue); margin-bottom: 2px; }
-.itip-desc { font-size: 12px; color: var(–grey); line-height: 1.4; }
+.itip-title { font-size: 13px; font-weight: 700; color: var(--blue); margin-bottom: 2px; }
+.itip-desc { font-size: 12px; color: var(--grey); line-height: 1.4; }
 
 .alert-card { border-radius: 14px; padding: 13px 14px; margin-bottom: 10px; border: 1.5px solid; display: flex; gap: 10px; align-items: flex-start; }
-.alert-card.teal { background: var(–teall); border-color: rgba(8,145,178,0.3); }
-.alert-card.gold { background: var(–goldl); border-color: rgba(201,151,26,0.3); }
+.alert-card.teal { background: var(--teall); border-color: rgba(8,145,178,0.3); }
+.alert-card.gold { background: var(--goldl); border-color: rgba(201,151,26,0.3); }
 .alert-card h4 { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
-.alert-card.teal h4 { color: var(–teal); }
+.alert-card.teal h4 { color: var(--teal); }
 .alert-card.gold h4 { color: #7A5800; }
-.alert-card p { font-size: 12px; color: var(–grey); line-height: 1.4; }
+.alert-card p { font-size: 12px; color: var(--grey); line-height: 1.4; }
 
-.iph-card { background: linear-gradient(140deg, var(–blue), #0A1F3D); border-radius: 14px; padding: 14px; margin-bottom: 10px; color: #fff; }
+.iph-card { background: linear-gradient(140deg, var(--blue), #0A1F3D); border-radius: 14px; padding: 14px; margin-bottom: 10px; color: #fff; }
 .iph-card h3 { font-size: 14px; font-weight: 700; color: #F5D97A; margin-bottom: 10px; }
 .iph-step { display: flex; gap: 9px; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: rgba(255,255,255,0.85); align-items: flex-start; }
 .iph-step:last-child { border-bottom: none; }
 .in { background: rgba(255,255,255,0.15); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
 /* PHOTO SPOTS */
-.photo-hdr { font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(–green); margin: 18px 0 8px; padding-left: 2px; display: flex; align-items: center; gap: 6px; }
-.photo-hdr::before { content: ‘’; display: block; height: 2px; width: 16px; background: var(–green); border-radius: 2px; }
-.pspot { background: #fff; border-radius: 11px; border: 1px solid var(–border); border-left: 3px solid var(–green); padding: 11px 13px; margin-bottom: 6px; display: flex; gap: 10px; align-items: flex-start; }
+.photo-hdr { font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green); margin: 18px 0 8px; padding-left: 2px; display: flex; align-items: center; gap: 6px; }
+.photo-hdr::before { content: ''; display: block; height: 2px; width: 16px; background: var(--green); border-radius: 2px; }
+.pspot { background: #fff; border-radius: 11px; border: 1px solid var(--border); border-left: 3px solid var(--green); padding: 11px 13px; margin-bottom: 6px; display: flex; gap: 10px; align-items: flex-start; }
 .pspot-ic { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
 .pspot-body { flex: 1; }
-.pspot-name { font-size: 13px; font-weight: 700; color: var(–blue); margin-bottom: 2px; }
-.pspot-tip { font-size: 12px; color: var(–grey); line-height: 1.4; }
+.pspot-name { font-size: 13px; font-weight: 700; color: var(--blue); margin-bottom: 2px; }
+.pspot-tip { font-size: 12px; color: var(--grey); line-height: 1.4; }
 .pspot-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
-.ptag { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 100px; background: var(–greenl); color: var(–green); }
+.ptag { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 100px; background: var(--greenl); color: var(--green); }
 
 /* EATS SECTION */
 .eats-hdr { font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: #C0392B; margin: 18px 0 8px; padding-left: 2px; display: flex; align-items: center; gap: 6px; }
-.eats-hdr::before { content: ‘’; display: block; height: 2px; width: 16px; background: #C0392B; border-radius: 2px; }
-.ecard { background: #fff; border-radius: 11px; border: 1px solid var(–border); border-left: 3px solid #C0392B; padding: 11px 13px; margin-bottom: 6px; }
+.eats-hdr::before { content: ''; display: block; height: 2px; width: 16px; background: #C0392B; border-radius: 2px; }
+.ecard { background: #fff; border-radius: 11px; border: 1px solid var(--border); border-left: 3px solid #C0392B; padding: 11px 13px; margin-bottom: 6px; }
 .ecard-top { display: flex; align-items: flex-start; gap: 9px; }
 .ecard-ic { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
-.ecard-name { font-size: 13px; font-weight: 700; color: var(–blue); margin-bottom: 2px; }
-.ecard-desc { font-size: 12px; color: var(–grey); line-height: 1.4; }
-.etag { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 100px; background: var(–redl); color: var(–red); }
-.etag-gold { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 100px; background: var(–goldl); color: #7A5800; }
-.etag-go { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 100px; background: var(–greenl); color: var(–green); }
+.ecard-name { font-size: 13px; font-weight: 700; color: var(--blue); margin-bottom: 2px; }
+.ecard-desc { font-size: 12px; color: var(--grey); line-height: 1.4; }
+.etag { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 100px; background: var(--redl); color: var(--red); }
+.etag-gold { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 100px; background: var(--goldl); color: #7A5800; }
+.etag-go { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 100px; background: var(--greenl); color: var(--green); }
 .ecard-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
 
 /* HIDDEN GEMS SECTION */
-.gems-hdr { font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(–purple); margin: 18px 0 8px; padding-left: 2px; display: flex; align-items: center; gap: 6px; }
-.gems-hdr::before { content: ‘’; display: block; height: 2px; width: 16px; background: var(–purple); border-radius: 2px; }
-.gcard { background: #fff; border-radius: 11px; border: 1px solid var(–border); border-left: 3px solid var(–purple); padding: 11px 13px; margin-bottom: 6px; display: flex; gap: 10px; align-items: flex-start; }
+.gems-hdr { font-size: 11px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--purple); margin: 18px 0 8px; padding-left: 2px; display: flex; align-items: center; gap: 6px; }
+.gems-hdr::before { content: ''; display: block; height: 2px; width: 16px; background: var(--purple); border-radius: 2px; }
+.gcard { background: #fff; border-radius: 11px; border: 1px solid var(--border); border-left: 3px solid var(--purple); padding: 11px 13px; margin-bottom: 6px; display: flex; gap: 10px; align-items: flex-start; }
 .gcard-ic { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
 .gcard-body { flex: 1; }
-.gcard-name { font-size: 13px; font-weight: 700; color: var(–blue); margin-bottom: 2px; }
-.gcard-desc { font-size: 12px; color: var(–grey); line-height: 1.4; }
-.gtag { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 100px; background: var(–purplel); color: var(–purple); }
+.gcard-name { font-size: 13px; font-weight: 700; color: var(--blue); margin-bottom: 2px; }
+.gcard-desc { font-size: 12px; color: var(--grey); line-height: 1.4; }
+.gtag { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 100px; background: var(--purplel); color: var(--purple); }
 .gcard-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
 </style>
-
 </head>
 <body>
 <div id="app">
@@ -307,7 +304,6 @@ transition: transform 0.1s;
 <div class="sw">
 
   <!-- OVERVIEW -->
-
   <div class="scr active" id="scr-overview">
     <div class="hero">
       <div class="hero-eye">&#10022; Family Trip &middot; 2026 &#10022;</div>
@@ -336,7 +332,6 @@ transition: transform 0.1s;
   </div>
 
   <!-- RIDES -->
-
   <div class="scr" id="scr-rides">
     <div class="park-tabs" id="parkTabs">
       <button class="ptab on" data-park="ak">&#129409; Animal Kingdom</button>
@@ -348,7 +343,6 @@ transition: transform 0.1s;
   </div>
 
   <!-- PACKING -->
-
   <div class="scr" id="scr-packing">
     <div class="hrisk">
       <div style="font-size:20px;flex-shrink:0">&#128680;</div>
@@ -376,523 +370,512 @@ transition: transform 0.1s;
   </div>
 
   <!-- DOCS -->
-
   <div class="scr" id="scr-docs">
 
-```
-<div class="iph-card">
-  <h3>&#128241; Add to iPhone Home Screen</h3>
-  <div class="iph-step"><div class="in">1</div><div><strong>Email this file</strong> to yourself as an attachment</div></div>
-  <div class="iph-step"><div class="in">2</div><div>Open on iPhone &rarr; tap and <strong>hold</strong> the .html attachment &rarr; <strong>"Open in Safari"</strong></div></div>
-  <div class="iph-step"><div class="in">3</div><div>Or: Save to Files app &rarr; open Files &rarr; tap file &rarr; share icon &rarr; <strong>"Add to Home Screen"</strong></div></div>
-  <div class="iph-step"><div class="in">4</div><div>Name it <strong>"Orlando Trip"</strong> &rarr; tap <strong>Add</strong> &rarr; &#10003; Works offline!</div></div>
-</div>
+    <div class="iph-card">
+      <h3>&#128241; Add to iPhone Home Screen</h3>
+      <div class="iph-step"><div class="in">1</div><div><strong>Email this file</strong> to yourself as an attachment</div></div>
+      <div class="iph-step"><div class="in">2</div><div>Open on iPhone &rarr; tap and <strong>hold</strong> the .html attachment &rarr; <strong>"Open in Safari"</strong></div></div>
+      <div class="iph-step"><div class="in">3</div><div>Or: Save to Files app &rarr; open Files &rarr; tap file &rarr; share icon &rarr; <strong>"Add to Home Screen"</strong></div></div>
+      <div class="iph-step"><div class="in">4</div><div>Name it <strong>"Orlando Trip"</strong> &rarr; tap <strong>Add</strong> &rarr; &#10003; Works offline!</div></div>
+    </div>
 
-<div class="ll-card">
-  <h3>&#9889; Genie+ Plain English</h3>
-  <p>Paid skip-the-line (~$20&ndash;35/person/day). Buy at 7 AM in Disney app, book a Lightning Lane window, skip the 60&ndash;90 min queue. <strong>Only buy on Magic Kingdom days.</strong></p>
-  <div class="llstep"><div class="sn">1</div><div>One adult wakes at 7 AM (kids still sleeping) &rarr; buy Genie+ &rarr; book Peter Pan immediately</div></div>
-  <div class="llstep"><div class="sn">2</div><div>After you USE the first LL, book the next one in the app</div></div>
-  <div class="llstep"><div class="sn">3</div><div><strong>Grace period:</strong> LL pass valid 5 min BEFORE your window opens and up to 1h 59m AFTER it closes. Use it if you're in line for something.</div></div>
-  <div class="llstep"><div class="sn">4</div><div>If a LL shows "sold out" keep refreshing &mdash; Disney adds popup availability throughout the day. Never give up.</div></div>
-  <div class="llstep"><div class="sn">5</div><div>Seven Dwarfs Mine Train = separate purchase ($15&ndash;25 extra)</div></div>
-  <div class="llstep"><div class="sn">6</div><div>Skip Genie+ entirely at Animal Kingdom and Hollywood Studios</div></div>
-  <div class="llstep"><div class="sn">7</div><div>Genie+ purchase = <strong>free ride photo downloads</strong> that day. Grab them within 45 days in the MDE app.</div></div>
-</div>
+    <div class="ll-card">
+      <h3>&#9889; Genie+ Plain English</h3>
+      <p>Paid skip-the-line (~$20&ndash;35/person/day). Buy at 7 AM in Disney app, book a Lightning Lane window, skip the 60&ndash;90 min queue. <strong>Only buy on Magic Kingdom days.</strong></p>
+      <div class="llstep"><div class="sn">1</div><div>One adult wakes at 7 AM (kids still sleeping) &rarr; buy Genie+ &rarr; book Peter Pan immediately</div></div>
+      <div class="llstep"><div class="sn">2</div><div>After you USE the first LL, book the next one in the app</div></div>
+      <div class="llstep"><div class="sn">3</div><div><strong>Grace period:</strong> LL pass valid 5 min BEFORE your window opens and up to 1h 59m AFTER it closes. Use it if you're in line for something.</div></div>
+      <div class="llstep"><div class="sn">4</div><div>If a LL shows "sold out" keep refreshing &mdash; Disney adds popup availability throughout the day. Never give up.</div></div>
+      <div class="llstep"><div class="sn">5</div><div>Seven Dwarfs Mine Train = separate purchase ($15&ndash;25 extra)</div></div>
+      <div class="llstep"><div class="sn">6</div><div>Skip Genie+ entirely at Animal Kingdom and Hollywood Studios</div></div>
+      <div class="llstep"><div class="sn">7</div><div>Genie+ purchase = <strong>free ride photo downloads</strong> that day. Grab them within 45 days in the MDE app.</div></div>
+    </div>
 
-<div class="dcard">
-  <div class="dhdr"><div class="dic b">&#9992;&#65039;</div><div><div class="dtitle">United Airlines</div><div class="dsub">Confirmation: NZ4HTS</div></div></div>
-  <div class="drow2"><div class="dlabel">Confirmation</div><div class="cval"><div class="dval">NZ4HTS</div><button class="cbtn" data-copy="NZ4HTS">Copy</button></div></div>
-  <div class="drow2"><div class="dlabel">Outbound</div><div class="dval">UA2215</div></div>
-  <div class="drow2"><div class="dlabel">Departs</div><div class="dval">EWR &middot; Feb 28 &middot; 2:00 PM</div></div>
-  <div class="drow2"><div class="dlabel">Arrives</div><div class="dval">MCO &middot; Feb 28 &middot; 4:59 PM</div></div>
-  <div class="drow2"><div class="dlabel">Return</div><div class="dval">UA1866</div></div>
-  <div class="drow2"><div class="dlabel">Departs</div><div class="dval">MCO &middot; Mar 7 &middot; 12:11 PM</div></div>
-  <div class="drow2"><div class="dlabel">Arrives</div><div class="dval">EWR &middot; Mar 7 &middot; 2:59 PM</div></div>
-</div>
+    <div class="dcard">
+      <div class="dhdr"><div class="dic b">&#9992;&#65039;</div><div><div class="dtitle">United Airlines</div><div class="dsub">Confirmation: NZ4HTS</div></div></div>
+      <div class="drow2"><div class="dlabel">Confirmation</div><div class="cval"><div class="dval">NZ4HTS</div><button class="cbtn" data-copy="NZ4HTS">Copy</button></div></div>
+      <div class="drow2"><div class="dlabel">Outbound</div><div class="dval">UA2215</div></div>
+      <div class="drow2"><div class="dlabel">Departs</div><div class="dval">EWR &middot; Feb 28 &middot; 2:00 PM</div></div>
+      <div class="drow2"><div class="dlabel">Arrives</div><div class="dval">MCO &middot; Feb 28 &middot; 4:59 PM</div></div>
+      <div class="drow2"><div class="dlabel">Return</div><div class="dval">UA1866</div></div>
+      <div class="drow2"><div class="dlabel">Departs</div><div class="dval">MCO &middot; Mar 7 &middot; 12:11 PM</div></div>
+      <div class="drow2"><div class="dlabel">Arrives</div><div class="dval">EWR &middot; Mar 7 &middot; 2:59 PM</div></div>
+    </div>
 
-<div class="dcard">
-  <div class="dhdr"><div class="dic n">&#127968;</div><div><div class="dtitle">Airbnb &mdash; Kissimmee</div><div class="dsub">Host: Diogo &middot; ~20 min to parks</div></div></div>
-  <div class="drow2"><div class="dlabel">Address</div><div class="cval"><div class="dval" style="font-size:11px">4806 Romeo Cir, Kissimmee FL</div><button class="cbtn" data-copy="4806 Romeo Cir, Kissimmee FL 34746">Copy</button></div></div>
-  <div class="drow2"><div class="dlabel">Confirmation</div><div class="cval"><div class="dval">HMNR52HJYB</div><button class="cbtn" data-copy="HMNR52HJYB">Copy</button></div></div>
-  <div class="drow2"><div class="dlabel">Check-in</div><div class="dval">Feb 28 &middot; After 4:00 PM</div></div>
-  <div class="drow2"><div class="dlabel">Check-out</div><div class="dval">Mar 7 &middot; By 10:00 AM</div></div>
-  <div class="drow2"><div class="dlabel">Total paid</div><div class="dval">$1,575.67</div></div>
-</div>
+    <div class="dcard">
+      <div class="dhdr"><div class="dic n">&#127968;</div><div><div class="dtitle">Airbnb &mdash; Kissimmee</div><div class="dsub">Host: Diogo &middot; ~20 min to parks</div></div></div>
+      <div class="drow2"><div class="dlabel">Address</div><div class="cval"><div class="dval" style="font-size:11px">4806 Romeo Cir, Kissimmee FL</div><button class="cbtn" data-copy="4806 Romeo Cir, Kissimmee FL 34746">Copy</button></div></div>
+      <div class="drow2"><div class="dlabel">Confirmation</div><div class="cval"><div class="dval">HMNR52HJYB</div><button class="cbtn" data-copy="HMNR52HJYB">Copy</button></div></div>
+      <div class="drow2"><div class="dlabel">Check-in</div><div class="dval">Feb 28 &middot; After 4:00 PM</div></div>
+      <div class="drow2"><div class="dlabel">Check-out</div><div class="dval">Mar 7 &middot; By 10:00 AM</div></div>
+      <div class="drow2"><div class="dlabel">Total paid</div><div class="dval">$1,575.67</div></div>
+    </div>
 
-<div class="dcard">
-  <div class="dhdr"><div class="dic g">&#128663;</div><div><div class="dtitle">Parking &amp; Leave Times</div><div class="dsub">~$30/day at all parks</div></div></div>
-  <div class="drow2"><div class="dlabel">Animal Kingdom</div><div class="dval">Leave 8:15 AM &middot; Direct lot</div></div>
-  <div class="drow2"><div class="dlabel">Magic Kingdom &#9888;</div><div class="dval">Leave 8:15 AM &middot; TTC + Monorail</div></div>
-  <div class="drow2"><div class="dlabel">Hollywood Studios</div><div class="dval">Leave 8:15 AM &middot; Direct lot</div></div>
-  <div class="drow2"><div class="dlabel">Universal IOA</div><div class="dval">Leave 7:45 AM &middot; Garage</div></div>
-  <div class="drow2"><div class="dlabel">MK note</div><div class="dval" style="font-size:11px">TTC &rarr; monorail adds 20&ndash;25 extra min</div></div>
-</div>
-```
+    <div class="dcard">
+      <div class="dhdr"><div class="dic g">&#128663;</div><div><div class="dtitle">Parking &amp; Leave Times</div><div class="dsub">~$30/day at all parks</div></div></div>
+      <div class="drow2"><div class="dlabel">Animal Kingdom</div><div class="dval">Leave 8:15 AM &middot; Direct lot</div></div>
+      <div class="drow2"><div class="dlabel">Magic Kingdom &#9888;</div><div class="dval">Leave 8:15 AM &middot; TTC + Monorail</div></div>
+      <div class="drow2"><div class="dlabel">Hollywood Studios</div><div class="dval">Leave 8:15 AM &middot; Direct lot</div></div>
+      <div class="drow2"><div class="dlabel">Universal IOA</div><div class="dval">Leave 7:45 AM &middot; Garage</div></div>
+      <div class="drow2"><div class="dlabel">MK note</div><div class="dval" style="font-size:11px">TTC &rarr; monorail adds 20&ndash;25 extra min</div></div>
+    </div>
 
   </div>
 
   <!-- INSIDER TIPS TAB -->
-
   <div class="scr" id="scr-tips">
 
-```
-<div class="itip-cat">&#127906; Line-Skipping Secrets</div>
+    <div class="itip-cat">&#127906; Line-Skipping Secrets</div>
 
-<div class="itip-item">
-  <div class="itip-num">1</div>
-  <div class="itip-body">
-    <div class="itip-title">Main St opens 1 HOUR before the park</div>
-    <div class="itip-desc">The park-proper (rides etc) opens at rope drop, but Main Street USA opens a full hour early. Walk in, take uncrowded castle photos, grab a pastry at the Main St Bakery, then you're right there for rope drop.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">1</div>
+      <div class="itip-body">
+        <div class="itip-title">Main St opens 1 HOUR before the park</div>
+        <div class="itip-desc">The park-proper (rides etc) opens at rope drop, but Main Street USA opens a full hour early. Walk in, take uncrowded castle photos, grab a pastry at the Main St Bakery, then you're right there for rope drop.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">2</div>
-  <div class="itip-body">
-    <div class="itip-title">Vintage Main St Vehicles &mdash; free ride to castle</div>
-    <div class="itip-desc">Free old-timey cars and a double-decker bus run up Main St all morning. Wait inside the entrance at Town Hall area and ride right to the castle steps. No wait, totally free, kids love it.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">2</div>
+      <div class="itip-body">
+        <div class="itip-title">Vintage Main St Vehicles &mdash; free ride to castle</div>
+        <div class="itip-desc">Free old-timey cars and a double-decker bus run up Main St all morning. Wait inside the entrance at Town Hall area and ride right to the castle steps. No wait, totally free, kids love it.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">3</div>
-  <div class="itip-body">
-    <div class="itip-title">LL grace period: almost 2 hours after</div>
-    <div class="itip-desc">Lightning Lane passes are valid 5 minutes BEFORE your window opens, and up to 1 hour 59 minutes AFTER your window closes. So if you're stuck on another ride, don't panic &mdash; your LL is still good.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">3</div>
+      <div class="itip-body">
+        <div class="itip-title">LL grace period: almost 2 hours after</div>
+        <div class="itip-desc">Lightning Lane passes are valid 5 minutes BEFORE your window opens, and up to 1 hour 59 minutes AFTER your window closes. So if you're stuck on another ride, don't panic &mdash; your LL is still good.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">4</div>
-  <div class="itip-body">
-    <div class="itip-title">"Sold out" Lightning Lane = keep refreshing</div>
-    <div class="itip-desc">Disney adds popup LL availability throughout the day. People also cancel and move passes around. If Peter Pan or anything else shows sold out, refresh repeatedly &mdash; it comes back.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">4</div>
+      <div class="itip-body">
+        <div class="itip-title">"Sold out" Lightning Lane = keep refreshing</div>
+        <div class="itip-desc">Disney adds popup LL availability throughout the day. People also cancel and move passes around. If Peter Pan or anything else shows sold out, refresh repeatedly &mdash; it comes back.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">5</div>
-  <div class="itip-body">
-    <div class="itip-title">Cast members open the gates 30 min early</div>
-    <div class="itip-desc">Early Entry (or even regular rope drop) often starts 30 minutes before the official time. Head straight to the ride you want first &mdash; you'll often be let on before the official opening.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">5</div>
+      <div class="itip-body">
+        <div class="itip-title">Cast members open the gates 30 min early</div>
+        <div class="itip-desc">Early Entry (or even regular rope drop) often starts 30 minutes before the official time. Head straight to the ride you want first &mdash; you'll often be let on before the official opening.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">6</div>
-  <div class="itip-body">
-    <div class="itip-title">Rider Switch for height-limit rides</div>
-    <div class="itip-body">If one toddler can't ride (38" height req on Mine Train / Slinky), one adult waits in line while the other stays with the kids. Then the second adult uses Rider Switch to enter the Lightning Lane. Free, no app needed &mdash; just ask the cast member at the ride entrance.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">6</div>
+      <div class="itip-body">
+        <div class="itip-title">Rider Switch for height-limit rides</div>
+        <div class="itip-body">If one toddler can't ride (38" height req on Mine Train / Slinky), one adult waits in line while the other stays with the kids. Then the second adult uses Rider Switch to enter the Lightning Lane. Free, no app needed &mdash; just ask the cast member at the ride entrance.</div>
+      </div>
+    </div>
 
-<div class="itip-cat">&#128247; Photo Secrets</div>
+    <div class="itip-cat">&#128247; Photo Secrets</div>
 
-<div class="itip-item">
-  <div class="itip-num">7</div>
-  <div class="itip-body">
-    <div class="itip-title">Castle photos with NO crowd in the background</div>
-    <div class="itip-desc">Go to the small projection buildings on either side at the front of the castle and shoot from right in front of the fence. The angle eliminates the crowd behind you. Perfect family shot.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">7</div>
+      <div class="itip-body">
+        <div class="itip-title">Castle photos with NO crowd in the background</div>
+        <div class="itip-desc">Go to the small projection buildings on either side at the front of the castle and shoot from right in front of the fence. The angle eliminates the crowd behind you. Perfect family shot.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">8</div>
-  <div class="itip-body">
-    <div class="itip-title">PhotoPass photographer will use your phone</div>
-    <div class="itip-desc">Any PhotoPass photographer stationed around the park will happily use your own phone or camera to take photos for free. Just ask. You don't have to buy Memory Maker for this.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">8</div>
+      <div class="itip-body">
+        <div class="itip-title">PhotoPass photographer will use your phone</div>
+        <div class="itip-desc">Any PhotoPass photographer stationed around the park will happily use your own phone or camera to take photos for free. Just ask. You don't have to buy Memory Maker for this.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">9</div>
-  <div class="itip-body">
-    <div class="itip-title">Genie+ purchase = free ride photo downloads</div>
-    <div class="itip-desc">When you buy Genie+ (Lightning Lane Multi Pass) you get complimentary ride photo downloads for that entire day at any park. Grab them in the MDE app within 45 days or they expire.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">9</div>
+      <div class="itip-body">
+        <div class="itip-title">Genie+ purchase = free ride photo downloads</div>
+        <div class="itip-desc">When you buy Genie+ (Lightning Lane Multi Pass) you get complimentary ride photo downloads for that entire day at any park. Grab them in the MDE app within 45 days or they expire.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">10</div>
-  <div class="itip-body">
-    <div class="itip-title">Tree of Life photos at Animal Kingdom</div>
-    <div class="itip-desc">Best Tree of Life background photos are on the pathway between Africa and Asia sections &mdash; not right in front of it. Try both sides at golden hour.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">10</div>
+      <div class="itip-body">
+        <div class="itip-title">Tree of Life photos at Animal Kingdom</div>
+        <div class="itip-desc">Best Tree of Life background photos are on the pathway between Africa and Asia sections &mdash; not right in front of it. Try both sides at golden hour.</div>
+      </div>
+    </div>
 
-<div class="itip-cat">&#128083; Money Savers</div>
+    <div class="itip-cat">&#128083; Money Savers</div>
 
-<div class="itip-item">
-  <div class="itip-num">11</div>
-  <div class="itip-body">
-    <div class="itip-title">Toll Pass vending machine at MCO &mdash; do this first!</div>
-    <div class="itip-desc">Before picking up your rental car, find the Visitor Toll Pass vending machines inside the terminal. Buy a hangtag for your rental car and save up to 80% on tolls vs. the rental car company rates. High priority on arrival.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">11</div>
+      <div class="itip-body">
+        <div class="itip-title">Toll Pass vending machine at MCO &mdash; do this first!</div>
+        <div class="itip-desc">Before picking up your rental car, find the Visitor Toll Pass vending machines inside the terminal. Buy a hangtag for your rental car and save up to 80% on tolls vs. the rental car company rates. High priority on arrival.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">12</div>
-  <div class="itip-body">
-    <div class="itip-title">Popcorn bucket &mdash; $2.25 refills all trip</div>
-    <div class="itip-desc">Buy a souvenir popcorn bucket on your first park day. Refills are $2.25 at any popcorn stand in any park. Pays for itself in one day with toddlers who want popcorn everywhere.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">12</div>
+      <div class="itip-body">
+        <div class="itip-title">Popcorn bucket &mdash; $2.25 refills all trip</div>
+        <div class="itip-desc">Buy a souvenir popcorn bucket on your first park day. Refills are $2.25 at any popcorn stand in any park. Pays for itself in one day with toddlers who want popcorn everywhere.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">13</div>
-  <div class="itip-body">
-    <div class="itip-title">Disney Springs &mdash; same merch, fraction of the price</div>
-    <div class="itip-desc">World of Disney at Disney Springs has virtually the same merchandise as the park stores. No ticket needed, free parking. Shop on your rest day Wednesday before seeing the park prices.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">13</div>
+      <div class="itip-body">
+        <div class="itip-title">Disney Springs &mdash; same merch, fraction of the price</div>
+        <div class="itip-desc">World of Disney at Disney Springs has virtually the same merchandise as the park stores. No ticket needed, free parking. Shop on your rest day Wednesday before seeing the park prices.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">14</div>
-  <div class="itip-body">
-    <div class="itip-title">Mouse ear headbands &mdash; buy from Amazon before you go</div>
-    <div class="itip-desc">Park headbands are heavy and give headaches after a few hours. Etsy and Amazon have lighter, cheaper, often cuter options. Kids won't know the difference and you'll thank yourself.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">14</div>
+      <div class="itip-body">
+        <div class="itip-title">Mouse ear headbands &mdash; buy from Amazon before you go</div>
+        <div class="itip-desc">Park headbands are heavy and give headaches after a few hours. Etsy and Amazon have lighter, cheaper, often cuter options. Kids won't know the difference and you'll thank yourself.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">15</div>
-  <div class="itip-body">
-    <div class="itip-title">Walk-up dining in MDE app</div>
-    <div class="itip-desc">No restaurant reservation? Open MDE app &rarr; Check Dining Availability &rarr; scroll to bottom for "Join Walk-Up List." Surprisingly often available, even at busy restaurants.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">15</div>
+      <div class="itip-body">
+        <div class="itip-title">Walk-up dining in MDE app</div>
+        <div class="itip-desc">No restaurant reservation? Open MDE app &rarr; Check Dining Availability &rarr; scroll to bottom for "Join Walk-Up List." Surprisingly often available, even at busy restaurants.</div>
+      </div>
+    </div>
 
-<div class="itip-cat">&#127785; Parade &amp; Fireworks Tips</div>
+    <div class="itip-cat">&#127785; Parade &amp; Fireworks Tips</div>
 
-<div class="itip-item">
-  <div class="itip-num">16</div>
-  <div class="itip-body">
-    <div class="itip-title">Best parade spot = Frontierland, not Main St</div>
-    <div class="itip-desc">Afternoon parade starts in Frontierland and ends on Main St. Nighttime parade runs in reverse. Watch from Frontierland/Liberty Square area for significantly lower crowds &mdash; same great view.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">16</div>
+      <div class="itip-body">
+        <div class="itip-title">Best parade spot = Frontierland, not Main St</div>
+        <div class="itip-desc">Afternoon parade starts in Frontierland and ends on Main St. Nighttime parade runs in reverse. Watch from Frontierland/Liberty Square area for significantly lower crowds &mdash; same great view.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">17</div>
-  <div class="itip-body">
-    <div class="itip-title">Fireworks from Polynesian beach (alternative)</div>
-    <div class="itip-desc">If you want to skip the MK park exit chaos, drive/take Disney transport to the Polynesian resort beach and watch fireworks from there. Bring food and sit on the sand. Way more relaxed with toddlers. Electric Water Pageant passes by at 8:45 PM too.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">17</div>
+      <div class="itip-body">
+        <div class="itip-title">Fireworks from Polynesian beach (alternative)</div>
+        <div class="itip-desc">If you want to skip the MK park exit chaos, drive/take Disney transport to the Polynesian resort beach and watch fireworks from there. Bring food and sit on the sand. Way more relaxed with toddlers. Electric Water Pageant passes by at 8:45 PM too.</div>
+      </div>
+    </div>
 
-<div class="itip-cat">&#127800; Family &amp; Toddler Tips</div>
+    <div class="itip-cat">&#127800; Family &amp; Toddler Tips</div>
 
-<div class="itip-item">
-  <div class="itip-num">18</div>
-  <div class="itip-body">
-    <div class="itip-title">Baby Care Centers in every Disney park</div>
-    <div class="itip-desc">Every park has a Baby Care Center &mdash; air-conditioned, private nursing rooms, changing tables away from crowds, basic supplies for purchase. Lifesaver on hot days when you just need 15 quiet minutes.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">18</div>
+      <div class="itip-body">
+        <div class="itip-title">Baby Care Centers in every Disney park</div>
+        <div class="itip-desc">Every park has a Baby Care Center &mdash; air-conditioned, private nursing rooms, changing tables away from crowds, basic supplies for purchase. Lifesaver on hot days when you just need 15 quiet minutes.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">19</div>
-  <div class="itip-body">
-    <div class="itip-title">Afternoon rain showers = lower wait times</div>
-    <div class="itip-desc">Florida gets quick 20-minute afternoon showers almost daily in late Feb/March. Most people run for cover or leave. Stay, use your ponchos, and enjoy drastically shorter lines the moment rain stops.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">19</div>
+      <div class="itip-body">
+        <div class="itip-title">Afternoon rain showers = lower wait times</div>
+        <div class="itip-desc">Florida gets quick 20-minute afternoon showers almost daily in late Feb/March. Most people run for cover or leave. Stay, use your ponchos, and enjoy drastically shorter lines the moment rain stops.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">20</div>
-  <div class="itip-body">
-    <div class="itip-title">Install MyRadar app before the trip</div>
-    <div class="itip-desc">Florida weather changes fast. MyRadar gives hyper-local storm tracking so you can see exactly when a shower will pass. Plan your indoor ride queue timing around it.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">20</div>
+      <div class="itip-body">
+        <div class="itip-title">Install MyRadar app before the trip</div>
+        <div class="itip-desc">Florida weather changes fast. MyRadar gives hyper-local storm tracking so you can see exactly when a shower will pass. Plan your indoor ride queue timing around it.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">21</div>
-  <div class="itip-body">
-    <div class="itip-title">Mobile Order food &mdash; skip the queue entirely</div>
-    <div class="itip-desc">For any counter service restaurant, use the MDE app to place a Mobile Order and choose your pickup window. Tap the + symbol at the bottom of MDE. Works for snacks too &mdash; you don't have to wait in line for a Dole Whip. Just show up when ready.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">21</div>
+      <div class="itip-body">
+        <div class="itip-title">Mobile Order food &mdash; skip the queue entirely</div>
+        <div class="itip-desc">For any counter service restaurant, use the MDE app to place a Mobile Order and choose your pickup window. Tap the + symbol at the bottom of MDE. Works for snacks too &mdash; you don't have to wait in line for a Dole Whip. Just show up when ready.</div>
+      </div>
+    </div>
 
-<div class="itip-cat">&#127919; Strategy &amp; Timing</div>
+    <div class="itip-cat">&#127919; Strategy &amp; Timing</div>
 
-<div class="itip-item">
-  <div class="itip-num">22</div>
-  <div class="itip-body">
-    <div class="itip-title">Burner Ride = unlock Tier 1 LLs faster</div>
-    <div class="itip-desc">Book a "burner ride" as your first LL advance selection &mdash; something low-stakes like Dumbo or Tea Cups, as early in the morning as possible. The moment you tap into it, you can immediately book another Tier 1 LL (like Peter Pan or Tiana's) before anyone else can. Power move.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">22</div>
+      <div class="itip-body">
+        <div class="itip-title">Burner Ride = unlock Tier 1 LLs faster</div>
+        <div class="itip-desc">Book a "burner ride" as your first LL advance selection &mdash; something low-stakes like Dumbo or Tea Cups, as early in the morning as possible. The moment you tap into it, you can immediately book another Tier 1 LL (like Peter Pan or Tiana's) before anyone else can. Power move.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">23</div>
-  <div class="itip-body">
-    <div class="itip-title">Park close = shortest waits of the day</div>
-    <div class="itip-desc">Disney posts inflated wait times in the last hour before close (posted 40 min often means 5&ndash;10 min). Get in line for Seven Dwarfs Mine Train or Peter Pan right at the posted closing time &mdash; you'll still ride. This is how Disney veterans skip paying for Single Pass.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">23</div>
+      <div class="itip-body">
+        <div class="itip-title">Park close = shortest waits of the day</div>
+        <div class="itip-desc">Disney posts inflated wait times in the last hour before close (posted 40 min often means 5&ndash;10 min). Get in line for Seven Dwarfs Mine Train or Peter Pan right at the posted closing time &mdash; you'll still ride. This is how Disney veterans skip paying for Single Pass.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">24</div>
-  <div class="itip-body">
-    <div class="itip-title">Stack your LLs for the evening return</div>
-    <div class="itip-desc">In the MDE app, you can modify your LL times to later in the evening. Before your midday break, stack 2&ndash;3 LLs for your 5&ndash;7 PM return window. You come back and chain through them immediately &mdash; this is what Disney insiders do and most people never figure it out.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">24</div>
+      <div class="itip-body">
+        <div class="itip-title">Stack your LLs for the evening return</div>
+        <div class="itip-desc">In the MDE app, you can modify your LL times to later in the evening. Before your midday break, stack 2&ndash;3 LLs for your 5&ndash;7 PM return window. You come back and chain through them immediately &mdash; this is what Disney insiders do and most people never figure it out.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">25</div>
-  <div class="itip-body">
-    <div class="itip-title">Standby Skipper &mdash; the app that books LLs for you</div>
-    <div class="itip-desc">Standby Skipper is a third-party app that automatically makes Lightning Lane reservations for you while you enjoy the parks. After you tap into your first LL of the day, it chains the rest. ~$25/day for up to 12 people. Worth considering for your two MK days when LLs matter most.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">25</div>
+      <div class="itip-body">
+        <div class="itip-title">Standby Skipper &mdash; the app that books LLs for you</div>
+        <div class="itip-desc">Standby Skipper is a third-party app that automatically makes Lightning Lane reservations for you while you enjoy the parks. After you tap into your first LL of the day, it chains the rest. ~$25/day for up to 12 people. Worth considering for your two MK days when LLs matter most.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">26</div>
-  <div class="itip-body">
-    <div class="itip-title">Crowds peak noon&ndash;4 PM every day</div>
-    <div class="itip-desc">Wait times build from opening and peak between noon and 4 PM at every Disney park, every day. This is the scientific reason your midday reset is not a luxury &mdash; it's a strategic move. Return after 5 PM when waits start dropping again.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">26</div>
+      <div class="itip-body">
+        <div class="itip-title">Crowds peak noon&ndash;4 PM every day</div>
+        <div class="itip-desc">Wait times build from opening and peak between noon and 4 PM at every Disney park, every day. This is the scientific reason your midday reset is not a luxury &mdash; it's a strategic move. Return after 5 PM when waits start dropping again.</div>
+      </div>
+    </div>
 
-<div class="itip-cat">&#127869; Food &amp; Dining Picks</div>
+    <div class="itip-cat">&#127869; Food &amp; Dining Picks</div>
 
-<div class="itip-item">
-  <div class="itip-num">27</div>
-  <div class="itip-body">
-    <div class="itip-title">Magic Kingdom best quick service: Columbia Harbor House</div>
-    <div class="itip-desc">Located near Haunted Mansion &amp; Peter Pan. Seafood, chicken, salads. Upper level seating with great views of Liberty Square. Consistent, affordable, accepts Mobile Order. Better than 90% of MK food options. Your go-to lunch spot both MK days.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">27</div>
+      <div class="itip-body">
+        <div class="itip-title">Magic Kingdom best quick service: Columbia Harbor House</div>
+        <div class="itip-desc">Located near Haunted Mansion &amp; Peter Pan. Seafood, chicken, salads. Upper level seating with great views of Liberty Square. Consistent, affordable, accepts Mobile Order. Better than 90% of MK food options. Your go-to lunch spot both MK days.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">28</div>
-  <div class="itip-body">
-    <div class="itip-title">Magic Kingdom best snacks you can't miss</div>
-    <div class="itip-desc">Dole Whip (pineapple-vanilla swirl) at Aloha Isle in Adventureland. Creme Brulee Croissant at Gaston's Tavern in Fantasyland. Cold Brew Float at Auntie Gravity's in Tomorrowland. Order all via Mobile Order to skip the lines.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">28</div>
+      <div class="itip-body">
+        <div class="itip-title">Magic Kingdom best snacks you can't miss</div>
+        <div class="itip-desc">Dole Whip (pineapple-vanilla swirl) at Aloha Isle in Adventureland. Creme Brulee Croissant at Gaston's Tavern in Fantasyland. Cold Brew Float at Auntie Gravity's in Tomorrowland. Order all via Mobile Order to skip the lines.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">29</div>
-  <div class="itip-body">
-    <div class="itip-title">Hollywood Studios: Woody's Lunchbox + Docking Bay 7</div>
-    <div class="itip-desc">HS has the worst food of any park overall. Stick to these two: Woody's Lunchbox in Toy Story Land (Lunchbox Tarts are a must), and Docking Bay 7 in Galaxy's Edge (pricey but creative and highly themed). Use Mobile Order &mdash; both get very long lines.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">29</div>
+      <div class="itip-body">
+        <div class="itip-title">Hollywood Studios: Woody's Lunchbox + Docking Bay 7</div>
+        <div class="itip-desc">HS has the worst food of any park overall. Stick to these two: Woody's Lunchbox in Toy Story Land (Lunchbox Tarts are a must), and Docking Bay 7 in Galaxy's Edge (pricey but creative and highly themed). Use Mobile Order &mdash; both get very long lines.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">30</div>
-  <div class="itip-body">
-    <div class="itip-title">Animal Kingdom best food: Flame Tree BBQ + Satuli Canteen</div>
-    <div class="itip-desc">Flame Tree Barbecue (Africa): best ribs at Disney World. Satuli Canteen (Pandora): beautiful themed setting, creative bowls with lots of variety. Both are excellent. Harambe Market is a solid backup for a rice bowl. Get coffee at Creature Comforts (Starbucks) on the way to Africa.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">30</div>
+      <div class="itip-body">
+        <div class="itip-title">Animal Kingdom best food: Flame Tree BBQ + Satuli Canteen</div>
+        <div class="itip-desc">Flame Tree Barbecue (Africa): best ribs at Disney World. Satuli Canteen (Pandora): beautiful themed setting, creative bowls with lots of variety. Both are excellent. Harambe Market is a solid backup for a rice bowl. Get coffee at Creature Comforts (Starbucks) on the way to Africa.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">31</div>
-  <div class="itip-body">
-    <div class="itip-title">Walk-up dining in MDE app works more than you think</div>
-    <div class="itip-desc">No restaurant reservation? MDE app &rarr; Check Dining Availability &rarr; scroll to "Join Walk-Up List." Frequently available even at popular spots, especially right when the park opens or after the main rush. Check MDE while you're in line for a ride &mdash; spots open constantly.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">31</div>
+      <div class="itip-body">
+        <div class="itip-title">Walk-up dining in MDE app works more than you think</div>
+        <div class="itip-desc">No restaurant reservation? MDE app &rarr; Check Dining Availability &rarr; scroll to "Join Walk-Up List." Frequently available even at popular spots, especially right when the park opens or after the main rush. Check MDE while you're in line for a ride &mdash; spots open constantly.</div>
+      </div>
+    </div>
 
-<div class="itip-cat">&#128197; Best Days Per Park</div>
+    <div class="itip-cat">&#128197; Best Days Per Park</div>
 
-<div class="itip-item">
-  <div class="itip-num">32</div>
-  <div class="itip-body">
-    <div class="itip-title">Magic Kingdom is most crowded Mondays &amp; Saturdays</div>
-    <div class="itip-desc">This has been true for years: families fly in Friday/Sunday and head to MK on their first full day. Your schedule (Mon 3/2, Tue 3/3) is one of the better combos &mdash; Monday is higher crowd but Tuesday is much lighter. If wait times feel brutal on Monday, just remind yourself Tuesday will be noticeably calmer.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">32</div>
+      <div class="itip-body">
+        <div class="itip-title">Magic Kingdom is most crowded Mondays &amp; Saturdays</div>
+        <div class="itip-desc">This has been true for years: families fly in Friday/Sunday and head to MK on their first full day. Your schedule (Mon 3/2, Tue 3/3) is one of the better combos &mdash; Monday is higher crowd but Tuesday is much lighter. If wait times feel brutal on Monday, just remind yourself Tuesday will be noticeably calmer.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">33</div>
-  <div class="itip-body">
-    <div class="itip-title">Best days to visit each park (ranked lowest crowds)</div>
-    <div class="itip-desc">Magic Kingdom: Sunday, Thursday, Friday. Hollywood Studios: Wednesday, Thursday. Animal Kingdom: Wednesday, Thursday, Tuesday. EPCOT: Wednesday, Friday, Thursday. Your Animal Kingdom on Sunday and Hollywood Studios on Thursday both land within the ideal windows. These aren't random &mdash; they're backed by years of crowd data.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">33</div>
+      <div class="itip-body">
+        <div class="itip-title">Best days to visit each park (ranked lowest crowds)</div>
+        <div class="itip-desc">Magic Kingdom: Sunday, Thursday, Friday. Hollywood Studios: Wednesday, Thursday. Animal Kingdom: Wednesday, Thursday, Tuesday. EPCOT: Wednesday, Friday, Thursday. Your Animal Kingdom on Sunday and Hollywood Studios on Thursday both land within the ideal windows. These aren't random &mdash; they're backed by years of crowd data.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">34</div>
-  <div class="itip-body">
-    <div class="itip-title">Animal Kingdom: you may not need Lightning Lane Multi Pass</div>
-    <div class="itip-desc">AK is the one park where Multi Pass is optional on non-peak days. Most rides have under 30-minute waits in the first hour, and the afternoon crowds are lower too since people wrongly treat it as a half-day park and leave by 2 PM. Your Sunday visit is non-peak. Buy Single Pass for Flight of Passage (it runs 80-min waits all day) &mdash; skip Multi Pass and save the $30+ per person.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">34</div>
+      <div class="itip-body">
+        <div class="itip-title">Animal Kingdom: you may not need Lightning Lane Multi Pass</div>
+        <div class="itip-desc">AK is the one park where Multi Pass is optional on non-peak days. Most rides have under 30-minute waits in the first hour, and the afternoon crowds are lower too since people wrongly treat it as a half-day park and leave by 2 PM. Your Sunday visit is non-peak. Buy Single Pass for Flight of Passage (it runs 80-min waits all day) &mdash; skip Multi Pass and save the $30+ per person.</div>
+      </div>
+    </div>
 
-<div class="itip-cat">&#128260; Virtual Queue (7 AM Rule)</div>
+    <div class="itip-cat">&#128260; Virtual Queue (7 AM Rule)</div>
 
-<div class="itip-item">
-  <div class="itip-num">35</div>
-  <div class="itip-body">
-    <div class="itip-title">Virtual Queue opens at exactly 7 AM &mdash; spots go in seconds</div>
-    <div class="itip-desc">For any ride offering a free Virtual Queue (check MDE app before your visit day), the queue opens at 7:00 AM sharp &mdash; sometimes spots vanish in under 30 seconds. Be in the MDE app before 7, find the Virtual Queue button on the home screen, confirm your party, and tap Refresh repeatedly until the clock hits 7:00, then tap Join Queue immediately. There's a second chance at 1:00 PM but don't count on it. If you get in, you'll get a Boarding Group number and a notification when it's your turn (you have 1 hour to arrive).</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">35</div>
+      <div class="itip-body">
+        <div class="itip-title">Virtual Queue opens at exactly 7 AM &mdash; spots go in seconds</div>
+        <div class="itip-desc">For any ride offering a free Virtual Queue (check MDE app before your visit day), the queue opens at 7:00 AM sharp &mdash; sometimes spots vanish in under 30 seconds. Be in the MDE app before 7, find the Virtual Queue button on the home screen, confirm your party, and tap Refresh repeatedly until the clock hits 7:00, then tap Join Queue immediately. There's a second chance at 1:00 PM but don't count on it. If you get in, you'll get a Boarding Group number and a notification when it's your turn (you have 1 hour to arrive).</div>
+      </div>
+    </div>
 
-<div class="itip-cat">&#128118; Kids &amp; Character Tips</div>
+    <div class="itip-cat">&#128118; Kids &amp; Character Tips</div>
 
-<div class="itip-item">
-  <div class="itip-num">36</div>
-  <div class="itip-body">
-    <div class="itip-title">PhotoPass photographers use your phone &mdash; no Memory Maker needed</div>
-    <div class="itip-desc">Any PhotoPass photographer will shoot with your own phone or camera for free. Just politely ask. You don't need to buy Memory Maker ($200+) for great photos. They're stationed near the castle hub, character meets, and key spots throughout the parks.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">36</div>
+      <div class="itip-body">
+        <div class="itip-title">PhotoPass photographers use your phone &mdash; no Memory Maker needed</div>
+        <div class="itip-desc">Any PhotoPass photographer will shoot with your own phone or camera for free. Just politely ask. You don't need to buy Memory Maker ($200+) for great photos. They're stationed near the castle hub, character meets, and key spots throughout the parks.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">37</div>
-  <div class="itip-body">
-    <div class="itip-title">Character meets: pick 2 max per day</div>
-    <div class="itip-desc">Character meets no longer have Lightning Lane. They take 20&ndash;40 min each. If you want more than 2 meets in a day, plan to miss some rides. Best strategy: meet characters in the first hour before long queues form, or right after noon when waits dip. Let the kids decide who matters most.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">37</div>
+      <div class="itip-body">
+        <div class="itip-title">Character meets: pick 2 max per day</div>
+        <div class="itip-desc">Character meets no longer have Lightning Lane. They take 20&ndash;40 min each. If you want more than 2 meets in a day, plan to miss some rides. Best strategy: meet characters in the first hour before long queues form, or right after noon when waits dip. Let the kids decide who matters most.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">38</div>
-  <div class="itip-body">
-    <div class="itip-title">Enchanted Tales with Belle &mdash; arrive 10 min before showtime</div>
-    <div class="itip-desc">This is more of a show than a standard meet. Kids get chosen to play roles in the story. Usually opens around 10:30 AM &mdash; check MDE for times. Arrive 10 minutes before your entry time. One of the most magical toddler experiences in all of Disney; do not skip it.</div>
-  </div>
-</div>
+    <div class="itip-item">
+      <div class="itip-num">38</div>
+      <div class="itip-body">
+        <div class="itip-title">Enchanted Tales with Belle &mdash; arrive 10 min before showtime</div>
+        <div class="itip-desc">This is more of a show than a standard meet. Kids get chosen to play roles in the story. Usually opens around 10:30 AM &mdash; check MDE for times. Arrive 10 minutes before your entry time. One of the most magical toddler experiences in all of Disney; do not skip it.</div>
+      </div>
+    </div>
 
-<div class="itip-item">
-  <div class="itip-num">39</div>
-  <div class="itip-body">
-    <div class="itip-title">Rider Switch &mdash; free, no app needed, both parents ride</div>
-    <div class="itip-desc">At any height-restricted ride (Mine Train, Slinky Dog, TRON): walk up as a group, tell the cast member you want Rider Switch. One adult waits with the child while the others ride standby. Then the second adult + one more person enters the Lightning Lane for free. Both adults ride, one gets a bonus partner. Just ask at the entrance gate.</div>
-  </div>
-</div>
-```
+    <div class="itip-item">
+      <div class="itip-num">39</div>
+      <div class="itip-body">
+        <div class="itip-title">Rider Switch &mdash; free, no app needed, both parents ride</div>
+        <div class="itip-desc">At any height-restricted ride (Mine Train, Slinky Dog, TRON): walk up as a group, tell the cast member you want Rider Switch. One adult waits with the child while the others ride standby. Then the second adult + one more person enters the Lightning Lane for free. Both adults ride, one gets a bonus partner. Just ask at the entrance gate.</div>
+      </div>
+    </div>
 
   </div>
 
   <!-- MAP TAB -->
-
   <div class="scr" id="scr-map" style="padding:0;display:flex;flex-direction:column;">
 
-```
-<!-- LIVE EMBEDDED MAP -->
-<div style="flex-shrink:0;border-radius:0;overflow:hidden;border-bottom:2px solid var(--border);">
-  <iframe
-    src="https://www.google.com/maps/d/embed?mid=1j4zztXc572SNLf_xaEHDEjhLEBkMok8&ehbc=2E312F"
-    style="width:100%;height:340px;border:none;display:block;"
-    allowfullscreen loading="lazy" title="Orlando Trip Custom Map">
-  </iframe>
-</div>
+    <!-- LIVE EMBEDDED MAP -->
+    <div style="flex-shrink:0;border-radius:0;overflow:hidden;border-bottom:2px solid var(--border);">
+      <iframe
+        src="https://www.google.com/maps/d/embed?mid=1j4zztXc572SNLf_xaEHDEjhLEBkMok8&ehbc=2E312F"
+        style="width:100%;height:340px;border:none;display:block;"
+        allowfullscreen loading="lazy" title="Orlando Trip Custom Map">
+      </iframe>
+    </div>
 
-<!-- OPEN FULL MAP BUTTON -->
-<div style="padding:10px 14px;background:#fff;border-bottom:1px solid var(--border);flex-shrink:0;">
-  <a href="https://www.google.com/maps/d/viewer?mid=1j4zztXc572SNLf_xaEHDEjhLEBkMok8"
-     target="_blank" rel="noopener"
-     style="display:flex;align-items:center;justify-content:center;gap:7px;background:var(--blue);color:#fff;border-radius:10px;padding:10px 14px;text-decoration:none;font-size:13px;font-weight:700;">
-    &#128279; Open Full Map in Google Maps
-  </a>
-</div>
+    <!-- OPEN FULL MAP BUTTON -->
+    <div style="padding:10px 14px;background:#fff;border-bottom:1px solid var(--border);flex-shrink:0;">
+      <a href="https://www.google.com/maps/d/viewer?mid=1j4zztXc572SNLf_xaEHDEjhLEBkMok8"
+         target="_blank" rel="noopener"
+         style="display:flex;align-items:center;justify-content:center;gap:7px;background:var(--blue);color:#fff;border-radius:10px;padding:10px 14px;text-decoration:none;font-size:13px;font-weight:700;">
+        &#128279; Open Full Map in Google Maps
+      </a>
+    </div>
 
-<!-- SCROLLABLE QUICK LINKS -->
-<div style="flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px;">
+    <!-- SCROLLABLE QUICK LINKS -->
+    <div style="flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px;">
 
-  <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue2);margin-bottom:8px;">&#127984; Disney Parks</div>
-  <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px;">
-    <a href="https://maps.google.com/?q=Magic+Kingdom+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#127984;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Magic Kingdom</div><div style="font-size:11px;color:var(--grey);">Mon 3/2 &amp; Tue 3/3</div></div><span style="color:var(--blue2);">&#8599;</span>
-    </a>
-    <a href="https://maps.google.com/?q=Animal+Kingdom+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#129446;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Animal Kingdom</div><div style="font-size:11px;color:var(--grey);">Sun 3/1</div></div><span style="color:var(--blue2);">&#8599;</span>
-    </a>
-    <a href="https://maps.google.com/?q=Hollywood+Studios+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#127916;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Hollywood Studios</div><div style="font-size:11px;color:var(--grey);">Thu 3/5</div></div><span style="color:var(--blue2);">&#8599;</span>
-    </a>
-  </div>
-
-  <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--purple);margin-bottom:8px;">&#129497; Universal</div>
-  <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px;">
-    <a href="https://maps.google.com/?q=Universal+Islands+of+Adventure+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#129497;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Islands of Adventure</div><div style="font-size:11px;color:var(--grey);">Fri 3/6</div></div><span style="color:var(--purple);">&#8599;</span>
-    </a>
-  </div>
-
-  <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:8px;">&#127968; Your Base</div>
-  <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px;">
-    <a href="https://maps.google.com/?q=4806+Romeo+Cir+Kissimmee+FL+34746" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#127968;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Airbnb &mdash; Kissimmee</div><div style="font-size:11px;color:var(--grey);">4806 Romeo Cir &middot; HMNR52HJYB</div></div><span style="color:var(--green);">&#8599;</span>
-    </a>
-    <a href="https://maps.google.com/?q=Orlando+International+Airport" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#9992;&#65039;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">MCO Airport</div><div style="font-size:11px;color:var(--grey);">Arrive 2/28 &middot; Depart 3/7</div></div><span style="color:var(--green);">&#8599;</span>
-    </a>
-  </div>
-
-  <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#7A5800;margin-bottom:8px;">&#128717; Shopping &amp; Food</div>
-  <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:6px;">
-    <a href="https://maps.google.com/?q=Disney+Springs+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#127970;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Disney Springs</div><div style="font-size:11px;color:var(--grey);">Wed 3/4 &mdash; cheaper merch, free parking</div></div><span style="color:#7A5800;">&#8599;</span>
-    </a>
-    <a href="https://maps.google.com/?q=Orlando+Vineland+Premium+Outlets+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#128717;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Vineland Premium Outlets</div><div style="font-size:11px;color:var(--grey);">Character Warehouse &mdash; discounted Disney merch</div></div><span style="color:#7A5800;">&#8599;</span>
-    </a>
-    <a href="https://maps.google.com/?q=Publix+Kissimmee+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#127839;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Publix</div><div style="font-size:11px;color:var(--grey);">Groceries &amp; snacks for the week</div></div><span style="color:#7A5800;">&#8599;</span>
-    </a>
-  </div>
-
-  <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:8px;">&#128722; Near Airbnb &mdash; Kissimmee</div>
-  <div style="background:var(--greenl);border-radius:10px;padding:9px 12px;margin-bottom:8px;font-size:11px;color:var(--green);font-weight:600;">&#128205; All within ~5 min of 4806 Romeo Cir</div>
-  <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px;">
-    <a href="https://maps.google.com/?q=Walmart+Supercenter+3250+Vineland+Rd+Kissimmee+FL+34746" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#128722;</span>
-      <div style="flex:1;">
-        <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Walmart Supercenter</div>
-        <div style="font-size:11px;color:var(--grey);">3250 Vineland Rd &middot; 24hr &middot; ~4 min drive &middot; Groceries + everything</div>
+      <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue2);margin-bottom:8px;">&#127984; Disney Parks</div>
+      <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px;">
+        <a href="https://maps.google.com/?q=Magic+Kingdom+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#127984;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Magic Kingdom</div><div style="font-size:11px;color:var(--grey);">Mon 3/2 &amp; Tue 3/3</div></div><span style="color:var(--blue2);">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Animal+Kingdom+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#129446;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Animal Kingdom</div><div style="font-size:11px;color:var(--grey);">Sun 3/1</div></div><span style="color:var(--blue2);">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Hollywood+Studios+Walt+Disney+World+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#127916;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Hollywood Studios</div><div style="font-size:11px;color:var(--grey);">Thu 3/5</div></div><span style="color:var(--blue2);">&#8599;</span>
+        </a>
       </div>
-      <span style="color:var(--green);">&#8599;</span>
-    </a>
-    <a href="https://maps.google.com/?q=Publix+Super+Market+4689+World+Center+Dr+Orlando+FL+32821" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#127823;</span>
-      <div style="flex:1;">
-        <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Publix Super Market</div>
-        <div style="font-size:11px;color:var(--grey);">4689 World Center Dr &middot; ~5 min drive &middot; Fresh deli, bakery</div>
-      </div>
-      <span style="color:var(--green);">&#8599;</span>
-    </a>
-    <a href="https://maps.google.com/?q=Target+8251+W+Irlo+Bronson+Hwy+Kissimmee+FL+34747" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#127919;</span>
-      <div style="flex:1;">
-        <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Target</div>
-        <div style="font-size:11px;color:var(--grey);">8251 W Irlo Bronson Hwy &middot; ~6 min drive &middot; Sunscreen, snacks, kids gear</div>
-      </div>
-      <span style="color:var(--green);">&#8599;</span>
-    </a>
-    <a href="https://maps.google.com/?q=Walgreens+Kissimmee+FL+34746" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#128138;</span>
-      <div style="flex:1;">
-        <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Walgreens</div>
-        <div style="font-size:11px;color:var(--grey);">Kissimmee &middot; ~3 min drive &middot; Pharmacy, sunscreen, snacks, meds</div>
-      </div>
-      <span style="color:var(--green);">&#8599;</span>
-    </a>
-    <a href="https://maps.google.com/?q=Winn-Dixie+7912+W+Irlo+Bronson+Hwy+Kissimmee+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
-      <span style="font-size:18px;">&#127856;</span>
-      <div style="flex:1;">
-        <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Winn-Dixie</div>
-        <div style="font-size:11px;color:var(--grey);">7912 W Irlo Bronson Hwy &middot; ~5 min drive &middot; Budget grocery option</div>
-      </div>
-      <span style="color:var(--green);">&#8599;</span>
-    </a>
-  </div>
 
-</div>
-```
+      <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--purple);margin-bottom:8px;">&#129497; Universal</div>
+      <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px;">
+        <a href="https://maps.google.com/?q=Universal+Islands+of+Adventure+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#129497;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Islands of Adventure</div><div style="font-size:11px;color:var(--grey);">Fri 3/6</div></div><span style="color:var(--purple);">&#8599;</span>
+        </a>
+      </div>
 
+      <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:8px;">&#127968; Your Base</div>
+      <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px;">
+        <a href="https://maps.google.com/?q=4806+Romeo+Cir+Kissimmee+FL+34746" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#127968;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Airbnb &mdash; Kissimmee</div><div style="font-size:11px;color:var(--grey);">4806 Romeo Cir &middot; HMNR52HJYB</div></div><span style="color:var(--green);">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Orlando+International+Airport" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#9992;&#65039;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">MCO Airport</div><div style="font-size:11px;color:var(--grey);">Arrive 2/28 &middot; Depart 3/7</div></div><span style="color:var(--green);">&#8599;</span>
+        </a>
+      </div>
+
+      <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:#7A5800;margin-bottom:8px;">&#128717; Shopping &amp; Food</div>
+      <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:6px;">
+        <a href="https://maps.google.com/?q=Disney+Springs+Orlando+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#127970;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Disney Springs</div><div style="font-size:11px;color:var(--grey);">Wed 3/4 &mdash; cheaper merch, free parking</div></div><span style="color:#7A5800;">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Orlando+Vineland+Premium+Outlets+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#128717;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Vineland Premium Outlets</div><div style="font-size:11px;color:var(--grey);">Character Warehouse &mdash; discounted Disney merch</div></div><span style="color:#7A5800;">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Publix+Kissimmee+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#127839;</span><div style="flex:1;"><div style="font-size:13px;font-weight:700;color:#1C1C1E;">Publix</div><div style="font-size:11px;color:var(--grey);">Groceries &amp; snacks for the week</div></div><span style="color:#7A5800;">&#8599;</span>
+        </a>
+      </div>
+
+      <div style="font-size:11px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:8px;">&#128722; Near Airbnb &mdash; Kissimmee</div>
+      <div style="background:var(--greenl);border-radius:10px;padding:9px 12px;margin-bottom:8px;font-size:11px;color:var(--green);font-weight:600;">&#128205; All within ~5 min of 4806 Romeo Cir</div>
+      <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px;">
+        <a href="https://maps.google.com/?q=Walmart+Supercenter+3250+Vineland+Rd+Kissimmee+FL+34746" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#128722;</span>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Walmart Supercenter</div>
+            <div style="font-size:11px;color:var(--grey);">3250 Vineland Rd &middot; 24hr &middot; ~4 min drive &middot; Groceries + everything</div>
+          </div>
+          <span style="color:var(--green);">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Publix+Super+Market+4689+World+Center+Dr+Orlando+FL+32821" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#127823;</span>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Publix Super Market</div>
+            <div style="font-size:11px;color:var(--grey);">4689 World Center Dr &middot; ~5 min drive &middot; Fresh deli, bakery</div>
+          </div>
+          <span style="color:var(--green);">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Target+8251+W+Irlo+Bronson+Hwy+Kissimmee+FL+34747" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#127919;</span>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Target</div>
+            <div style="font-size:11px;color:var(--grey);">8251 W Irlo Bronson Hwy &middot; ~6 min drive &middot; Sunscreen, snacks, kids gear</div>
+          </div>
+          <span style="color:var(--green);">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Walgreens+Kissimmee+FL+34746" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#128138;</span>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Walgreens</div>
+            <div style="font-size:11px;color:var(--grey);">Kissimmee &middot; ~3 min drive &middot; Pharmacy, sunscreen, snacks, meds</div>
+          </div>
+          <span style="color:var(--green);">&#8599;</span>
+        </a>
+        <a href="https://maps.google.com/?q=Winn-Dixie+7912+W+Irlo+Bronson+Hwy+Kissimmee+FL" target="_blank" rel="noopener" style="background:#fff;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:10px;text-decoration:none;border:1.5px solid var(--border);">
+          <span style="font-size:18px;">&#127856;</span>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;color:#1C1C1E;">Winn-Dixie</div>
+            <div style="font-size:11px;color:var(--grey);">7912 W Irlo Bronson Hwy &middot; ~5 min drive &middot; Budget grocery option</div>
+          </div>
+          <span style="color:var(--green);">&#8599;</span>
+        </a>
+      </div>
+
+    </div>
   </div>
 
   <!-- DAY DETAIL -->
-
   <div class="scr" id="scr-day">
     <div id="dayContent"></div>
   </div>
@@ -1316,12 +1299,13 @@ function renderRides() {
 
   // Eats
   var eats = (EATS[curPark] || []).map(function(e) {
-    var tagClasses = {'\u11088 Best QS in park':'etag','\u11088 Top 5 Disney QS':'etag','\u11088 Best QS in MK':'etag','\u11088 Must eat':'etag','\u11088 HP dining':'etag','\u11088 World-class':'etag','\u11088 Non-negotiable':'etag','\u11088 Iconic':'etag','Must-try snack':'etag'};
-    var tags = e.tags ? (function(){
-      var out = '';
-      for(var i=0;i<e.tags.length;i+=2){ out += '<span class="' + (e.tags[i+1]||'etag-go') + '">' + e.tags[i] + '</span>'; }
-      return out;
-    })() : '';
+    var tags = '';
+    if (e.tags) {
+      for (var i = 0; i < e.tags.length; i += 2) {
+        var cls = e.tags[i + 1] || 'etag-go';
+        tags += '<span class="' + cls + '">' + e.tags[i] + '</span>';
+      }
+    }
     return '<div class="ecard"><div class="ecard-top"><div class="ecard-ic">' + e.ic + '</div><div><div class="ecard-name">' + e.n + '</div><div class="ecard-desc">' + e.d + '</div></div></div><div class="ecard-tags">' + tags + '</div></div>';
   }).join('');
 
@@ -1336,6 +1320,11 @@ function renderRides() {
     + '<div class="eats-hdr">&#127869; Best Eats</div>' + eats
     + '<div class="gems-hdr">&#128142; Hidden Gems &amp; Secrets</div>' + gems;
 }
+
+var curPark = 'ak';
+
+// PHOTO SPOTS per park
+var PHOTOS = {
   ak: [
     { ic:'&#127981;', n:'Tree of Life — Africa/Asia Pathway', tip:'Walk the path between Africa and Asia sections (NOT directly in front). This angle gives you the full Tree of Life with far less crowd. Best in morning light or late afternoon gold hour.', tags:['Best angle','Less crowded','Morning light'] },
     { ic:'&#127776;', n:'Pandora Floating Mountains', tip:'From the bridge entering Pandora, look back for the floating mountains reflected in the water below. Sunrise light hits this perfectly. Have someone in the foreground for scale.', tags:['Magical','Wide shot','Bridge viewpoint'] },
@@ -1503,6 +1492,5 @@ document.getElementById('scr-docs').addEventListener('click', function(e) {
 renderRides();
 renderPacking();
 </script>
-
 </body>
 </html>
